@@ -129,38 +129,66 @@ const Contacto = () => {
         </div>
       </div>
 
-      {/* Redes Sociales */}
+      {/* Combined Redes Sociales and Laptop Map Section */}
       <section className="relative bg-gray-900 py-16">
-        <div className="text-center text-white max-w-4xl mx-auto">
-          <h2 className="text-2xl font-bold mb-6">Síguenos en nuestras redes</h2>
-          <div className="flex justify-center space-x-8">
-            <a href="#" className="hover:opacity-75 transition-opacity">
-              <Image 
-                src="/facebook-icon.svg" 
-                alt="Facebook"
-                width={40}
-                height={40}
-              />
-            </a>
-            <a href="#" className="hover:opacity-75 transition-opacity">
-              <Image 
-                src="/instagram-icon.svg" 
-                alt="Instagram"
-                width={40}
-                height={40}
-              />
-            </a>
-            <a href="#" className="hover:opacity-75 transition-opacity">
-              <Image 
-                src="/whatsapp-icon.svg" 
-                alt="WhatsApp"
-                width={40}
-                height={40}
-              />
-            </a>
+        <div className="container mx-auto px-4">
+          {/* Redes Sociales */}
+          <div className="text-center text-white max-w-4xl mx-auto mb-24">
+            <h2 className="text-2xl font-bold mb-6">Síguenos en nuestras redes</h2>
+            <div className="flex justify-center space-x-8">
+              {/* TikTok */}
+              <a href="#" className="hover:opacity-75 transition-opacity">
+                <div className="bg-black rounded-full p-3">
+                  <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+                  </svg>
+                </div>
+              </a>
+              {/* YouTube */}
+              <a href="#" className="hover:opacity-75 transition-opacity">
+                <div className="bg-red-600 rounded-full p-3">
+                  <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M23.5 6.2c-.3-1.1-1.1-1.9-2.2-2.2C19.5 3.4 12 3.4 12 3.4s-7.5 0-9.3.6c-1.1.3-1.9 1.1-2.2 2.2C0 8 0 12 0 12s0 4 .5 5.8c.3 1.1 1.1 1.9 2.2 2.2 1.8.6 9.3.6 9.3.6s7.5 0 9.3-.6c1.1-.3 1.9-1.1 2.2-2.2.5-1.8.5-5.8.5-5.8s0-4-.5-5.8zm-13.8 9.4V8.4l6.2 3.6-6.2 3.6z"/>
+                  </svg>
+                </div>
+              </a>
+              {/* Facebook */}
+              <a href="#" className="hover:opacity-75 transition-opacity">
+                <div className="bg-blue-600 rounded-full p-3">
+                  <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/>
+                  </svg>
+                </div>
+              </a>
+              {/* Instagram */}
+              <a href="#" className="hover:opacity-75 transition-opacity">
+                <div className="bg-gradient-to-tr from-yellow-500 via-pink-500 to-purple-500 rounded-full p-3">
+                  <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465.66.254 1.216.598 1.772 1.153a4.908 4.908 0 0 1 1.153 1.772c.247.637.415 1.363.465 2.428.047 1.066.06 1.405.06 4.122 0 2.717-.01 3.056-.06 4.122-.05 1.065-.218 1.79-.465 2.428a4.883 4.883 0 0 1-1.153 1.772 4.915 4.915 0 0 1-1.772 1.153c-.637.247-1.363.415-2.428.465-1.066.047-1.405.06-4.122.06-2.717 0-3.056-.01-4.122-.06-1.065-.05-1.79-.218-2.428-.465a4.89 4.89 0 0 1-1.772-1.153 4.904 4.904 0 0 1-1.153-1.772c-.248-.637-.415-1.363-.465-2.428C2.013 15.056 2 14.717 2 12c0-2.717.01-3.056.06-4.122.05-1.066.217-1.79.465-2.428a4.88 4.88 0 0 1 1.153-1.772A4.897 4.897 0 0 1 5.45 2.525c.638-.248 1.362-.415 2.428-.465C8.944 2.013 9.283 2 12 2zm0 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm6.5-.25a1.25 1.25 0 0 0-2.5 0 1.25 1.25 0 0 0 2.5 0zM12 9a3 3 0 1 1 0 6 3 3 0 0 1 0-6z"/>
+                  </svg>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          {/* Laptop Map Section */}
+          <div className="max-w-5xl mx-auto relative">
+            <div className="bg-gray-800 rounded-2xl shadow-2xl overflow-hidden">
+              <div className="relative h-[500px] w-full">
+                <Image
+                  src="/laptop/LAPTOP-MAPA.webp"
+                  alt="Ubicación en mapa"
+                  fill
+                  className="object-cover"
+                  priority
+                  unoptimized
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
+      
     </div>
   );
 };
