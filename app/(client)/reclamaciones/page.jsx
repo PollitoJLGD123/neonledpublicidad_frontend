@@ -32,10 +32,12 @@ export default function Page() {
           </h3>
 
           <div className="flex flex-col gap-4 md:flex-row md:flex-wrap">
-            <select className="border-[#b2b2b2] border-2 p-2 bg-white" required>
-              <option disabled selected>
-                Tipo
-              </option>
+            <select
+              className="border-[#b2b2b2] border-2 p-2 bg-white"
+              defaultValue="Tipo"
+              required
+            >
+              <option disabled>Tipo</option>
               <option>Tipo A</option>
               <option>Tipo B</option>
               <option>Tipo C</option>
