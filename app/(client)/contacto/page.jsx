@@ -5,14 +5,28 @@ const Contacto = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-white">
       {/* Hero Section */}
-      <section className="relative min-h-[400px] md:h-[500px] bg-gradient-to-r from-blue-900 to-blue-800 flex items-center justify-center px-4 py-12 md:py-0">  <div className="absolute right-0 w-32 h-32 md:w-64 md:h-64 mt-[-50px] md:mt-0">
-    <div className="w-full h-full rounded-full bg-blue-400/20"></div>
-  </div>
-  <div className="text-center max-w-xl lg:max-w-2xl px-4 z-10">
-    <h2 className="text-xl md:text-2xl mb-2 md:mb-4">Conoce nuestros medios de</h2>
-    <h1 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6">CONTACTO</h1>
-  </div>
-</section>
+      <section className="relative min-h-[400px] md:h-[500px] bg-gradient-to-r from-blue-900 to-blue-800 flex items-center justify-center px-4 py-12 md:py-0">
+        {/* Background Image */}
+        <div className="absolute inset-0 w-full h-full">
+          <Image
+            src="/contacto/Banner_Contacto.webp"
+            alt="Banner Contacto"
+            fill
+            priority
+            className="object-cover"
+            unoptimized
+          />
+          <div className="absolute inset-0 bg-blue-900/50 mix-blend-multiply"></div>
+        </div>
+        
+        <div className="absolute right-0 w-32 h-32 md:w-64 md:h-64 mt-[-50px] md:mt-0">
+          <div className="w-full h-full rounded-full bg-blue-400/20"></div>
+        </div>
+        <div className="text-center max-w-xl lg:max-w-2xl px-4 z-10">
+          <h2 className="text-xl md:text-2xl mb-2 md:mb-4">Conoce nuestros medios de</h2>
+          <h1 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6">CONTACTO</h1>
+        </div>
+      </section>
 
 {/* Contact Info Section (Superpuesta en el límite exacto) */}
 <div className="relative z-20 mx-4 md:mx-auto max-w-5xl -translate-y-[45%]">
@@ -21,9 +35,13 @@ const Contacto = () => {
       {/* Celular */}
       <div className="flex flex-col items-center text-center">
         <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mb-4">
-          <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-          </svg>
+          <Image
+            src="/contacto/icono-ContactoCelular.svg"
+            alt="Icono Celular"
+            width={42}
+            height={42}
+            className="text-white"
+          />
         </div>
         <h3 className="text-lg font-semibold mb-2">Celular</h3>
         <p className="text-gray-300">+51 994 078 320</p>
@@ -55,67 +73,63 @@ const Contacto = () => {
   </div>
 </div>
 
-{/* Hello Section (Fondo extendido hacia arriba) */}
-<div className="relative z-10 -mt-[150px] md:-mt-[208px] pt-[250px] md:pt-[300px] bg-gradient-to-r from-blue-500 to-blue-400 pb-32">
-  <div className="relative z-30 text-center text-white">
-    <h2 className="text-4xl font-bold mb-4">¡HOLA!</h2>
-    <p className="text-xl">Déjanos tus datos y agenda una visita a nuestro local.</p>
-  </div>
-</div>
-
+    {/* Hello Section (Fondo extendido hacia arriba) */}
+    <div className="relative z-10 -mt-[150px] md:-mt-[208px] pt-[250px] md:pt-[300px] bg-gradient-to-r from-blue-500 to-blue-400 pb-32">
+      <div className="relative z-30 text-center text-white">
+        <h2 className="text-4xl font-bold mb-4">¡HOLA!</h2>
+        <p className="text-xl">Déjanos tus datos y agenda una visita a nuestro local.</p>
+      </div>
+    </div>
+      
+    <div className="relative bg-white">
       {/* Form Section */}
-      <div className="relative z-10 max-w-4xl mx-auto px-4 -mt-20 pb-24">
-        <div className="bg-white rounded-lg p-8 shadow-xl">
+            <div className="relative z-10 max-w-4xl mx-auto px-8 -mt-20 pb-24">
+        <div className="bg-white rounded-lg p-8 shadow-xl border-2 border-gray-200">
           <h3 className="text-2xl font-bold text-gray-800 text-center mb-8">Solicita información</h3>
           
-          <form className="space-y-6">
+          <form className="space-y-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <input
                 type="text"
                 placeholder="Nombre*"
-                className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
+                className="w-full p-3 border-2 border-transparent rounded-md focus:outline-none focus:ring-2 focus:ring-gray-400 bg-gradient-to-r from-gray-50 to-gray-100 [border-image:linear-gradient(to_right,#E5E7EB,#F3F4F6)_1] text-gray-900 placeholder:text-gray-400"              />
               <input
                 type="text"
                 placeholder="Apellido*"
-                className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
+                className="w-full p-3 border-2 border-transparent rounded-md focus:outline-none focus:ring-2 focus:ring-gray-400 bg-gradient-to-r from-gray-50 to-gray-100 [border-image:linear-gradient(to_right,#E5E7EB,#F3F4F6)_1] text-gray-900 placeholder:text-gray-400"              />
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <input
                 type="tel"
                 placeholder="Teléfono*"
-                className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
+                className="w-full p-3 border-2 border-transparent rounded-md focus:outline-none focus:ring-2 focus:ring-gray-400 bg-gradient-to-r from-gray-50 to-gray-100 [border-image:linear-gradient(to_right,#E5E7EB,#F3F4F6)_1] text-gray-900 placeholder:text-gray-400"              />
               <input
                 type="text"
                 placeholder="Distrito*"
-                className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
+                className="w-full p-3 border-2 border-transparent rounded-md focus:outline-none focus:ring-2 focus:ring-gray-400 bg-gradient-to-r from-gray-50 to-gray-100 [border-image:linear-gradient(to_right,#E5E7EB,#F3F4F6)_1] text-gray-900 placeholder:text-gray-400"              />
             </div>
-
+      
             <input
               type="email"
               placeholder="Email*"
-              className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-
+              className="w-full p-3 border-2 border-transparent rounded-md focus:outline-none focus:ring-2 focus:ring-gray-400 bg-gradient-to-r from-gray-50 to-gray-100 [border-image:linear-gradient(to_right,#E5E7EB,#F3F4F6)_1] text-gray-900 placeholder:text-gray-400"            />
+      
             <select
-              className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-500"
+              className="w-full p-3 border-2 border-transparent rounded-md focus:outline-none focus:ring-2 focus:ring-gray-400 bg-gradient-to-r from-gray-50 to-gray-100 [border-image:linear-gradient(to_right,#E5E7EB,#F3F4F6)_1] text-gray-500"
             >
               <option value="">Detalle de reclamación</option>
               <option value="consulta">Consulta</option>
               <option value="reclamo">Reclamo</option>
               <option value="sugerencia">Sugerencia</option>
             </select>
-
-            <textarea
-              placeholder="Mensaje*"
+      
+                        <textarea
+              placeholder="Escribe aquí tu mensaje detallando tus consultas o requerimientos..."
               rows={6}
-              className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full p-4 border-2 border-transparent rounded-md focus:outline-none focus:ring-2 focus:ring-gray-400 resize-none shadow-md text-gray-900 bg-gradient-to-r from-gray-200 to-gray-100 [border-image:linear-gradient(to_right,#9CA3AF,#E5E7EB)_1] placeholder:text-gray-400"
             ></textarea>
-
+      
             <div className="text-center">
               <button
                 type="submit"
@@ -126,56 +140,78 @@ const Contacto = () => {
             </div>
           </form>
         </div>
-      </div>
-
-      {/* Combined Redes Sociales and Laptop Map Section */}
-      <section className="relative bg-gray-900 py-16">
-        <div className="container mx-auto px-4">
-          {/* Redes Sociales */}
-          <div className="text-center text-white max-w-4xl mx-auto mb-24">
-            <h2 className="text-2xl font-bold mb-6">Síguenos en nuestras redes</h2>
-            <div className="flex justify-center space-x-8">
-              {/* TikTok */}
-              <a href="#" className="hover:opacity-75 transition-opacity">
-                <div className="bg-black rounded-full p-3">
-                  <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
-                  </svg>
+      
+      
+        <div className="container mx-auto px-4 mt-16">
+          <div className="text-center text-white max-w-4xl mx-auto mb-20">
+            {/* ... Contenido de redes sociales ... */}
+              <h2 className="text-2xl font-bold mb-4 text-gray-900">Síguenos en nuestras redes</h2>
+                <div className="flex justify-center space-x-8">
+                  {/* TikTok */}
+                  <a href="#" className="hover:opacity-75 transition-opacity">
+                    <div className="rounded-full p-3">
+                      <Image
+                        src="/contacto/REDES-SOCIALES-01.svg"
+                        alt="TikTok"
+                        width={44}
+                        height={44}
+                        className="text-white"
+                        unoptimized
+                      />
+                    </div>
+                  </a>
+                  {/* YouTube */}
+                  <a href="#" className="hover:opacity-75 transition-opacity">
+                    <div className="rounded-full p-3">
+                      <Image
+                        src="/contacto/REDES-SOCIALES-03.svg"
+                        alt="YouTube"
+                        width={44}
+                        height={44}
+                        className="text-white"
+                        unoptimized
+                      />
+                    </div>
+                  </a>
+                  {/* Facebook */}
+                  <a href="#" className="hover:opacity-75 transition-opacity">
+                    <div className="rounded-full p-3">
+                      <Image
+                        src="/contacto/REDES-SOCIALES-04.svg"
+                        alt="Facebook"
+                        width={44}
+                        height={44}
+                        className="text-white"
+                        unoptimized
+                      />
+                    </div>
+                  </a>
+                  {/* Instagram */}
+                  <a href="#" className="hover:opacity-75 transition-opacity">
+                    <div className="rounded-full p-3">
+                      <Image
+                        src="/contacto/REDES-SOCIALES-02.svg"
+                        alt="Instagram"
+                        width={44}
+                        height={44}
+                        className="text-white"
+                        unoptimized
+                      />
+                    </div>
+                  </a>
                 </div>
-              </a>
-              {/* YouTube */}
-              <a href="#" className="hover:opacity-75 transition-opacity">
-                <div className="bg-red-600 rounded-full p-3">
-                  <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M23.5 6.2c-.3-1.1-1.1-1.9-2.2-2.2C19.5 3.4 12 3.4 12 3.4s-7.5 0-9.3.6c-1.1.3-1.9 1.1-2.2 2.2C0 8 0 12 0 12s0 4 .5 5.8c.3 1.1 1.1 1.9 2.2 2.2 1.8.6 9.3.6 9.3.6s7.5 0 9.3-.6c1.1-.3 1.9-1.1 2.2-2.2.5-1.8.5-5.8.5-5.8s0-4-.5-5.8zm-13.8 9.4V8.4l6.2 3.6-6.2 3.6z"/>
-                  </svg>
-                </div>
-              </a>
-              {/* Facebook */}
-              <a href="#" className="hover:opacity-75 transition-opacity">
-                <div className="bg-blue-600 rounded-full p-3">
-                  <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/>
-                  </svg>
-                </div>
-              </a>
-              {/* Instagram */}
-              <a href="#" className="hover:opacity-75 transition-opacity">
-                <div className="bg-gradient-to-tr from-yellow-500 via-pink-500 to-purple-500 rounded-full p-3">
-                  <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465.66.254 1.216.598 1.772 1.153a4.908 4.908 0 0 1 1.153 1.772c.247.637.415 1.363.465 2.428.047 1.066.06 1.405.06 4.122 0 2.717-.01 3.056-.06 4.122-.05 1.065-.218 1.79-.465 2.428a4.883 4.883 0 0 1-1.153 1.772 4.915 4.915 0 0 1-1.772 1.153c-.637.247-1.363.415-2.428.465-1.066.047-1.405.06-4.122.06-2.717 0-3.056-.01-4.122-.06-1.065-.05-1.79-.218-2.428-.465a4.89 4.89 0 0 1-1.772-1.153 4.904 4.904 0 0 1-1.153-1.772c-.248-.637-.415-1.363-.465-2.428C2.013 15.056 2 14.717 2 12c0-2.717.01-3.056.06-4.122.05-1.066.217-1.79.465-2.428a4.88 4.88 0 0 1 1.153-1.772A4.897 4.897 0 0 1 5.45 2.525c.638-.248 1.362-.415 2.428-.465C8.944 2.013 9.283 2 12 2zm0 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm6.5-.25a1.25 1.25 0 0 0-2.5 0 1.25 1.25 0 0 0 2.5 0zM12 9a3 3 0 1 1 0 6 3 3 0 0 1 0-6z"/>
-                  </svg>
-                </div>
-              </a>
+              </div>
             </div>
           </div>
-
-          {/* Laptop Map Section */}
-          <div className="max-w-5xl mx-auto relative">
-            <div className="bg-gray-800 rounded-2xl shadow-2xl overflow-hidden">
+        </div>
+      {/* Sección Oscura */}
+      <section className="relative bg-gray-900 py-40"> {/* Aumentado padding vertical */}
+        <div className="container mx-auto px-4">
+          {/* Contenedor para laptop superpuesta */}
+          <div className="max-w-5xl mx-auto relative -mb-96 z-10"> {/* Aumentado margen negativo */}
               <div className="relative h-[500px] w-full">
                 <Image
-                  src="/laptop/LAPTOP-MAPA.webp"
+                  src="/contacto/LAPTOP-MAPA.webp"
                   alt="Ubicación en mapa"
                   fill
                   className="object-cover"
@@ -183,11 +219,16 @@ const Contacto = () => {
                   unoptimized
                 />
               </div>
-            </div>
           </div>
         </div>
       </section>
       
+      {/* Sección Blanca Inferior */}
+      <section className="relative bg-white pt-56 pb-16"> {/* Aumentado padding top */}
+        <div className="container mx-auto px-4">
+          {/* Contenido adicional si es necesario */}
+        </div>
+      </section>
     </div>
   );
 };
