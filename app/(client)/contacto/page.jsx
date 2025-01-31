@@ -204,31 +204,31 @@ const Contacto = () => {
             </div>
           </div>
         </div>
-      {/* Sección Oscura */}
-      <section className="relative bg-gray-900 py-40"> {/* Aumentado padding vertical */}
-        <div className="container mx-auto px-4">
-          {/* Contenedor para laptop superpuesta */}
-          <div className="max-w-5xl mx-auto relative -mb-96 z-10"> {/* Aumentado margen negativo */}
-              <div className="relative h-[500px] w-full">
-                <Image
-                  src="/contacto/LAPTOP-MAPA.webp"
-                  alt="Ubicación en mapa"
-                  fill
-                  className="object-cover"
-                  priority
-                  unoptimized
-                />
-              </div>
-          </div>
-        </div>
-      </section>
-      
-      {/* Sección Blanca Inferior */}
-      <section className="relative bg-white pt-56 pb-16"> {/* Aumentado padding top */}
-        <div className="container mx-auto px-4">
-          {/* Contenido adicional si es necesario */}
-        </div>
-      </section>
+      {/* Sección Oscura Modificada */}
+<section className="relative bg-gray-900 py-24 md:py-40"> {/* Ajuste responsive del padding */}
+  <div className="container mx-auto px-4">
+    {/* Contenedor para laptop superpuesta */}
+    <div className="max-w-5xl mx-auto relative -mb-40 md:-mb-96 z-10"> {/* Margen negativo responsive */}
+      <div className="relative aspect-video w-full h-[300px] md:h-[500px]"> {/* Altura responsive y relación de aspecto */}
+        <Image
+          src="/contacto/LAPTOP-MAPA.webp"
+          alt="Ubicación en mapa"
+          fill
+          className="object-contain md:object-cover" /* Mobile: contain, Desktop: cover */
+          priority
+          unoptimized
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+{/* Sección Blanca Inferior Modificada */}
+<section className="relative bg-white pt-40 md:pt-56 pb-16"> {/* Padding superior responsive */}
+  <div className="container mx-auto px-4">
+    {/* Contenido adicional si es necesario */}
+  </div>
+</section>
     </div>
   );
 };
