@@ -1,7 +1,7 @@
-import Banner from "./productosComponents/Banner";
-import NeonBackground from "./productosComponents/Luz";
-import NuestrosProductos from "./productosComponents/NuestrosProductos";
-import Productos from "./productosComponents/ProductosPrincipal";
+import Banner from "./components/Banner";
+import NeonBackground from "./components/Luz";
+import NuestrosProductos from "./components/NuestrosProductos";
+import Productos from "./components/ProductosPrincipal";
 
 export default function Home() {
   return (
