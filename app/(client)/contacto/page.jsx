@@ -73,8 +73,8 @@ const Contacto = () => {
   </div>
 </div>
 
-    {/* Hello Section (Fondo extendido hacia arriba) */}
-    <div className="relative z-10 -mt-[150px] md:-mt-[208px] pt-[250px] md:pt-[300px] bg-gradient-to-r from-blue-500 to-blue-400 pb-32">
+    {/* Hello Section con variables CSS personalizadas */}
+    <div className="relative z-10 -mt-[150px] md:-mt-[208px] pt-[250px] md:pt-[300px] bg-gradient-to-r from-[--azul_brillante] to-[--azul_intenso] pb-32">
       <div className="relative z-30 text-center text-white">
         <h2 className="text-4xl font-bold mb-4">¡HOLA!</h2>
         <p className="text-xl">Déjanos tus datos y agenda una visita a nuestro local.</p>
