@@ -1,5 +1,5 @@
 import Banner from "../components/banner";
-import Datos from "../components/datos";
+import Datos from "../components/Datos";
 import Ejemplos from "../components/Ejemplos";
 import Section2 from "../components/section2/Section2";
 
