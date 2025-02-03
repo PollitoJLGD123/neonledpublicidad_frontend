@@ -1,5 +1,6 @@
 import React from "react";
-import "./productosIndi.css";
+import "./productsStyle.css";
+import "@/public/productosIndividuales/CarroLaptop.png"
 
 export default function SquareRectangle() {
   return (
@@ -9,7 +10,7 @@ export default function SquareRectangle() {
 
       {/* Imagen entre el cuadrado y el rectángulo */}
       <img
-        src="./productosIndividuales/CarroLaptop.png"
+        src="/productosIndividuales/CarroLaptop.png"
         alt="LaptopImg"
         className="intermediate-image"
       />

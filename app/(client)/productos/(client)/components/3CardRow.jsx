@@ -1,6 +1,6 @@
 "use client";
 
-import "./productosIndi.css";
+import "./productsStyle.css";
 
 export default function ThreeCardRow() {
   const cards = [

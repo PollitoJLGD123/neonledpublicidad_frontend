@@ -1,7 +1,7 @@
 import ThreeCardRow from "./3CardRow";
 import SquareRectangle from "./CuadradoRectangulo";
 import Section2BG from "./Section2BG";
-import "./productosIndi.css"
+import "./productsStyle.css"
 
 export default function Section2() {
   return (

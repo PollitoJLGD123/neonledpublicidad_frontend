@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import "./productosIndi.css"
+import "./productsStyle.css"
 
 export default function GradientBanner() {
   return (
