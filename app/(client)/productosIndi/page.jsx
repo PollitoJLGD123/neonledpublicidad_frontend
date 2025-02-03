@@ -1,18 +1,9 @@
-import ThreeCardRow from "./components/3CardRow";
-import SquareRectangle from "./components/CuadradoRectangulo";
-import Section2BG from "./components/Section2BG";
-import "./components/productosIndi.css"
+import Section2 from "./components/Section2";
 
-export default function Section2() {
+export default function Home() {
   return (
-    <div className="home-container">
-      <Section2BG />
-      <div className="overlay-cards">
-        <ThreeCardRow />
-      </div>
-      <div className="square-info-container">
-        <SquareRectangle />
-      </div>
+    <div>
+      <Section2/>
     </div>
   );
 }
