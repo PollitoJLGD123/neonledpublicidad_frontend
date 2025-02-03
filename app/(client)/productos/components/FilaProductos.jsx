@@ -10,6 +10,7 @@ function FilaProductos({ productos }) {
           imgSrc={producto.imgSrc}
           altText={producto.altText}
           description={producto.description}
+          route={producto.route}
         />
       ))}
     </div>

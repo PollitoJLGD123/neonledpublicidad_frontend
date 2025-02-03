@@ -4,13 +4,12 @@ import { motion, useInView } from "framer-motion";
 import "./productoStyles.css";
 
 export default function NuestrosProductos() {
-  const [hasAnimated, setHasAnimated] = useState(false);  // Estado para controlar si la animación ya se ha ejecutado
+  const [hasAnimated, setHasAnimated] = useState(false);
   const ref = React.useRef(null);
   const isInView = useInView(ref, { triggerOnce: true, threshold: 0.3 });
 
-  // Controlamos si la animación ya ha ocurrido
   if (isInView && !hasAnimated) {
-    setHasAnimated(true);  // Cambiamos el estado una vez que la animación se haya ejecutado
+    setHasAnimated(true); 
   }
 
   return (
