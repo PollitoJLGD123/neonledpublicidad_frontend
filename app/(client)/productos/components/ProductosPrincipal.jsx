@@ -100,6 +100,7 @@ export default function Productos() {
       {/* Fila 1 */}
       <motion.div
         ref={fila1Ref}
+        className="fila-productos"
         initial={{ x: "100%" }}
         animate={animacionActivadaFila1 ? { x: 0 } : { x: "100%" }}
         transition={{ duration: 2, ease: "easeOut" }}
@@ -111,6 +112,7 @@ export default function Productos() {
       {/* Fila 2 */}
       <motion.div
         ref={fila2Ref}
+        className="fila-productos"
         initial={{ x: "-100%" }}
         animate={animacionActivadaFila2 ? { x: 0 } : { x: "-100%" }}
         transition={{ duration: 2, ease: "easeOut" }}
@@ -122,6 +124,7 @@ export default function Productos() {
       {/* Fila 3 */}
       <motion.div
         ref={fila3Ref}
+        className="fila-productos"
         initial={{ x: "100%" }}
         animate={animacionActivadaFila3 ? { x: 0 } : { x: "100%" }}
         transition={{ duration: 2, ease: "easeOut" }}
@@ -133,6 +136,7 @@ export default function Productos() {
       {/* Fila 4 */}
       <motion.div
         ref={fila4Ref}
+        className="fila-productos"
         initial={{ x: "-100%" }}
         animate={animacionActivadaFila4 ? { x: 0 } : { x: "-100%" }}
         transition={{ duration: 2, ease: "easeOut" }}
