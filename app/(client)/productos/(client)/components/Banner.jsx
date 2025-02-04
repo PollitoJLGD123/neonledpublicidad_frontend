@@ -1,10 +1,15 @@
+export default function Banner({ titulo, imagen }) {
+  const style = {
+    backgroundImage: `url(${imagen})`,
+  };
 
-export default function Banner() {
-
-
-    return (
-        <>
-            <h1>Banner</h1>
-        </>
-    )
+  return (
+    <main style={style}>
+      <h1>
+        Conoce más sobre
+        <span>{titulo}</span>
+        en nuestra página
+      </h1>
+    </main>
+  );
 }
