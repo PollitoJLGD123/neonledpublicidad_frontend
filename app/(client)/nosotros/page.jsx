@@ -3,16 +3,26 @@ import React from 'react';
 const Nosotros = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-white">
-      {/* Hero Section - Mejorado para móviles */}
-      <section className="relative min-h-[400px] md:h-[500px] bg-gradient-to-r from-blue-900 to-blue-800 flex items-center justify-center px-4 py-12 md:py-0">
+      {/* Hero Section - Mejorado para móviles con imagen de fondo */}
+      <section className="relative min-h-[400px] md:h-[500px] bg-gradient-to-r from-blue-900 to-blue-800 flex items-center justify-center px-4 py-12 md:py-0 overflow-hidden">
+        {/* Imagen de fondo semi-transparente */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src="/Nosotros/FONDO WEB_NOSOTROS.jpg"
+            alt="Fondo Neon Led Store"
+            className="w-full h-full object-cover opacity-30"
+          />
+        </div>
+
         <div className="absolute right-0 w-32 h-32 md:w-64 md:h-64 mt-[-50px] md:mt-0">
           {/* Placeholder redimensionado para móviles */}
           <div className="w-full h-full rounded-full bg-blue-400/20"></div>
         </div>
-        <div className="text-center max-w-xl lg:max-w-2xl px-4 z-10">
-          <h2 className="text-xl md:text-2xl mb-2 md:mb-4">Conoce más sobre</h2>
-          <h1 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6">NOSOTROS</h1>
-          <p className="text-base md:text-lg">
+
+        <div className="text-center max-w-xl lg:max-w-2xl px-4 z-10 relative">
+          <h2 className="text-xl md:text-2xl mb-2 md:mb-4 text-white">Conoce más sobre</h2>
+          <h1 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6 text-white">NOSOTROS</h1>
+          <p className="text-base md:text-lg text-white">
             Somos Neon Led Store, una empresa dedicada a la creación de diseños personalizados de luces LED que transforman cualquier espacio en un reflejo único de estilo y personalidad.
           </p>
         </div>
