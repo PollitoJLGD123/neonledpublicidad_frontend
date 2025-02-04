@@ -103,6 +103,8 @@ button:hover .arrow:before {
 
 .productos-container {
   padding: 3% 10%;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 .producto-row {
@@ -156,4 +158,8 @@ button:hover .arrow:before {
 
 .w-full {
   width: 100%;
+}
+
+.fila-productos {
+  will-change: transform;
 }

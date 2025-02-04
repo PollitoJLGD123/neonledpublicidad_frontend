@@ -59,7 +59,7 @@ const Nosotros = () => {
           {/* Values cards con mejor espaciado móvil */}
           {[
             {
-              title: "Somos un",
+              title: "Trabajo en",
               value: "EQUIPO",
               bgColor: "bg-blue-400",
               icon: (
@@ -72,7 +72,7 @@ const Nosotros = () => {
               )
             },
             {
-              title: "Velamos por",
+              title: "Compromiso con",
               value: "EL CLIENTE",
               bgColor: "bg-blue-600",
               icon: (
@@ -93,8 +93,8 @@ const Nosotros = () => {
               )
             },
             {
-              title: "Orientación",
-              value: "AL CLIENTE",
+              title: "Profecionalismo",
+              value: "",
               bgColor: "bg-gray-800",
               icon: (
                 <svg className="w-6 h-6 md:w-8 md:h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor">
