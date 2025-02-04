@@ -9,7 +9,7 @@ export default function Home() {
     <>
       <Banner />
       <Section2 idProducto={idProducto} />
-      <Datos />
+      <Datos idProducto={idProducto}/>
       <Ejemplos />
     </>
   );
