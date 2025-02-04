@@ -36,29 +36,34 @@ const data = [
 
 export default function Datos() {
   return (
-    <>
-      <NeonBackground />
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-white flex flex-col items-center justify-center p-6">
-    
-      <h1 className="text-4xl font-bold mb-8">Datos sobre: HOLOGRÁFICO</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {data.map((item) => (
-          <div
-            key={item.id}
-            className="bg-gray-800 p-4 rounded-xl shadow-md text-center flex flex-col justify-between hover:shadow-lg transform hover:scale-105 transition-transform"
-          >
-            <div className="flex items-center justify-center mb-4">
-              <div className="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg">
-                {item.id}
+    <div className="relative min-h-screen">
+      <NeonBackground className="absolute inset-0 z-0" />
+      
+      <div className="relative z-10 min-h-screen bg-gradient-to-b from-gray-900/80 to-black/80 text-white flex flex-col items-center justify-center p-6">
+        <h1 className="text-4xl font-bold mb-8 text-center">Datos sobre: </h1>
+        <h1 className="text-4xl font-bold mb-8 text-center text-cyan-400 neon-text">HOLOGRÁFICO</h1>
+        
+        {/* Cambiamos el grid por flexbox */}
+        <div className="flex flex-wrap justify-center gap-6 max-w-6xl w-full">
+          {data.map((item) => (
+            <div
+              key={item.id}
+              className="bg-gray-800/90 backdrop-blur-sm p-6 rounded-xl shadow-xl text-center 
+                         flex flex-col justify-between hover:shadow-2xl transform hover:scale-[1.02] 
+                         transition-all duration-300 max-w-xs mx-4 w-full flex-grow-0" // Añadimos flex-grow-0
+            >
+              <div className="flex items-center justify-center mb-4">
+                <div className="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center 
+                              justify-center font-bold text-sm">
+                  {item.id}
+                </div>
               </div>
+              <h2 className="text-lg font-semibold mb-2">{item.title}</h2>
+              <p className="text-gray-300 text-xs leading-relaxed">{item.description}</p>
             </div>
-            <h2 className="text-xl font-semibold mb-2">{item.title}</h2>
-            <p className="text-gray-300 text-sm">{item.description}</p>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
-    </>
-    
   );
 }
