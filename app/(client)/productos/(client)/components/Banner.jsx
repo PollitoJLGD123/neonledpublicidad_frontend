@@ -4,10 +4,19 @@ export default function Banner({ titulo, imagen }) {
   };
 
   return (
-    <main style={style}>
-      <h1>
+    <main
+      style={style}
+      className="h-[calc(100vh-100px)] bg-cover overflow-hidden bg-center relative"
+    >
+      <div className="rotate-45 absolute -top-[1000px] left-40">
+        <div className="border-[32px] w-[1000px] h-[3000px] bg-gradient-to-b from-[#00b2fb] to-[#005ee0] absolute -left-[0px] top-0 z-10"></div>
+        <div className="border-[32px] w-[1000px] h-[1000px] bg-[#02101d] absolute left-[calc(1000px-32px)] top-[700px]"></div>
+      </div>
+      <h1 className="text-white font-bold flex flex-col gap-4 items-center absolute left-0 w-[750px] bottom-40 text-4xl">
         Conoce más sobre
-        <span>{titulo}</span>
+        <span style={{ textShadow: '0 0 10px lightblue' }} className="text-6xl">
+          {titulo}
+        </span>
         en nuestra página
       </h1>
     </main>
