@@ -12,9 +12,12 @@ export default function Banner({ titulo, imagen }) {
         <div className="border-[32px] w-[1000px] h-[3000px] bg-gradient-to-b from-[#00b2fb] to-[#005ee0] absolute -left-[0px] top-0 z-10"></div>
         <div className="border-[32px] w-[1000px] h-[1000px] bg-[#02101d] absolute left-[calc(1000px-32px)] top-[700px]"></div>
       </div>
-      <h1 className="text-white font-bold flex flex-col gap-4 items-center absolute left-0 w-[750px] bottom-40 text-4xl">
+      <h1 className="text-white font-bold flex flex-col gap-4 items-center absolute left-0 w-[750px] bottom-40 text-4xl text-center">
         Conoce más sobre
-        <span style={{ textShadow: '0 0 10px lightblue' }} className="text-6xl">
+        <span
+          style={{ textShadow: '0 0 10px lightblue' }}
+          className="text-6xl w-[600px]"
+        >
           {titulo}
         </span>
         en nuestra página
