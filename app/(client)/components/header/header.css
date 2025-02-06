@@ -1,5 +1,73 @@
-/* Para pantallas pequeñas */
 @media (max-width: 580px) {
+    .menu-icon {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .menu-icon-text {
+        color: white;
+        margin-right: 10px;
+    }
+
+    .text-small {
+        font-size: 1rem;
+    }
+
+    .text-large {
+        font-size: 2rem;
+    }
+
+    .icon-box {
+        width: 40px;
+        height: 40px;
+        background: linear-gradient(to right, var(--azul_brillante), var(--azul_intenso));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        transition: background-color 0.3s ease;
+    }
+
+    .inner-box {
+        position: relative;
+        width: 34px;
+        background-color: var(--azul_oscuro);
+        height: 34px;
+    }
+
+    .bar {
+        position: absolute;
+        width: 80%;
+        height: 2px;
+        top: 16px;
+        left: 3.5px;
+        background-color: WHITE;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .bar1 {
+        transform: rotate(45deg);
+    }
+
+    .bar2 {
+        transform: rotate(-45deg);
+    }
+
+    .x-mark {
+        color: white;
+        font-size: 12px;
+        font-weight: bold;
+        transition: transform 0.3s ease;
+    }
+    .icon-box.active {
+        background-color: #0097a7;
+    }
+
+    .icon-box.active .x-mark {
+        transform: rotate(45deg);
+    }
+
     .containerF {
         background-color: var(--azul_oscuro);
         position: relative;
@@ -76,6 +144,7 @@
         border-top: 2px solid var(--azul_brillante);
         text-align: center;
     }
+
     .red-bg {
         background-color: var(--azul_oscuro);
         height: 25vh;
@@ -106,5 +175,3 @@
         background-color: var(--azul_oscuro);
     }
 }
-
-

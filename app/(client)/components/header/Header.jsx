@@ -11,7 +11,6 @@ export default function Header() {
     const [isSmallScreen, setIsSmallScreen] = useState(false);
     const [menuInitialized, setMenuInitialized] = useState(false);
 
-    // Verificar el estado del menú en el localStorage al cargar
     useEffect(() => {
         const savedMenuState = localStorage.getItem("menuActive");
         if (savedMenuState !== null) {
@@ -24,7 +23,7 @@ export default function Header() {
                 if (!menuInitialized) {
                     setMenuInitialized(true);
                     if (!savedMenuState) {
-                        setMenuActive(true); // Activar automáticamente si es una pantalla pequeña
+                        setMenuActive(true);
                     }
                     setContainerFullHeight(true);
                 }
@@ -43,7 +42,6 @@ export default function Header() {
         };
     }, [menuInitialized]);
 
-    // Al cambiar el estado del menú, guardar el valor en el localStorage
     useEffect(() => {
         localStorage.setItem("menuActive", JSON.stringify(menuActive));
         if (menuActive) {
@@ -78,10 +76,22 @@ export default function Header() {
                     <LinkNav text={"Contacto"} link={"/contacto"} />
                     {isSmallScreen && (
                         <div className="menu-icon" onClick={toggleMenu}>
-                            <span className="menu-icon-text">
-                                {menuActive ? "Cerrar X" : "\u2630"}
+                            <span className={`menu-icon-text ${menuActive ? "text-small" : "text-large"}`}>
+                                {menuActive ? "Cerrar" : "\u2630"}
                             </span>
+                            {menuActive && (
+                                <div className="icon-box">
+                                    <div className="inner-box">
+                                        <div className="bar bar1"></div>
+                                        <div className="bar bar2"></div>
+                                    </div>
+                                </div>
+                            )}
+
                         </div>
+
+
+
                     )}
                 </header>
                 {menuActive && (
