@@ -4,18 +4,28 @@ import Link from "next/link";
 import DropdownLink from "./components/DropdownLink";
 import LinkNav from "./components/LinkNav";
 import "./header.css";
+
 export default function Header() {
     const [menuActive, setMenuActive] = useState(false);
     const [containerFullHeight, setContainerFullHeight] = useState(false);
     const [isSmallScreen, setIsSmallScreen] = useState(false);
     const [menuInitialized, setMenuInitialized] = useState(false);
+
+    // Verificar el estado del menú en el localStorage al cargar
     useEffect(() => {
+        const savedMenuState = localStorage.getItem("menuActive");
+        if (savedMenuState !== null) {
+            setMenuActive(JSON.parse(savedMenuState));
+        }
+
         const handleResize = () => {
             if (window.innerWidth <= 580) {
                 setIsSmallScreen(true);
                 if (!menuInitialized) {
-                    setMenuActive(true);
                     setMenuInitialized(true);
+                    if (!savedMenuState) {
+                        setMenuActive(true); // Activar automáticamente si es una pantalla pequeña
+                    }
                     setContainerFullHeight(true);
                 }
             } else {
@@ -25,6 +35,7 @@ export default function Header() {
                 setMenuInitialized(false);
             }
         };
+
         handleResize();
         window.addEventListener("resize", handleResize);
         return () => {
@@ -32,7 +43,9 @@ export default function Header() {
         };
     }, [menuInitialized]);
 
+    // Al cambiar el estado del menú, guardar el valor en el localStorage
     useEffect(() => {
+        localStorage.setItem("menuActive", JSON.stringify(menuActive));
         if (menuActive) {
             document.body.classList.add("overflow-hidden");
         } else {
@@ -72,54 +85,51 @@ export default function Header() {
                     )}
                 </header>
                 {menuActive && (
-                    <>
-                        <div className="dropdown-menu bg-gradient-to-r from-[--azul_brillante] to-[--azul_intenso]">
-                            <DropdownLink
-                                text={"Inicio"}
-                                link={"/"}
-                                isInicio={true}
-                                final={false}
-                                closeMenu={() => {
-                                    setMenuActive(false);
-                                    setContainerFullHeight(false);
-                                }}
-                            />
-                            <DropdownLink
-                                text={"Productos"}
-                                link={"/productos"}
-                                isInicio={false}
-                                final={false}
-                                closeMenu={() => {
-                                    setMenuActive(false);
-                                    setContainerFullHeight(false);
-                                }}
-                            />
-                            <DropdownLink
-                                text={"Nosotros"}
-                                link={"/nosotros"}
-                                isInicio={false}
-                                final={false}
-                                closeMenu={() => {
-                                    setMenuActive(false);
-                                    setContainerFullHeight(false);
-                                }}
-                            />
-                            <DropdownLink
-                                text={"Contacto"}
-                                link={"/contacto"}
-                                isInicio={false}
-                                final={true}
-                                closeMenu={() => {
-                                    setMenuActive(false);
-                                    setContainerFullHeight(false);
-                                }}
-                            />
-                            <div className="red-bg ">
-                                <img className="absolute w-[130px] right-[calc(50%-65px)] bottom-[0] translate-y-[40%] z-30" src="/header_footer/tiktock.svg" alt="" />
-                            </div>
+                    <div className="dropdown-menu bg-gradient-to-r from-[--azul_brillante] to-[--azul_intenso]">
+                        <DropdownLink
+                            text={"Inicio"}
+                            link={"/"}
+                            isInicio={true}
+                            final={false}
+                            closeMenu={() => {
+                                setMenuActive(false);
+                                setContainerFullHeight(false);
+                            }}
+                        />
+                        <DropdownLink
+                            text={"Productos"}
+                            link={"/productos"}
+                            isInicio={false}
+                            final={false}
+                            closeMenu={() => {
+                                setMenuActive(false);
+                                setContainerFullHeight(false);
+                            }}
+                        />
+                        <DropdownLink
+                            text={"Nosotros"}
+                            link={"/nosotros"}
+                            isInicio={false}
+                            final={false}
+                            closeMenu={() => {
+                                setMenuActive(false);
+                                setContainerFullHeight(false);
+                            }}
+                        />
+                        <DropdownLink
+                            text={"Contacto"}
+                            link={"/contacto"}
+                            isInicio={false}
+                            final={true}
+                            closeMenu={() => {
+                                setMenuActive(false);
+                                setContainerFullHeight(false);
+                            }}
+                        />
+                        <div className="red-bg">
+                            <img className="absolute w-[130px] right-[calc(50%-65px)] bottom-[0] translate-y-[40%] z-30" src="/header_footer/tiktock.svg" alt="" />
                         </div>
-
-                    </>
+                    </div>
                 )}
             </div>
         </>
