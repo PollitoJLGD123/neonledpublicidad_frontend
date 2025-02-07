@@ -163,3 +163,9 @@ button:hover .arrow:before {
 .fila-productos {
   will-change: transform;
 }
+@media (max-width: 810px) {
+  .producto-row {
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 1rem;
+  }
+}

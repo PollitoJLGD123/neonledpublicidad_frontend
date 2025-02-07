@@ -113,3 +113,39 @@
   height: 300px;
   z-index: 2;
 }
+@media (max-width: 768px) {
+  .custom-square {
+    height: 200px;
+  }
+  .square-info-container {
+    height: 330px;
+  }
+  .card {
+   max-height: 180px;
+   width: 25%;
+  }
+  .card-description {
+    font-size: 0.75rem;
+  }
+  .card-title {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 517px) {.info-rectangle {
+    padding: 5rem 1.8rem 5rem 5rem;
+  }
+  .info-description {
+    font-size: 0.65rem;
+  }
+}
+@media (max-width: 697px) {.info-rectangle {
+    padding: 5rem 1.8rem 5rem 5rem;
+  }
+  .info-description {
+    font-size: 0.65rem;
+  }
+  .intermediate-image{
+    width: 240px;
+    height: 230px;
+  }
+}
