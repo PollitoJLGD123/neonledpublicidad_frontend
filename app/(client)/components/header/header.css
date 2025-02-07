@@ -60,6 +60,7 @@
         font-weight: bold;
         transition: transform 0.3s ease;
     }
+
     .icon-box.active {
         background-color: #0097a7;
     }
@@ -72,6 +73,7 @@
         background-color: var(--azul_oscuro);
         position: relative;
         overflow: hidden;
+        
     }
 
     .containerF.full-height {
@@ -135,6 +137,8 @@
         flex-direction: column;
         overflow-y: auto;
         z-index: 9998;
+        scrollbar-width: none;
+        
     }
 
     .dropdown-menu>a {
@@ -147,14 +151,14 @@
 
     .red-bg {
         background-color: var(--azul_oscuro);
-        height: 25vh;
+        height: 25vh; 
+        min-height: 150px; 
         position: relative;
         z-index: 1;
         background-color: var(--azul_oscuro);
         border-bottom-left-radius: 100% 30%;
         border-bottom-right-radius: 100% 30%;
-    }
-
+    }  
 }
 
 @media (min-width: 581px) {

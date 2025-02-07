@@ -1,13 +1,19 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-export default function DropdownLink({ text, link, isInicio, closeMenu, final}) {
+export default function DropdownLink({ text, link, isInicio, closeMenu, onClick, final }) {
     const pathname = usePathname();
 
     return (
         <Link
             href={link}
-            onClick={closeMenu} 
+            onClick={(e) => {
+                if (onClick) {
+                    e.preventDefault(); // Evita la navegación si es un submenú.
+                    onClick(); // Ejecuta la función `onClick`, como `goToSubMenu`.
+                }
+                if (closeMenu) closeMenu(); // Cierra el menú si se pasa `closeMenu`.
+            }}
             className={`flex items-center justify-between gap-2 py-4 px-4 text-white font-bold
                 ${pathname === link ? "bg-[--azul_claro]" : "bg-[--azul_oscuro]"} ${final ? "border-b-2 border-b-[--azul_brillante]" : ""} border-t-2 border-t-[--celeste] hover:bg-[--azul_claro] `}
         >
