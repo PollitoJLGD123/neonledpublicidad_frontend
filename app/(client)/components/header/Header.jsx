@@ -85,8 +85,8 @@ export default function Header() {
                     <LinkNav text={"Productos"} link={"/productos"} />
 
                     {currentMenu === "main" ? (
-                        <div className="h-[50px] w-[50px] text-white mx-7 text-center logo">
-                            Neon Led
+                        <div className=" w-[90px] text-white mx-7 text-center logo">
+                            <img src="/header_footer/logo_azul_letraBlanco.png" alt="" />
                         </div>
                     ) : (
                         <div className="h-[50px] w-auto  text-white mx-7 text-center logo flex items-center justify-center">

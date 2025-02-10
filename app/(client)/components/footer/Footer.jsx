@@ -1,9 +1,13 @@
+import Link from "next/link";
+
 export default function Footer() {
     return (
         <>
             <footer className="overflow-hidden h-[850px] md:h-auto bg-gradient-to-r from-[--azul_brillante] to-[--azul_intenso] w-full pb-20">
                 <div className="after:w-[200%] h-[750px] md:h-auto after:translate-x-[-25%] after:z-10 after:absolute after:inset-0 relative after:bg-[--azul_oscuro] pt-16 pb-72  after:rounded-b-[50%]">
-                    <img className="absolute w-[130px] right-[calc(50%-65px)] bottom-[0] translate-y-[40%] z-30" src="/header_footer/tiktock.svg" alt="" />
+                    <div className="rounded-full flex justify-center items-center p-7 bg-white overflow-hidden absolute w-[130px]  right-[calc(50%-65px)] bottom-[0] translate-y-[40%] z-30">
+                        <img className="w-[80px]" src="/header_footer/logo_azul_letraNegra.png" alt="" />
+                    </div>
                     <div className="absolute pt-10 inset-0 z-20 flex flex-col md:flex-row md:justify-between mx-32 gap-12 text-center md:text-left text-white font-semibold">
                         <ul>
                             <li className="flex flex-col">
@@ -43,7 +47,9 @@ export default function Footer() {
                         <div className="flex flex-col">
                             <h2 className="text-[--azul_brillante]">Reclamaciones</h2>
                             <span className="w-[30px] mx-auto md:mx-0 h-[6px] border-t-2 border-solid border-t-[--azul_brillante]"></span>
-                            <p>Libro</p>
+                            <Link className="w-[250px]" href={"/reclamaciones"}>
+                                <img className="w-full" src="/reclamaciones/libro.png" alt="" />
+                            </Link>
                         </div>
                     </div>
                 </div>
