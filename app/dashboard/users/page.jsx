@@ -5,7 +5,7 @@ import Pagination from '../components/Pagination';
 import Table from '../components/Table';
 import { useEffect, useState } from 'react';
 import Modal_usuario from './components/Modal_usuario';
-// import user_service from './services/user.service';
+import user_service from './services/user.service';
 
 const headers = ['id', 'name', 'email', 'created_at'];
 
