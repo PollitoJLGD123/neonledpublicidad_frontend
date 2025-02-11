@@ -10,7 +10,7 @@ export default function Section2({ idProducto }) {
       <div className="overlay-cards">
         <ThreeCardRow idProducto={idProducto}/>
       </div>
-      <div className="square-info-container">
+      <div className="/productosIndividuales/LetrasDoradoLaptop.webp">
         <SquareRectangle idProducto={idProducto} />
       </div>
     </div>

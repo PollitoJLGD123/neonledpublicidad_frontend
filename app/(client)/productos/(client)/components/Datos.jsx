@@ -3,7 +3,7 @@ import React from "react";
 import Card from './card';
 const data = [
   {
-    id: 1,
+    id: 5,
     producto: "NEÓN LED",
     caracteristica: "Perfectas para crear letreros de neón LED personalizados, estas luces son ideales tato para negocios como para el hogar.",
     ventaja: "El material con el que está contruido supera al vidrio en cuanto a ligereza.",
@@ -12,7 +12,7 @@ const data = [
     durabilidad: "Este producto combina tiras de luces LED decorativas encapsuladas en un tubo resistente, diseñado para brindar durabilidad y estilo.",
   },
   {
-    id: 2,
+    id: 1,
     producto: "LETRAS DE ACRÍLICO",
     caracteristica: "Su diseño tridimensional y acabado brillante las convierten en una opción estilizada y sofisticada para cualquier tipo de negocio.",
     ventaja: "La superficie del acrílico es fácil de limpiar y mantener en buen estado, lo que ayuda a conservar su apariencia a lo largo del tiempo.",
@@ -21,7 +21,7 @@ const data = [
     durabilidad: "El acrílico tiene una fuerte resistencia en la intemperie, lo que lo hace adecuado para su uso en el exterior.",
   },
   {
-    id: 3,
+    id: 4,
     producto: "LETRAS DE NEÓN",
     caracteristica: "Su diseño permite combinar las letras de neón LED con otros elementos decorativos creando letreros llamativos y funcionales.",
     ventaja: "Son una herramienta de marketing que puede ayudar a los negocios o eventos a tener más presencia en redes sociales.",
@@ -30,7 +30,7 @@ const data = [
     durabilidad: "Se permite su instalación tanto para el exterior como para el interior, debido a su fuerte resistencia a la intemperie en cualquier estación del año.",
   },
   {
-    id: 4,
+    id: 3,
     producto: "LETREROS LIMUNOSOS",
     caracteristica: "Los letreros luminosos tiene la capacidad de iluminar grandes áreas de manera efectiva.",
     ventaja: "Estos letreros publicitarios se adaptan completamente a la identidad corporativa, permitiendo personalizar colores, luces y diseños.",
@@ -39,7 +39,7 @@ const data = [
     durabilidad: "Los letreros con bombillas LED son más atractivos y permiten ahorrar energía.",
   },
   {
-    id: 5,
+    id: 2,
     producto: "LETRAS DORADAS Y PLATEADAS",
     caracteristica: "Las letras corpóreas pueden personalizarse en diferentes tamaños y estilos, adaptándose a la identidad visual de la empresa.",
     ventaja: "Las letras doradas y plateadas son visualmente llamativas, lo que ayuda a captar la atención de los clientes potenciales.",
