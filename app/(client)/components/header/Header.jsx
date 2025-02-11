@@ -239,8 +239,15 @@ export default function Header() {
                         )}
 
                         <div className="red-bg">
-                            <img className="absolute w-[130px] right-[calc(50%-65px)] bottom-[0] translate-y-[40%] z-30" src="/header_footer/tiktock.svg" alt="" />
+                            <div className="absolute w-[110px] h-[110px] left-1/2 bottom-0 translate-x-[-50%] translate-y-[40%] z-30 rounded-full bg-white flex items-center justify-center">
+                                <img
+                                    className="w-[75px] h-[75px] object-contain"
+                                    src="/header_footer/logo_azul_letraNegra.png"
+                                    alt=""
+                                />
+                            </div>
                         </div>
+
                     </div>
                 )}
             </div>
