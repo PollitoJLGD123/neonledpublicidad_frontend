@@ -22,9 +22,11 @@ export default function Home() {
     <>
     <div className="bg-[--azul_oscuro] overflow-hidden">
       <Slider slides={slidesData} />
-      <div className="px-4 lg:px-8">
+      <div className="px-4 lg:px-8 mt-20 mb-24">
         <NuestrosProductos/> 
-        <FilaProductos productos={fila1}/>     
+        <div className="mt-8">
+          <FilaProductos productos={fila1}/>
+        </div>    
       </div>
       <div>
         <section className="flex flex-col justify-center items-center text-center bg-gradient-to-r from-[--azul_brillante] to-[--azul_cobalto] text-white p-8 w-4/5 max-w-4xl mx-auto rounded-2xl shadow-lg my-12">
