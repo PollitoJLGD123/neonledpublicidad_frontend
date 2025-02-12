@@ -1,4 +1,62 @@
+"use client";
+import React, { useState } from 'react';
+
 export default function Page() {
+  const [formData, setFormData] = useState({
+    nombre: '',
+    apellido: '',
+    email: '',
+    telefono: '',
+    departamento: '',
+    direccion: '',
+    distrito: '',
+    tipo: '',
+    fecha: '',
+    monto: '',
+    descripcion: '',
+  });
+
+  const [status, setStatus] = useState(null);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({ ...prevData, [name]: value }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    console.log(formData);
+    setStatus('loading');
+
+    try {
+      const response = await fetch('/api/reclamaciones', { //CAMBIAR AQUIIIIIIIIIIIIIIIIIIIIIIIII
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+      z``
+      if (response.ok) {
+        setStatus('success');
+        setFormData({
+          nombre: '',
+          apellido: '',
+          email: '',
+          telefono: '',
+          departamento: '',
+          direccion: '',
+          distrito: '',
+          tipo: '',
+          fecha: '',
+          monto: '',
+          descripcion: ''
+        });
+      } else {
+        setStatus('error');
+      }
+    } catch (error) {
+      setStatus('error');
+    }
+  };
   return (
     <>
       <main className="bg-black text-white flex p-8 justify-center items-center">
@@ -8,23 +66,25 @@ export default function Page() {
         </h1>
       </main>
       <section className="p-8 text-[#b2b2b2] md:border-2 md:my-16 border-[#b2b2b2] max-w-3xl mx-auto">
+        {status === 'success' && <p className="text-green-600 text-center">¡Mensaje enviado con éxito!</p>}
+        {status === 'error' && <p className="text-red-600 text-center">Hubo un error, inténtalo de nuevo.</p>}
         <h2 className="text-center text-black md:text-left">
           Déjanos tus datos para poder atender tu reclamo
         </h2>
 
-        <form>
+        <form onSubmit={handleSubmit}>
           <h3 className="text-xl text-center mb-4 mt-2 text-black md:text-left">
             Identidad del consumidor reclamante
           </h3>
 
           <div className="flex flex-col gap-4 md:flex-row md:flex-wrap">
-            <Input placeholder="Nombre*" type="text" />
-            <Input placeholder="Apellido*" type="text" />
-            <Input placeholder="Email*" type="email" />
-            <Input placeholder="Telefono*" type="text" />
-            <Input placeholder="Departamento*" type="text" />
-            <Input placeholder="Dirección*" type="text" />
-            <Input placeholder="Distrito*" type="text" />
+            <Input placeholder="Nombre*" type="text" name="nombre" value={formData.nombre} onChange={handleChange} required />
+            <Input placeholder="Apellido*" type="text" name="apellido" value={formData.apellido} onChange={handleChange} required />
+            <Input placeholder="Email*" type="email" name="email" value={formData.email} onChange={handleChange} required />
+            <Input placeholder="Telefono*" type="text" name="telefono" value={formData.telefono} onChange={handleChange} required />
+            <Input placeholder="Departamento*" type="text" name="departamento" value={formData.departamento} onChange={handleChange} required />
+            <Input placeholder="Dirección*" type="text" name="direccion" value={formData.direccion} onChange={handleChange} required />
+            <Input placeholder="Distrito*" type="text" name="distrito" value={formData.distrito} onChange={handleChange} required />
           </div>
 
           <h3 className="text-xl text-center mb-4 mt-6 text-black md:text-left">
@@ -33,20 +93,24 @@ export default function Page() {
 
           <div className="flex flex-col gap-4 md:flex-row md:flex-wrap">
             <select
+              name="tipo"
+              value={formData.tipo} 
+              onChange={handleChange}
               className="border-[#b2b2b2] border-2 p-2 bg-white"
-              defaultValue="Tipo"
               required
             >
-              <option disabled>Tipo</option>
-              <option>Tipo A</option>
-              <option>Tipo B</option>
-              <option>Tipo C</option>
+              <option value="" disabled>Tipo</option> 
+              <option value="Tipo A">Tipo A</option>
+              <option value="Tipo B">Tipo B</option>
+              <option value="Tipo C">Tipo C</option>
             </select>
 
-            <Input placeholder="Fecha*" type="text" />
-            <Input placeholder="Monto reclamado*" type="number" />
+
+            <Input placeholder="Fecha*" type="text" name="fecha" value={formData.fecha} onChange={handleChange} required />
+            <Input placeholder="Monto reclamado*" type="number" name="monto" value={formData.monto} onChange={handleChange} required />
           </div>
           <textarea
+            name="descripcion" value={formData.descripcion} onChange={handleChange}
             className="border-[#b2b2b2] border-2 p-2 w-full mt-4"
             rows={5}
             placeholder="Descripción del servicio*"
@@ -54,7 +118,7 @@ export default function Page() {
           ></textarea>
 
           <label className="flex gap-2 my-4" htmlFor="veraz">
-            <input className="w-8" type="checkbox" id="veraz" />
+            <input className="w-8" type="checkbox" id="veraz" required />
             Doy fe que los datos e información proporcionados son veraces*
           </label>
 
@@ -64,7 +128,7 @@ export default function Page() {
           </p>
 
           <label className="flex gap-2 my-4" htmlFor="politica">
-            <input className="w-8" type="checkbox" id="politica" />
+            <input className="w-8" type="checkbox" id="politica" required />
             <span>
               Acepto la{' '}
               <a className="text-[#007bf9]">
@@ -74,8 +138,8 @@ export default function Page() {
             </span>
           </label>
 
-          <button className="bg-[#0c1a27] rounded-full p-4 px-16 font-bold block m-auto text-white">
-            Enviar
+          <button type="submit" className="bg-[#0c1a27] rounded-full p-4 px-16 font-bold block m-auto text-white">
+            {status === 'loading' ? 'Enviando...' : 'Enviar'}
           </button>
         </form>
       </section>
@@ -83,13 +147,17 @@ export default function Page() {
   );
 }
 
-function Input({ placeholder, type }) {
+function Input({ placeholder, type, name, value, onChange }) {
   return (
     <input
       className="border-[#b2b2b2] border-2 p-2 flex-1 md:last:w-1/2"
       type={type}
+      name={name}
+      value={value}
+      onChange={onChange}
       placeholder={placeholder}
       required
     />
   );
 }
+
