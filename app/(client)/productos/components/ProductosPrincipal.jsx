@@ -44,22 +44,12 @@ export default function Productos() {
   const fila2Ref = useRef(null);
   const fila3Ref = useRef(null);
   const fila4Ref = useRef(null);
-
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting && !animacionActivadaFila1) {
             setAnimacionActivadaFila1(true);
-          }
-          if (entry.isIntersecting && !animacionActivadaFila2) {
-            setAnimacionActivadaFila2(true);
-          }
-          if (entry.isIntersecting && !animacionActivadaFila3) {
-            setAnimacionActivadaFila3(true);
-          }
-          if (entry.isIntersecting && !animacionActivadaFila4) {
-            setAnimacionActivadaFila4(true);
           }
         });
       },
@@ -69,31 +59,86 @@ export default function Productos() {
     if (fila1Ref.current) {
       observer.observe(fila1Ref.current);
     }
-    if (fila2Ref.current) {
-      observer.observe(fila2Ref.current);
-    }
-    if (fila3Ref.current) {
-      observer.observe(fila3Ref.current);
-    }
-    if (fila4Ref.current) {
-      observer.observe(fila4Ref.current);
-    }
 
     return () => {
       if (fila1Ref.current) {
         observer.unobserve(fila1Ref.current);
       }
+    };
+  }, [animacionActivadaFila1]);
+
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting && !animacionActivadaFila2) {
+            setAnimacionActivadaFila2(true);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    if (fila2Ref.current) {
+      observer.observe(fila2Ref.current);
+    }
+
+    return () => {
       if (fila2Ref.current) {
         observer.unobserve(fila2Ref.current);
       }
+    };
+  }, [animacionActivadaFila2]);
+
+
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting && !animacionActivadaFila3) {
+            setAnimacionActivadaFila3(true);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    if (fila3Ref.current) {
+      observer.observe(fila3Ref.current);
+    }
+
+    return () => {
       if (fila3Ref.current) {
         observer.unobserve(fila3Ref.current);
       }
+    };
+  }, [animacionActivadaFila3]);
+
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting && !animacionActivadaFila4) {
+            setAnimacionActivadaFila4(true);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    if (fila4Ref.current) {
+      observer.observe(fila4Ref.current);
+    }
+
+    return () => {
       if (fila4Ref.current) {
         observer.unobserve(fila4Ref.current);
       }
     };
-  }, [animacionActivadaFila1, animacionActivadaFila2, animacionActivadaFila3, animacionActivadaFila4]);
+  }, [animacionActivadaFila4]);
 
   return (
     <div className="productos-container mt-12">
