@@ -160,7 +160,7 @@ const Contacto = () => {
                 className="w-full p-3 border-2 border-transparent rounded-md focus:outline-none focus:ring-2 focus:ring-gray-400 bg-gradient-to-r from-gray-50 to-gray-100 [border-image:linear-gradient(to_right,#E5E7EB,#F3F4F6)_1] text-gray-900 placeholder:text-gray-400" />
 
               <select
-                name="tipoReclamo" value={formData.tipoReclamo} onChange={handleChange}
+                name="tipoReclamo" value={formData.tipoReclamo} onChange={handleChange} required
                 className="w-full p-3 border-2 border-transparent rounded-md focus:outline-none focus:ring-2 focus:ring-gray-400 bg-gradient-to-r from-gray-50 to-gray-100 [border-image:linear-gradient(to_right,#E5E7EB,#F3F4F6)_1] text-gray-500"
               >
                 <option value="">Detalle de reclamación</option>
