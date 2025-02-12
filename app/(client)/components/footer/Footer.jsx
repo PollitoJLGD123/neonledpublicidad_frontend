@@ -1,5 +1,5 @@
 import Link from "next/link";
-
+import './footer.css'
 export default function Footer() {
     return (
         <>
@@ -8,7 +8,7 @@ export default function Footer() {
                     <div className="rounded-full flex justify-center items-center p-7 bg-white overflow-hidden absolute w-[130px]  right-[calc(50%-65px)] bottom-[0] translate-y-[40%] z-30">
                         <img className="w-[80px]" src="/header_footer/logo_azul_letraNegra.png" alt="" />
                     </div>
-                    <div className="absolute pt-10 inset-0 z-20 flex flex-col md:flex-row md:justify-between mx-32 gap-12 text-center md:text-left text-white font-semibold">
+                    <div className="footer-content absolute pt-10 inset-0 z-20 flex flex-col md:flex-row md:justify-between mx-32 gap-12 text-center md:text-left text-white font-semibold">
                         <ul>
                             <li className="flex flex-col">
                                 <h2 className="text-[--azul_brillante]">Contáctanos</h2>
@@ -26,25 +26,25 @@ export default function Footer() {
                         </ul>
                         <ul>
                             <li className="flex flex-col">
-                                <h2 className="text-[--azul_brillante]">Horario</h2>
+                                <h2 className="text-[--azul_brillante] text-lg md:text-xl">Horario</h2>
                                 <span className="w-[30px] mx-auto md:mx-0 h-[6px] border-t-2 border-solid border-t-[--azul_brillante]"></span>
                             </li>
-                            <li className="flex flex-col">
+                            <li className="flex flex-col text-base md:text-lg">
                                 <p>Disponibilidad:</p>
-                                <p>Lunes a Vietnes</p>
+                                <p>Lunes a Viernes</p>
                                 <p>8:00 a.m - 7:00 p.m</p>
                             </li>
                             <li className="flex flex-col mt-4">
-                                <p>Redes sociales:</p>
-                                <div className="flex gap-4 justify-between mt-2">
-                                    <a className="h-10 w-10" href="#"><img className="w-full" src="/header_footer/tiktock.svg" alt="" /></a>
-                                    <a className="h-10 w-10" href="#"><img className="w-full" src="/header_footer/youtube.svg" alt="" /></a>
-                                    <a className="h-10 w-10" href="#"><img className="w-full" src="/header_footer/facebook.svg" alt="" /></a>
-                                    <a className="h-10 w-10" href="#"><img className="w-full" src="/header_footer/instagram.svg" alt="" /></a>
+                                <p className="text-base md:text-lg">Redes sociales:</p>
+                                <div className="flex gap-4 justify-center md:justify-between mt-2">
+                                    <a className="h-12 w-12 md:h-10 md:w-10" href="#"><img className="w-full" src="/header_footer/tiktock.svg" alt="" /></a>
+                                    <a className="h-12 w-12 md:h-10 md:w-10" href="#"><img className="w-full" src="/header_footer/youtube.svg" alt="" /></a>
+                                    <a className="h-12 w-12 md:h-10 md:w-10" href="#"><img className="w-full" src="/header_footer/facebook.svg" alt="" /></a>
+                                    <a className="h-12 w-12 md:h-10 md:w-10" href="#"><img className="w-full" src="/header_footer/instagram.svg" alt="" /></a>
                                 </div>
                             </li>
                         </ul>
-                        <div className="flex flex-col">
+                        <div className="flex flex-col items-center md:items-start">
                             <h2 className="text-[--azul_brillante]">Reclamaciones</h2>
                             <span className="w-[30px] mx-auto md:mx-0 h-[6px] border-t-2 border-solid border-t-[--azul_brillante]"></span>
                             <Link className="w-[250px]" href={"/reclamaciones"}>
