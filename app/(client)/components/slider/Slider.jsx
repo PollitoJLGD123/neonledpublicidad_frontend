@@ -1,12 +1,19 @@
 "use client"
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 
 const Slider = ({ slides }) => {
   const [current, setCurrent] = useState(0);
   const length = slides.length;
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent((prev) => (prev === length - 1 ? 0 : prev + 1));
+    }, 4000);
 
+    return () => clearInterval(interval);
+  }, [current]);
+  
   const nextSlide = () => {
     setCurrent(current === length - 1 ? 0 : current + 1);
   };
