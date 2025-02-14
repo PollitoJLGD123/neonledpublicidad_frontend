@@ -3,19 +3,23 @@ import { usePathname } from "next/navigation";
 
 export default function DropdownLink({ text, link, isInicio, closeMenu, onClick, final }) {
     const pathname = usePathname();
+    const mainCategory = "/" + pathname.split("/")[1]; 
+    const isActive = pathname === link || (mainCategory === link);
 
     return (
         <Link
             href={link}
             onClick={(e) => {
                 if (onClick) {
-                    e.preventDefault(); // Evita la navegación si es un submenú.
-                    onClick(); // Ejecuta la función `onClick`, como `goToSubMenu`.
+                    e.preventDefault(); 
+                    onClick(); 
                 }
-                if (closeMenu) closeMenu(); // Cierra el menú si se pasa `closeMenu`.
+                if (closeMenu) closeMenu(); 
             }}
             className={`flex items-center justify-between gap-2 py-4 px-4 text-white font-bold
-                ${pathname === link ? "bg-[--azul_claro]" : "bg-[--azul_oscuro]"} ${final ? "border-b-2 border-b-[--azul_brillante]" : ""} border-t-2 border-t-[--celeste] hover:bg-[--azul_claro] `}
+                ${isActive ? "bg-[--azul_claro]" : "bg-[--azul_oscuro]"} 
+                ${final ? "border-b-2 border-b-[--azul_brillante]" : ""} 
+                border-t-2 border-t-[--celeste] hover:bg-[--azul_claro]`}
         >
             <span>{text}</span>
             {!isInicio && (

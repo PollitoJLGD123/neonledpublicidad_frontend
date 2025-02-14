@@ -167,7 +167,7 @@ export default function Header() {
                     )}
                     {currentMenu === "productos" && (
                         <>
-                            <DropdownLink text={"Letras de acrílico"} link={"/productos/letras-acrilico"} isInicio={false} final={false} closeMenu={() => {
+                            <DropdownLink text={"Letras de acrílico"} link={"/productos/letras-acrilico"} isInicio={true} final={false} closeMenu={() => {
                                 setMenuActive(false);
                                 setContainerFullHeight(false);
                                 setCurrentMenu("main");
@@ -182,52 +182,52 @@ export default function Header() {
                                 setContainerFullHeight(false);
                                 setCurrentMenu("main");
                             }} />
-                            <DropdownLink text={"Letras de Neón"} link={"/productos/letras-neon"} isInicio={false} final={true} closeMenu={() => {
+                            <DropdownLink text={"Letras de Neón"} link={"/productos/letras-neon"} isInicio={false} final={false} closeMenu={() => {
                                 setMenuActive(false);
                                 setContainerFullHeight(false);
                                 setCurrentMenu("main");
                             }} />
-                            <DropdownLink text={"Neón Led"} link={"/productos/neon-led"} isInicio={false} final={true} closeMenu={() => {
+                            <DropdownLink text={"Neón Led"} link={"/productos/neon-led"} isInicio={false} final={false} closeMenu={() => {
                                 setMenuActive(false);
                                 setContainerFullHeight(false);
                                 setCurrentMenu("main");
                             }} />
-                            <DropdownLink text={"Impresión en viniles decorativos"} link={"/productos/impresion-vinilo"} isInicio={false} final={true} closeMenu={() => {
+                            <DropdownLink text={"Impresión en viniles decorativos"} link={"/productos/impresion-vinilo"} isInicio={false} final={false} closeMenu={() => {
                                 setMenuActive(false);
                                 setContainerFullHeight(false);
                                 setCurrentMenu("main");
                             }} />
-                            <DropdownLink text={"Menú Board"} link={"/productos/menu-board"} isInicio={false} final={true} closeMenu={() => {
+                            <DropdownLink text={"Menú Board"} link={"/productos/menu-board"} isInicio={false} final={false} closeMenu={() => {
                                 setMenuActive(false);
                                 setContainerFullHeight(false);
                                 setCurrentMenu("main");
                             }} />
-                            <DropdownLink text={"Letras pintadas en MDF"} link={"/productos/letras-pintadas"} isInicio={false} final={true} closeMenu={() => {
+                            <DropdownLink text={"Letras pintadas en MDF"} link={"/productos/letras-pintadas"} isInicio={false} final={false} closeMenu={() => {
                                 setMenuActive(false);
                                 setContainerFullHeight(false);
                                 setCurrentMenu("main");
                             }} />
-                            <DropdownLink text={"Displays"} link={"/productos/displays"} isInicio={false} final={true} closeMenu={() => {
+                            <DropdownLink text={"Displays"} link={"/productos/displays"} isInicio={false} final={false} closeMenu={() => {
                                 setMenuActive(false);
                                 setContainerFullHeight(false);
                                 setCurrentMenu("main");
                             }} />
-                            <DropdownLink text={"Pantallas Led"} link={"/productos/pantalla-led"} isInicio={false} final={true} closeMenu={() => {
+                            <DropdownLink text={"Pantallas Led"} link={"/productos/pantalla-led"} isInicio={false} final={false} closeMenu={() => {
                                 setMenuActive(false);
                                 setContainerFullHeight(false);
                                 setCurrentMenu("main");
                             }} />
-                            <DropdownLink text={"Holográfico"} link={"/productos/holografico"} isInicio={false} final={true} closeMenu={() => {
+                            <DropdownLink text={"Holográfico"} link={"/productos/holografico"} isInicio={false} final={false} closeMenu={() => {
                                 setMenuActive(false);
                                 setContainerFullHeight(false);
                                 setCurrentMenu("main");
                             }} />
-                            <DropdownLink text={"Pixel Led"} link={"/productos/pixel-led"} isInicio={false} final={true} closeMenu={() => {
+                            <DropdownLink text={"Pixel Led"} link={"/productos/pixel-led"} isInicio={false} final={false} closeMenu={() => {
                                 setMenuActive(false);
                                 setContainerFullHeight(false);
                                 setCurrentMenu("main");
                             }} />
-                            <DropdownLink text={"Sillas Luminosas"} link={"/productos/sillas-luminosas"} isInicio={false} final={true} closeMenu={() => {
+                            <DropdownLink text={"Sillas Luminosas"} link={"/productos/sillas-luminosas"} isInicio={false} final={false} closeMenu={() => {
                                 setMenuActive(false);
                                 setContainerFullHeight(false);
                                 setCurrentMenu("main");
