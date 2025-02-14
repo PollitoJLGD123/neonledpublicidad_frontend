@@ -121,6 +121,8 @@ button:hover .arrow:before {
   overflow: hidden;
   border-radius: 8px;
   transition: transform 0.3s ease;
+  display: flex;
+  justify-content: center;
 }
 
 .producto:hover {
@@ -128,7 +130,7 @@ button:hover .arrow:before {
 }
 
 .producto-img {
-  width: 80%;
+  width: 80%; 
   height: auto;
   display: block;
   border-radius: 8px;
@@ -138,9 +140,8 @@ button:hover .arrow:before {
 .producto-description {
   position: absolute;
   bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  right: 0;
+  left: 10%; 
+  right: 0; 
   text-align: center;
   font-size: 1rem;
   font-weight: bold;
@@ -149,7 +150,7 @@ button:hover .arrow:before {
   padding: 0.5rem;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
-  width: 80%;
+  width: 80%; 
   box-sizing: border-box;
 }
 
