@@ -37,7 +37,7 @@
   align-items: center;
   gap: 2rem;
   padding: 2rem;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .card {
@@ -77,7 +77,7 @@
   gap: 5rem;
   width: 100%;
   position: absolute;
-  bottom: 15%;
+  bottom: 10%;
   z-index: 1;
   justify-content: center;
 }
@@ -125,10 +125,11 @@
   }
   .square-info-container {
     height: 330px;
+    bottom: 8%;
   }
   .card {
-   max-height: 180px;
-   width: 25%;
+    max-height: 180px;
+    width: 25%;
   }
   .card-description {
     font-size: 0.75rem;
@@ -138,7 +139,8 @@
   }
 }
 
-@media (max-width: 517px) {.info-rectangle {
+@media (max-width: 517px) {
+  .info-rectangle {
     padding: 5rem 1.8rem 5rem 5rem;
   }
   .info-description {
@@ -146,13 +148,14 @@
   }
 }
 
-@media (max-width: 697px) {.info-rectangle {
+@media (max-width: 697px) {
+  .info-rectangle {
     padding: 5rem 1.8rem 5rem 5rem;
   }
   .info-description {
     font-size: 0.65rem;
   }
-  .intermediate-image{
+  .intermediate-image {
     width: 240px;
     height: 230px;
   }
@@ -184,33 +187,20 @@
 
 @media (max-width: 768px) {
   .three-card-row {
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
-    gap: 1.5rem;
+    gap: 1rem;
   }
 
   .card {
-    width: 80%;
-    min-width: 200px;
+    width: 30%;
+    min-width: 150px;
   }
 
   .card-icon {
-    width: 60px;
-    height: 60px;
-  }
-
-  .card-title {
-    font-size: 1rem;
-  }
-
-  .card-description {
-    font-size: 0.8rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .card {
-    width: 90%;
+    width: 50px;
+    height: 50px;
   }
 
   .card-title {
@@ -221,3 +211,19 @@
     font-size: 0.75rem;
   }
 }
+
+@media (max-width: 480px) {
+  .card {
+    width: 30%;
+    min-width: 120px;
+  }
+
+  .card-title {
+    font-size: 0.8rem;
+  }
+
+  .card-description {
+    font-size: 0.7rem;
+  }
+}
+
