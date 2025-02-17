@@ -1,5 +1,6 @@
+'use client';
 import NeonBackground from '../../components/Luz';
-import React from "react";
+import React, { useState } from "react";
 import Card from './card';
 const data = [
   {
@@ -132,6 +133,17 @@ const data = [
 
 export default function Datos({ idProducto }) {
   const item = data.find((item) => item.id === idProducto);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const totalCards = 5;
+
+  const goNext = () => {
+    setActiveIndex(prev => Math.min(prev + 1, totalCards - 1));
+  };
+
+  const goPrev = () => {
+    setActiveIndex(prev => Math.max(prev - 1, 0));
+  };
+
   return (
     <div className="relative min-h-screen">
       <NeonBackground className="absolute inset-0 z-0" />
@@ -140,8 +152,47 @@ export default function Datos({ idProducto }) {
         <h1 className="text-4xl font-bold mb-8 text-center">Datos sobre: </h1>
         <h1 className="text-4xl font-bold mb-8 text-center text-cyan-400 neon-text">{item.producto}</h1>
 
-        {/* Cambiamos el grid por flexbox */}
-        <div className="flex flex-wrap justify-center gap-6 max-w-6xl w-full">
+        {/* Versión móvil - Carrusel */}
+        <div className="sm:hidden relative w-full max-w-6xl overflow-hidden">
+          <button
+            onClick={goPrev}
+            disabled={activeIndex === 0}
+            className="absolute left-2 top-1/2 -translate-y-1/2 z-10 p-2 bg-gray-100 rounded-full shadow-md disabled:opacity-50"
+          >
+            ←
+          </button>
+          <button
+            onClick={goNext}
+            disabled={activeIndex === totalCards - 1}
+            className="absolute right-2 top-1/2 -translate-y-1/2 z-10 p-2 bg-gray-100 rounded-full shadow-md disabled:opacity-50"
+          >
+            →
+          </button>
+
+          <div 
+            className="flex transition-transform duration-300"
+            style={{ transform: `translateX(-${activeIndex * 100}%)` }}
+          >
+            <div className="w-full flex-shrink-0 p-2">
+              <Card numero={1} title="Característica" descripcion={item.caracteristica} />
+            </div>
+            <div className="w-full flex-shrink-0 p-2">
+              <Card numero={2} title="Ventaja" descripcion={item.ventaja} />
+            </div>
+            <div className="w-full flex-shrink-0 p-2">
+              <Card numero={3} title="Consumo Energético" descripcion={item.consumo_energetico} />
+            </div>
+            <div className="w-full flex-shrink-0 p-2">
+              <Card numero={4} title="Iluminación" descripcion={item.iluminacion} />
+            </div>
+            <div className="w-full flex-shrink-0 p-2">
+              <Card numero={5} title="Durabilidad" descripcion={item.durabilidad} />
+            </div>
+          </div>
+        </div>
+
+        {/* Versión escritorio - Grid normal */}
+        <div className="hidden sm:flex flex-wrap justify-center gap-6 max-w-6xl w-full">
           <Card numero={1} title="Característica" descripcion={item.caracteristica} />
           <Card numero={2} title="Ventaja" descripcion={item.ventaja} />
           <Card numero={3} title="Consumo Energético" descripcion={item.consumo_energetico} />
