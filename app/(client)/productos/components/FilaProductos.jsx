@@ -3,7 +3,7 @@ import Producto from './ProductoIndividual';
 
 function FilaProductos({ productos }) {
   return (
-    <div className="producto-row">
+    <div className="producto-row ">
       {productos.map((producto, index) => (
         <Producto
           key={index}
