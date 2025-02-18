@@ -8,7 +8,7 @@ const cards = [
     title: "LETRAS DE ACRÍLICO", 
     description: "Te mostramos la implementación de las letras de acrílico en diversos espacios", 
     bgColor: "bg-black text-white", 
-    glow: "text-blue-400" 
+    glow: "text-blue-600" 
   },
   { 
     title: "Juguetería", 
