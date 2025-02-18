@@ -83,6 +83,7 @@ export default function Header() {
                 >
                     <LinkNav text={"Inicio"} link={"/"} />
                     <LinkNav text={"Productos"} link={"/productos"} />
+                    <LinkNav text={"Blog"} link={"/blog"} />
 
                     {currentMenu === "main" ? (
                         <div className=" w-[90px] text-white mx-7 text-center logo">
@@ -103,6 +104,8 @@ export default function Header() {
 
                     <LinkNav text={"Nosotros"} link={"/nosotros"} />
                     <LinkNav text={"Contacto"} link={"/contacto"} />
+                    <LinkNav text={"Login"} link={"/login"} />
+
                     {isSmallScreen && (
                         <div className="menu-icon" onClick={toggleMenu}>
                             <span className={`menu-icon-text ${menuActive ? "text-small" : "text-large"}`}>
