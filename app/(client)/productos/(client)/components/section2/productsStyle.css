@@ -121,11 +121,13 @@
 
 @media (max-width: 768px) {
   .custom-square {
-    height: 200px;
+    display: none;
   }
   .square-info-container {
-    height: 330px;
+    height: auto;
     bottom: 8%;
+    flex-direction: column;
+    gap: 2rem;
   }
   .card {
     max-height: 180px;
@@ -226,4 +228,3 @@
     font-size: 0.7rem;
   }
 }
-
