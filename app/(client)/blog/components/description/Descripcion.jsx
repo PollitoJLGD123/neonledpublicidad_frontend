@@ -1,29 +1,51 @@
+"use client";
 import Item from './components/item'
+import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 export default function Descripcion() {
+    const [isVisible, setIsVisible] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const flecha = document.getElementById("flechaAbajo");
+            if (flecha) {
+                const rect = flecha.getBoundingClientRect();
+                const isInView = rect.top < window.innerHeight && rect.bottom >= 0;
+                setIsVisible(isInView);
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
     return (
         <div className="relative w-full min-h-screen mt-10">
             <div className="absolute top-0 left-0 w-full h-1/4 bg-gradient-to-r from-[--azul_brillante] to-[--azul_intenso]"></div>
             <div className="relative flex flex-col md:flex-row items-center justify-center  py-16 gap-8">
-                <div className="flex flex-col gap-4 flex-[70%]">
-                    <div className="flex flex-col md:flex-row  pl-8 py-3 bg-[#0F1721] rounded-br-lg rounded-tr-lg shadow-lg overflow-hidden relative">
-                        <div className=" md:w-1/2 min-h-[300px]">
-                            <img
-                                src="/blog/description/cafecreepe.png"
-                                alt="Imagen izquierda"
-                                className="w-full h-full object-cover object-left"
-                            />
-                        </div>
-
-                        <div className="w-full md:w-1/2 flex flex-col justify-between p-6 text-white ">
-                            <p className="text-[25px] font-medium italic leading-[30.48px] tracking-normal text-center font-montserrat">
-                                "Del diseño a la instalación, así damos vida a nuestros productos destacables."
-                            </p>
-                            <div className="mt-4 overflow-visible border-[20px] border-[#0F1721] rounded-[20px] md:-translate-x-40">
+                <div className="flex flex-col gap-4 flex-[65%] ">
+                    <div className="relative flex flex-col md:flex-row items-stretch pl-8 py-5 pr-8 bg-[#0F1721] rounded-br-lg rounded-tr-lg shadow-lg overflow-hidden">
+                        <div className='md:w-[25%]'></div>
+                        <div className='ml-auto flex flex-col md:flex-row'>
+                            <div className="md:w-[55%] h-full relative z-10">
                                 <img
-                                    src="/blog/description/xd.png"
-                                    alt="Imagen derecha"
-                                    className=" min-w-[520px] h-auto rounded-lg shadow-lg"
+                                    src="/blog/description/cafecreepe.png"
+                                    alt="Imagen izquierda"
+                                    className="w-[90%] h-[60vh] object-cover"
                                 />
+                            </div>
+                            <div className="md:w-[45%] flex flex-col justify-between items-center py-6 text-white z-10">
+                                <p className="text-[22px] italic text-center font-montserrat leading-[28px]  max-[921px]:text-[19px] max-[908px]:text-[18.5px] font-extrabold">
+                                    "Del diseño a la instalación, así damos vida a nuestros productos destacables."
+                                </p>
+                            </div>
+                            <div className="absolute bottom-6 right-0 md:w-[50%]  z-20">
+                                <div className="border-[10px] border-[#0F1721] rounded-[20px] shadow-lg overflow-hidden">
+                                    <img
+                                        src="/blog/description/xd.png"
+                                        alt="Imagen derecha"
+                                        className="w-full h-[43vh] max-[1393px]:h-[40vh] max-[1233px]:h-[37vh] object-cover rounded-lg"
+                                    />
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -44,7 +66,7 @@ export default function Descripcion() {
                         </div>
                     </div>
                 </div>
-                <div className="relative flex-[30%] p-6 bg-[#0F1721] rounded-bl-lg rounded-tl-lg  shadow-lg flex flex-col items-center justify-center overflow-hidden">
+                <div className="relative flex-[35%] p-6 bg-[#0F1721] rounded-bl-lg rounded-tl-lg  shadow-lg flex flex-col items-center justify-center overflow-hidden">
                     <div className="absolute top-[-35%] left-1/2 transform -translate-x-1/2 w-[400px] h-[400px] bg-[radial-gradient(circle,_rgb(0,_94,_255)_0%,_transparent_100%)] filter blur-[80px] pointer-events-none"></div>
 
                     <h2 className="font-montserrat text-white font-bold text-[36px] leading-[43.88px] text-center z-10 mt-2">
@@ -61,10 +83,14 @@ export default function Descripcion() {
                         Aquí encontrarás inspiración, tendencias y soluciones para que tu marca brille. ¡Descubre el poder de la luz!
                     </p>
                     <div className="mt-6 z-10">
-                        <img
+                        <motion.img
+                            id="flechaAbajo"
                             src="/blog/description/flechaabajo.png"
                             alt="Flecha hacia abajo"
                             className="mx-auto"
+                            initial={{ y: 0 }}
+                            animate={isVisible ? { y: [0, -10, 0] } : {}}
+                            transition={{ repeat: 5, duration: 0.5, ease: "easeInOut" }}
                         />
                     </div>
                 </div>
