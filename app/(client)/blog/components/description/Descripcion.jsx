@@ -19,22 +19,22 @@ export default function Descripcion() {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
     return (
-        <div className="relative w-full min-h-screen mt-10">
-            <div className="absolute top-0 left-0 w-full h-1/4 bg-gradient-to-r from-[--azul_brillante] to-[--azul_intenso]"></div>
+        <div className="relative w-full mt-10">
+            <div className="absolute top-0 left-0 w-full h-[18rem] bg-gradient-to-r from-[--azul_brillante] to-[--azul_intenso]"></div>
             <div className="relative flex flex-col md:flex-row items-center justify-center  py-16 gap-8">
-                <div className="flex flex-col gap-4 flex-[65%] ">
-                    <div className="relative flex flex-col md:flex-row items-stretch pl-8 py-5 pr-8 bg-[#0F1721] rounded-br-lg rounded-tr-lg shadow-lg overflow-hidden">
-                        <div className='md:w-[25%]'></div>
+                <div className="flex flex-col gap-4 w-[70em] ">
+                    <div className="relative flex flex-col md:flex-row items-stretch pl-8 py-5 pr-8 max-[1119px]:pr-1 bg-[#0F1721] rounded-br-lg rounded-tr-lg shadow-lg overflow-hidden">
+                        <div className='md:w-[40%]'></div>
                         <div className='ml-auto flex flex-col md:flex-row'>
-                            <div className="md:w-[55%] h-full relative z-10">
+                            <div className="md:w-[60%] relative z-10">
                                 <img
                                     src="/blog/description/cafecreepe.png"
                                     alt="Imagen izquierda"
-                                    className="w-[90%] h-[60vh] object-cover"
+                                    className=" max-h-[35rem] object-cover"
                                 />
                             </div>
-                            <div className="md:w-[45%] flex flex-col justify-between items-center py-6 text-white z-10">
-                                <p className="text-[22px] italic text-center font-montserrat leading-[28px]  max-[921px]:text-[19px] max-[908px]:text-[18.5px] font-extrabold">
+                            <div className="md:w-[40%] flex flex-col justify-between items-center py-6 pl-6 max-[1119px]:pl-2 text-white z-10">
+                                <p className="text-[22px] max-[1261px]:text-[18px] max-[1261px]:font-medium max-[997px]:text-[14.2px] italic text-center font-montserrat  font-extrabold">
                                     "Del diseño a la instalación, así damos vida a nuestros productos destacables."
                                 </p>
                             </div>
@@ -43,7 +43,7 @@ export default function Descripcion() {
                                     <img
                                         src="/blog/description/xd.png"
                                         alt="Imagen derecha"
-                                        className="w-full h-[43vh] max-[1393px]:h-[40vh] max-[1233px]:h-[37vh] object-cover rounded-lg"
+                                        className="max-h-[23rem] min-w-full object-cover rounded-lg"
                                     />
                                 </div>
                             </div>
@@ -66,7 +66,7 @@ export default function Descripcion() {
                         </div>
                     </div>
                 </div>
-                <div className="relative flex-[35%] p-6 bg-[#0F1721] rounded-bl-lg rounded-tl-lg  shadow-lg flex flex-col items-center justify-center overflow-hidden">
+                <div className="relative w-[30em] p-6 bg-[#0F1721] rounded-bl-lg rounded-tl-lg  shadow-lg flex flex-col items-center justify-center overflow-hidden">
                     <div className="absolute top-[-35%] left-1/2 transform -translate-x-1/2 w-[400px] h-[400px] bg-[radial-gradient(circle,_rgb(0,_94,_255)_0%,_transparent_100%)] filter blur-[80px] pointer-events-none"></div>
 
                     <h2 className="font-montserrat text-white font-bold text-[36px] leading-[43.88px] text-center z-10 mt-2">
