@@ -1,70 +1,73 @@
 import React from 'react';
-import { Montserrat } from 'next/font/google'
+import { Montserrat } from 'next/font/google';
 
-const montserrat = Montserrat({ 
-    subsets: ['latin'], 
+const montserrat = Montserrat({
+    subsets: ['latin'],
     weight: ['400', '500', '700'],
-    variable: '--font-montserrat'
-  })
+    variable: '--font-montserrat',
+});
+
 export default function Banner() {
-    
     return (
-        <div className="relative w-full h-[600px] bg-black overflow-hidden">
+        <div className="relative w-full h-[600px] sm:h-[600px] bg-black overflow-hidden">
             {/* Background Image */}
             <div
                 className="absolute inset-0 w-full h-full"
                 style={{
-                    backgroundImage: "url('/blog/banner/banner.webp')", // Ruta absoluta desde la carpeta public
+                    backgroundImage: "url('/blog/banner/banner.webp')",
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
-                    backgroundRepeat: 'no-repeat'
+                    backgroundRepeat: 'no-repeat',
                 }}
             >
                 {/* Dark overlay for better text readability */}
                 <div className="absolute inset-0 bg-black/50" />
             </div>
+
             {/* Curved edges */}
-            <div className="absolute top-0 right-0 w-1/3 h-32">
-                <div
-                    className="w-full h-full bg-blue-500/80 rounded-bl-[100px] border border-white" // Línea blanca
+            <div className="absolute top-0 right-0 w-[350px] sm:w-[500px] h-[200px] sm:h-[300px]">
+                <img
+                    src="/blog/banner/Vector 2.png"
+                    alt="Imagen superior derecha"
+                    className="w-full h-full object-cover rounded-bl-[50px] opacity-80"
                 />
             </div>
-            <div className="absolute bottom-0 left-0 w-1/3 h-32">
-                <div
-                    className="w-full h-full bg-blue-500/80 rounded-tr-[100px] border border-white" // Línea blanca
+            <div className="absolute bottom-0 left-0 w-[350px] sm:w-[500px] h-[200px] sm:h-[300px]">
+                <img
+                    src="/blog/banner/Vector 1.png"
+                    alt="Imagen inferior izquierda"
+                    className="w-full h-full object-cover rounded-tr-[50px] opacity-80"
                 />
             </div>
+
             {/* Content container */}
             <div className="relative h-full flex flex-col items-center justify-center text-white px-4 z-10">
                 {/* Small text */}
                 <span
-                    className={`${montserrat.variable} text-[25px] uppercase tracking-wider mb-4`} 
-                    style={{ fontSize: '25px' }} // Tamaño personalizado
+                    className={`${montserrat.variable} text-[18px] sm:text-[30px] uppercase tracking-wider mb-4 font-title`}
                 >
                     BLOG
                 </span>
                 {/* Main heading */}
                 <h1
-                    className={`${montserrat.variable} text-[120px] font-bold mb-6 text-center`}
-                    style={{ fontSize: '120px' }} // Tamaño personalizado
+                    className={`${montserrat.variable} text-[40px] sm:text-[60px] md:text-[80px] lg:text-[121px] font-bold mb-6 text-center font-title2`}
                 >
                     ¿Quieres conocer más?
                 </h1>
                 {/* Subtitle */}
                 <p
-                    className={`${montserrat.variable} text-[22px] text-center max-w-2xl`}
-                    style={{ fontSize: '22px' }} // Tamaño personalizado
+                    className={`${montserrat.variable} text-[16px] sm:text-[30px] text-center max-w-[300px] sm:max-w-[500px] md:max-w-[700px] lg:max-w-2xl font-title`}
                 >
                     Mira cómo trabajamos cada uno de nuestros productos.
                 </p>
             </div>
-            {/* Glowing effect overlays */}
-            <div className="absolute top-1/4 left-1/4 w-24 h-24 bg-pink-500/30 blur-xl" />
-            <div className="absolute bottom-1/4 right-1/4 w-24 h-24 bg-blue-500/30 blur-xl" />
 
+            {/* Glowing effect overlays */}
+            <div className="absolute top-1/4 left-1/4 w-16 sm:w-24 h-16 sm:h-24 bg-pink-500/30 blur-xl animate-pulse" />
+            <div className="absolute bottom-1/4 right-1/4 w-16 sm:w-24 h-16 sm:h-24 bg-blue-500/30 blur-xl animate-pulse" />
             {/* Optional: Add more subtle glowing effects */}
-            <div className="absolute top-1/2 right-1/3 w-16 h-16 bg-purple-500/20 blur-xl" />
-            <div className="absolute bottom-1/3 left-1/3 w-16 h-16 bg-cyan-500/20 blur-xl" />
+            <div className="absolute top-1/2 right-1/3 w-12 sm:w-16 h-12 sm:h-16 bg-purple-500/20 blur-xl animate-pulse" />
+            <div className="absolute bottom-1/3 left-1/3 w-12 sm:w-16 h-12 sm:h-16 bg-cyan-500/20 blur-xl animate-pulse" />
         </div>
     );
 }
