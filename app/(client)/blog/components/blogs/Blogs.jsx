@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 const Blogs = () => {
   return (
@@ -23,9 +24,9 @@ const Blogs = () => {
                   Modernas y llamativas, las letras acrílicas luminosas destacan tu marca o decoran con elegancia. ¡Ilumina tu creatividad! 💡🔠
                 </p>
                 <div className="pt-8">
-                  <button className="w-[200px] px-6 py-2 rounded-full bg-gradient-to-r from-[--azul_cobalto] to-[--azul_cobalto] text-white hover:opacity-90 transition-all duration-300 transform hover:scale-105 flex justify-center items-center">
+                  <Link href="/blog/atrae-clientes" className="w-[200px] px-6 py-2 rounded-full bg-gradient-to-r from-[--azul_cobalto] to-[--azul_cobalto] text-white hover:opacity-90 transition-all duration-300 transform hover:scale-105 flex justify-center items-center">
                     Leer más
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>
