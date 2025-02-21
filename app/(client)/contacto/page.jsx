@@ -67,7 +67,7 @@ const Contacto = () => {
       </section>
 
       {/* Contact Info Section (Superpuesta en el límite exacto) */}
-      <div className="relative z-20 mx-4 md:mx-auto max-w-5xl -translate-y-[45%]">
+      <div className="relative z-20 mx-4 md:mx-auto max-w-5xl -translate-y-[25%] md:-translate-y-[45%]">
         <div className="bg-gray-900 rounded-xl shadow-2xl p-6 md:p-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8"> {/* Cambiado a 3 columnas */}
             {/* Celular */}
@@ -250,6 +250,7 @@ const Contacto = () => {
           </div>
         </div>
       </div>
+      
       {/* Sección Oscura Modificada */}
       <section className="relative bg-gray-900 py-24 md:py-40"> {/* Ajuste responsive del padding */}
         <div className="container mx-auto px-4">
