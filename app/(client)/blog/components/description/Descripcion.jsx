@@ -24,17 +24,18 @@ export default function Descripcion() {
             <div className="relative flex flex-col md:flex-row items-center justify-center  py-16 gap-8">
                 <div className="flex flex-col gap-4 w-[70em] ">
                     <div className="relative flex flex-col md:flex-row items-stretch pl-8 py-5 pr-8 max-[1119px]:pr-1 bg-[#0F1721] rounded-br-lg rounded-tr-lg shadow-lg overflow-hidden">
-                        <div className='md:w-[40%]'></div>
+                        <div className='md:w-[10%]'></div>
                         <div className='ml-auto flex flex-col md:flex-row'>
-                            <div className="md:w-[60%] relative z-10">
+                            <div className="md:w-[90%] relative z-10">
                                 <img
                                     src="/blog/description/cafecreepe.png"
                                     alt="Imagen izquierda"
-                                    className=" max-h-[35rem] object-cover"
+                                    className="max-h-[40rem] min-w-[40rem] max-[1400px]:min-w-[30rem] max-[1200px]:min-w-[20rem] max-[900px]:min-w-[10rem] object-cover"
+
                                 />
                             </div>
-                            <div className="md:w-[40%] flex flex-col justify-between items-center py-6 pl-6 max-[1119px]:pl-2 text-white z-10">
-                                <p className="text-[22px] max-[1261px]:text-[18px] max-[1261px]:font-medium max-[997px]:text-[14.2px] italic text-center font-montserrat  font-extrabold">
+                            <div className="md:w-[40%] flex flex-col justify-between items-center py-[3.5rem] pl-6 max-[1119px]:pl-2 text-white z-10">
+                                <p className="text-[22px] max-[1261px]:text-[18px] max-[1261px]:font-medium max-[997px]:text-[14.2px] max-[812px]:text-[13px] italic text-center font-montserrat  font-extrabold">
                                     "Del diseño a la instalación, así damos vida a nuestros productos destacables."
                                 </p>
                             </div>
@@ -69,7 +70,7 @@ export default function Descripcion() {
                 <div className="relative w-[30em] p-6 bg-[#0F1721] rounded-bl-lg rounded-tl-lg  shadow-lg flex flex-col items-center justify-center overflow-hidden">
                     <div className="absolute top-[-35%] left-1/2 transform -translate-x-1/2 w-[400px] h-[400px] bg-[radial-gradient(circle,_rgb(0,_94,_255)_0%,_transparent_100%)] filter blur-[80px] pointer-events-none"></div>
 
-                    <h2 className="font-montserrat text-white font-bold text-[36px] leading-[43.88px] text-center z-10 mt-2">
+                    <h2 className="font-montserrat text-white font-bold text-[36px] max-[1121px]:text-[30px] max-[830px]:text-[24px] leading-[43.88px] text-center z-10 mt-2">
                         ¡Bienvenidos a nuestro blog!
                     </h2>
                     <div className="z-10">
@@ -79,7 +80,7 @@ export default function Descripcion() {
                             className="mx-auto"
                         />
                     </div>
-                    <p className="font-montserrat text-white font-medium text-[25px] leading-[30.48px] text-center mt-4 z-10">
+                    <p className="font-montserrat text-white font-medium text-[25px] max-[1121px]:text-[19px] max-[997px]:text-[15px] leading-[30.48px] text-center mt-4 z-10">
                         Aquí encontrarás inspiración, tendencias y soluciones para que tu marca brille. ¡Descubre el poder de la luz!
                     </p>
                     <div className="mt-6 z-10">
