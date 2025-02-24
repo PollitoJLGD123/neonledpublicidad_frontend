@@ -19,7 +19,7 @@ export default function Header() {
         }
 
         const handleResize = () => {
-            if (window.innerWidth <= 660) {
+            if (window.innerWidth <= 768) {
                 setIsSmallScreen(true);
                 if (!menuInitialized) {
                     setMenuInitialized(true);
