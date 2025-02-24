@@ -10,8 +10,9 @@ const BrillaConEstilo = () => {
       <div className="space-y-6 text-gray-300">
         <p>
           Las letras acrílicas luminosas son más que simple señalización - son una 
-          declaración de estilo y modernidad para tu marca.
+          declaración de estilo y modernidad para tu marcaa.
         </p>
+        
 
         <h2 className="text-2xl font-bold text-white mt-8">
           ¿Por qué elegir letras acrílicas?
