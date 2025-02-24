@@ -24,9 +24,11 @@ const Blogs = () => {
                   Modernas y llamativas, las letras acrílicas luminosas destacan tu marca o decoran con elegancia. ¡Ilumina tu creatividad! 💡🔠
                 </p>
                 <div className="pt-8">
-                  <Link href="/blog/atrae-clientes" className="w-[200px] px-6 py-2 rounded-full bg-gradient-to-r from-[--azul_cobalto] to-[--azul_cobalto] text-white hover:opacity-90 transition-all duration-300 transform hover:scale-105 flex justify-center items-center">
+                <Link href="/blog/content/blog1">
+                  <button className="w-[200px] px-6 py-2 rounded-full bg-gradient-to-r from-[--azul_cobalto] to-[--azul_cobalto] text-white hover:opacity-90 transition-all duration-300 transform hover:scale-105">
                     Leer más
-                  </Link>
+                  </button>
+                </Link>
                 </div>
               </div>
             </div>
@@ -51,7 +53,7 @@ const Blogs = () => {
                   Destaca tu marca con carteles iluminados que captan miradas. Innovadores, atractivos y efectivos. ¡Haz que tu publicidad brille! 💡🚀
                 </p>
                 <div className="pt-8">
-                  <button className="w-[200px] px-6 py-2 rounded-full bg-gradient-to-r from-[--azul_cobalto] to-[--azul_cobalto] text-white hover:opacity-90 transition-all duration-300 transform hover:scale-105 flex justify-center items-center">
+                  <button className="w-[200px] px-6 py-2 rounded-full bg-gradient-to-r from-[--azul_cobalto] to-[--azul_cobalto] text-white hover:opacity-90 transition-all duration-300 transform hover:scale-105">
                     Leer más
                   </button>
                 </div>
@@ -78,9 +80,11 @@ const Blogs = () => {
                   Cautiva con visuales 3D futuristas. Tus anuncios cobrarán vida con hologramas que atraen, sorprenden y convierten. 🚀 🎥                
                 </p>
                 <div className="pt-8">
-                  <button className="w-[200px] px-6 py-2 rounded-full bg-gradient-to-r from-[--azul_cobalto] to-[--azul_cobalto] text-white hover:opacity-90 transition-all duration-300 transform hover:scale-105 flex justify-center items-center">
+                <Link href="/blog/content/blog3">
+                  <button className="w-[200px] px-6 py-2 rounded-full bg-gradient-to-r from-[--azul_cobalto] to-[--azul_cobalto] text-white hover:opacity-90 transition-all duration-300 transform hover:scale-105">
                     Leer más
                   </button>
+                </Link>
                 </div>
               </div>
             </div>
@@ -105,7 +109,7 @@ const Blogs = () => {
                   Haz que el nombre de tu bar destaque con letras neón LED. Crea un ambiente único que atraiga miradas y clientes. ¡Ilumina tu identidad! 🍹🔆                
                 </p>
                 <div className="pt-8">
-                  <button className="w-[200px] px-6 py-2 rounded-full bg-gradient-to-r from-[--azul_cobalto] to-[--azul_cobalto] text-white hover:opacity-90 transition-all duration-300 transform hover:scale-105 flex justify-center items-center">
+                  <button className="w-[200px] px-6 py-2 rounded-full bg-gradient-to-r from-[--azul_cobalto] to-[--azul_cobalto] text-white hover:opacity-90 transition-all duration-300 transform hover:scale-105">
                     Leer más
                   </button>
                 </div>
@@ -132,7 +136,7 @@ const Blogs = () => {
                   Brilla con estilo y distinción. Las letras doradas y plateadas aportan prestigio, presencia y posiciona tu marca o negocio. ¡Haz que te noten! 💛
                 </p>
                 <div className="pt-8">
-                  <button className="w-[200px] px-6 py-2 rounded-full bg-gradient-to-r from-[--azul_cobalto] to-[--azul_cobalto] text-white hover:opacity-90 transition-all duration-300 transform hover:scale-105 flex justify-center items-center">
+                  <button className="w-[200px] px-6 py-2 rounded-full bg-gradient-to-r from-[--azul_cobalto] to-[--azul_cobalto] text-white hover:opacity-90 transition-all duration-300 transform hover:scale-105">
                     Leer más
                   </button>
                 </div>
@@ -159,7 +163,7 @@ const Blogs = () => {
                 Atrae con un diseño agradable, moderno y llamativo. La iluminación ideal para resaltar tu local y hacerlo inolvidable, de día y de noche. 🔆
                 </p>
                 <div className="pt-8">
-                  <button className="w-[200px] px-6 py-2 rounded-full bg-gradient-to-r from-[--azul_cobalto] to-[--azul_cobalto] text-white hover:opacity-90 transition-all duration-300 transform hover:scale-105 flex justify-center items-center">
+                  <button className="w-[200px] px-6 py-2 rounded-full bg-gradient-to-r from-[--azul_cobalto] to-[--azul_cobalto] text-white hover:opacity-90 transition-all duration-300 transform hover:scale-105">
                     Leer más
                   </button>
                 </div>
