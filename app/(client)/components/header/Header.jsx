@@ -19,7 +19,7 @@ export default function Header() {
         }
 
         const handleResize = () => {
-            if (window.innerWidth <= 767) {
+            if (window.innerWidth <= 768) {
                 setIsSmallScreen(true);
                 if (!menuInitialized) {
                     setMenuInitialized(true);
@@ -146,6 +146,16 @@ export default function Header() {
                                 onClick={() => goToSubMenu("productos")}
                             />
                             <DropdownLink
+                                text={"Blog"}
+                                link={"/blog"}
+                                isInicio={false}
+                                final={false}
+                                closeMenu={() => {
+                                    setMenuActive(false);
+                                    setContainerFullHeight(false);
+                                }}
+                            />
+                            <DropdownLink
                                 text={"Nosotros"}
                                 link={"/nosotros"}
                                 isInicio={false}
@@ -160,6 +170,16 @@ export default function Header() {
                                 link={"/contacto"}
                                 isInicio={false}
                                 final={true}
+                                closeMenu={() => {
+                                    setMenuActive(false);
+                                    setContainerFullHeight(false);
+                                }}
+                            />
+                            <DropdownLink
+                                text={"Login"}
+                                link={"/login"}
+                                isInicio={false}
+                                final={false}
                                 closeMenu={() => {
                                     setMenuActive(false);
                                     setContainerFullHeight(false);
