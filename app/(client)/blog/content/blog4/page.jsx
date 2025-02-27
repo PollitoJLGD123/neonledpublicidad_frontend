@@ -1,22 +1,20 @@
 import React from 'react';
 import Link from 'next/link';
+import SidebarMenu from '../../components/SidebarMenu/SidebarMenu';
 
 export default function Blog4() {
   return (
     <div>
-      {/* Contenedor de la imagen y el título */}
+      {/* Contenedor de la imagen y el título - SIN CAMBIOS */}
       <div className="w-full h-[1024px] relative overflow-hidden">
-        {/* Imagen de fondo con zoom out y posición ajustada más arriba */}
         <img
           src="/blog/LETRANEONLED.png"
           alt="Luces Neón LED para Bares"
           className="w-full h-full object-cover transform scale-110 transition-transform duration-300 object-[center_40%]"
         />
         
-        {/* Overlay oscuro para mejorar contraste */}
         <div className="absolute inset-0 bg-black bg-opacity-40"></div>
         
-        {/* Título superpuesto sobre la imagen - ajustado más arriba */}
         <div className="absolute top-[15%] left-0 right-0 flex flex-col items-center justify-center z-10">
           <h1 className="text-5xl font-bold text-white text-center max-w-4xl px-4">
             Tu Bar, en la Mira
@@ -25,13 +23,16 @@ export default function Blog4() {
         </div>
       </div>
       
+      {/* Integramos el sidebar menu independiente del contenido principal */}
+      <SidebarMenu />
+      
       {/* Contenido del blog con margen superior sobre fondo blanco y barra lateral celeste */}
       <div className="container mx-auto px-4 py-12 relative">
-        {/* Barra lateral celeste con ancho aumentado */}
-        <div className="w-20 bg-[#AADFFD] absolute -left-0 top-0 h-full"></div>
+        {/* Barra lateral celeste con ancho adaptativo */}
+        <div className="hidden lg:block w-20 xl:w-24 2xl:w-32 bg-[#AADFFD] fixed left-0 top-0 h-full -z-10"></div>
         
-        {/* Contenido del artículo */}
-        <div className="relative ml-24">
+        {/* Contenido del artículo - Ajustado con margen derecho adicional */}
+        <div className="relative lg:ml-24 lg:mr-72">
           {/* Título del artículo con fecha */}
           <div className="flex items-center mb-8">
             <h2 className="text-3xl font-bold">Tu Bar, en la Mira</h2>
@@ -96,24 +97,24 @@ export default function Blog4() {
             </p>
           </div>
           
-        {/* Imágenes de ejemplos */}
-            <div className="mb-10">
-                <p className="text-sm text-gray-600 mb-4">
-                    A continuación, te presentamos unos ejemplos de nuestros productos:
-                </p>
-                <div className="flex flex-wrap gap-4">
-                    <img 
-                        src="/blog/blog4/Frame7.png" 
-                        alt="Ejemplo 1" 
-                        className="w-full max-w-xs rounded-lg shadow-md"
-                    />
-                    <img 
-                        src="/blog/blog4/Frame8.png" 
-                        alt="Ejemplo 2" 
-                        className="w-full max-w-xs rounded-lg shadow-md"
-                    />
-                </div>
+          {/* Imágenes de ejemplos */}
+          <div className="mb-10">
+            <p className="text-sm text-gray-600 mb-4">
+              A continuación, te presentamos unos ejemplos de nuestros productos:
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <img 
+                src="/blog/blog4/Frame7.png" 
+                alt="Ejemplo 1" 
+                className="w-full max-w-xs rounded-lg shadow-md"
+              />
+              <img 
+                src="/blog/blog4/Frame8.png" 
+                alt="Ejemplo 2" 
+                className="w-full max-w-xs rounded-lg shadow-md"
+              />
             </div>
+          </div>
         </div>
       </div>
     </div>
