@@ -1,7 +1,7 @@
 import Image from "next/image";
 import NuestrosProductos from "./productos/components/NuestrosProductos";
 import FilaProductos from "./productos/components/FilaProductos";
-import Slider from "./components/Slider/Slider";
+import Slider from "./components/slider/Slider";
 
 export default function Home() {
   const fila1 = [
