@@ -44,19 +44,19 @@ export default function Banner() {
             <div className="relative h-full flex flex-col items-center justify-center text-white px-4 z-10">
                 {/* Small text */}
                 <span
-                    className={`${montserrat.variable} text-[18px] sm:text-[30px] uppercase tracking-wider mb-4 font-title`}
+                    className={"text-[18px] sm:text-[30px] uppercase tracking-wider mb-4"}
                 >
                     BLOG
                 </span>
                 {/* Main heading */}
                 <h1
-                    className={`${montserrat.variable} text-[40px] sm:text-[60px] md:text-[80px] lg:text-[121px] font-bold mb-6 text-center font-title2`}
+                    className={"text-[40px] sm:text-[60px] md:text-[80px] lg:text-[121px] font-bold mb-6 text-center font-title"}
                 >
                     ¿Quieres conocer más?
                 </h1>
                 {/* Subtitle */}
                 <p
-                    className={`${montserrat.variable} text-[16px] sm:text-[30px] text-center max-w-[300px] sm:max-w-[500px] md:max-w-[700px] lg:max-w-2xl font-title`}
+                    className={"text-[16px] sm:text-[30px] text-center max-w-[300px] sm:max-w-[500px] md:max-w-[700px] lg:max-w-2xl"}
                 >
                     Mira cómo trabajamos cada uno de nuestros productos.
                 </p>
