@@ -23,7 +23,8 @@ export default function Banner({ titulo, imagen }) {
     //     en nuestra página
     //   </h1>
     // </main>
-    <main className="h-[calc(100vh-100px)] text-center">
+    <main className="h-[calc(100vh-100px)] text-center flex flex-col">
+      <div style={style} className="flex-1 mb-[-50px] bg-cover bg-center"></div>
       <div className="bg-[#00101B] rounded-t-[50px] p-14 flex flex-col justify-center items-center">
         <h1 className="text-white text-xl font-medium">
           Conoce más sobre
