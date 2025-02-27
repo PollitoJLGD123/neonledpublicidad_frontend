@@ -12,7 +12,7 @@ export default {
         foreground: "var(--foreground)",
       },
       fontFamily: {
-        title: ["Montserrat", "serif"], // Fuente Montserrat
+        title: ["League Gothic", "ui-serif"], // ui-serif para detectar cuando la fuente no carga
       },
     },
   },
