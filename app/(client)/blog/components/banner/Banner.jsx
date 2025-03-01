@@ -7,7 +7,7 @@ const montserrat = Montserrat({
     variable: '--font-montserrat',
 });
 
-export default function Banner() {
+const Banner = () => {
     return (
         <div className="relative w-full h-[600px] sm:h-[600px] bg-black overflow-hidden">
             {/* Background Image */}
@@ -29,14 +29,14 @@ export default function Banner() {
                 <img
                     src="/blog/banner/Vector 2.png"
                     alt="Imagen superior derecha"
-                    className="w-full h-full object-cover rounded-bl-[50px] opacity-80"
+                    className="w-full h-full object-cover rounded-bl-[50px] opacity-70"
                 />
             </div>
             <div className="absolute bottom-0 left-0 w-[350px] sm:w-[500px] h-[200px] sm:h-[300px]">
                 <img
                     src="/blog/banner/Vector 1.png"
                     alt="Imagen inferior izquierda"
-                    className="w-full h-full object-cover rounded-tr-[50px] opacity-80"
+                    className="w-full h-full object-cover rounded-tr-[50px] opacity-70"
                 />
             </div>
 
@@ -65,9 +65,10 @@ export default function Banner() {
             {/* Glowing effect overlays */}
             <div className="absolute top-1/4 left-1/4 w-16 sm:w-24 h-16 sm:h-24 bg-pink-500/30 blur-xl animate-pulse" />
             <div className="absolute bottom-1/4 right-1/4 w-16 sm:w-24 h-16 sm:h-24 bg-blue-500/30 blur-xl animate-pulse" />
-            {/* Optional: Add more subtle glowing effects */}
             <div className="absolute top-1/2 right-1/3 w-12 sm:w-16 h-12 sm:h-16 bg-purple-500/20 blur-xl animate-pulse" />
             <div className="absolute bottom-1/3 left-1/3 w-12 sm:w-16 h-12 sm:h-16 bg-cyan-500/20 blur-xl animate-pulse" />
         </div>
     );
-}
+};
+
+export default Banner;
