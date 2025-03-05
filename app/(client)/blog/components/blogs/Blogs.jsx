@@ -109,9 +109,11 @@ const Blogs = () => {
                   Haz que el nombre de tu bar destaque con letras neón LED. Crea un ambiente único que atraiga miradas y clientes. ¡Ilumina tu identidad! 🍹🔆                
                 </p>
                 <div className="pt-8">
-                  <button className="w-[200px] px-6 py-2 rounded-full bg-gradient-to-r from-[--azul_cobalto] to-[--azul_cobalto] text-white hover:opacity-90 transition-all duration-300 transform hover:scale-105">
-                    Leer más
-                  </button>
+                  <Link href="/blog/content/blog4">
+                    <button className="w-[200px] px-6 py-2 rounded-full bg-gradient-to-r from-[--azul_cobalto] to-[--azul_cobalto] text-white hover:opacity-90 transition-all duration-300 transform hover:scale-105">
+                      Leer más
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>
