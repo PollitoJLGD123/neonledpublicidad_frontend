@@ -7,7 +7,7 @@ export default function IlluminatedAd() {
   return (
     <div className="flex flex-col items-center justify-center ">
       {/* Sección superior (Cartel + Texto lateral) */}
-      <div className="flex flex-col md:flex-row items-center  w-screen h-screen bg-gradient-to-r from-[#00C3FF] to-[#0050FF]  rounded-lg shadow-lg">
+ <div className="flex flex-col md:flex-row items-center  w-screen h-screen bg-gradient-to-r from-[#00C3FF] to-[#0050FF]  rounded-lg shadow-lg">
   {/* Imagen iluminada */}
   <div className="w-full md:w-1/2 h-screen">
     <img className="w-full h-full object-cover" src="/blog/ACRILICO.png" alt="Publicidad iluminada" />
