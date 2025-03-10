@@ -11,7 +11,7 @@ export default function Footer() {
                     <div className="footer-content absolute pt-10 inset-0 z-20 flex flex-col justify-center lg:flex-row lg:justify-center mx-28 gap-12 text-center lg:text-left text-white font-semibold mb-28">
                         <ul>
                             <li className="flex flex-col">
-                                <h2 className="text-[--azul_brillante]">Contáctanos</h2>
+                                <h2 className="text-[--azul_brillante] text-lg lg:text-xl">Contáctanos</h2>
                                 <span className="w-[30px] mx-auto lg:mx-0 h-[6px] border-t-2 border-solid border-t-[--azul_brillante]"></span>
                             </li>
                             <li className="flex flex-col">
@@ -38,7 +38,7 @@ export default function Footer() {
                         </ul>
                         <ul>
                             <li className="flex flex-col">
-                            <h2 className="text-[--azul_brillante]">Redes sociales</h2>
+                            <h2 className="text-[--azul_brillante] text-lg lg:text-xl">Redes sociales</h2>
                             <span className="w-[30px] mx-auto lg:mx-0 h-[6px] border-t-2 border-solid border-t-[--azul_brillante]"></span>
                                 <div className="flex gap-4 justify-center align-middle lg:justify-between mt-2">
                                     <a className="h-12 w-12 md:h-10 md:w-10" href="#"><img className="w-full" src="/header_footer/tiktock.svg" alt="" /></a>
@@ -49,7 +49,7 @@ export default function Footer() {
                             </li>
                         </ul>
                         <div className="flex flex-col items-center lg:items-start">
-                            <h2 className="text-[--azul_brillante]">Reclamaciones</h2>
+                            <h2 className="text-[--azul_brillante] text-lg lg:text-xl">Reclamaciones</h2>
                             <span className="w-[30px] mx-auto lg:mx-0 h-[6px] border-t-2 border-solid border-t-[--azul_brillante]"></span>
                             <Link className="w-[200px] m-1" href={"/reclamaciones"}>
                                 <p className="text-center">Libro de reclamos</p>
