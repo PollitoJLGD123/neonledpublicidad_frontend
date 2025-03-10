@@ -19,7 +19,7 @@ export default function Header() {
         }
 
         const handleResize = () => {
-            if (window.innerWidth <= 768) {
+            if (window.innerWidth <= 850) {
                 setIsSmallScreen(true);
                 if (!menuInitialized) {
                     setMenuInitialized(true);
@@ -79,7 +79,7 @@ export default function Header() {
         <>
             <div className={`containerF ${menuActive ? "full-height" : ""}`}>
                 <header
-                    className={`header-container h-[100px] bg-[--azul_oscuro] flex items-center justify-center gap-6 ${menuActive ? "menu-active" : ""}`}
+                    className={`header-container h-[100px] bg-[--azul_oscuro] flex items-center justify-center gap-6 px-5 ${menuActive ? "menu-active" : ""}`}
                 >
                     <LinkNav text={"Inicio"} link={"/"} />
                     <LinkNav text={"Productos"} link={"/productos"} />

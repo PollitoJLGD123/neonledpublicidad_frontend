@@ -1,4 +1,4 @@
-@media (max-width: 767px) {
+@media (max-width: 850px) {
     .menu-icon {
         display: flex;
         align-items: center;
@@ -173,7 +173,7 @@
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 850px) {
     .menu-icon {
         display: none !important;
     }
