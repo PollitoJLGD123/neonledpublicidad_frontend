@@ -50,8 +50,8 @@ export default function Blog4() {
                 Las luces neón LED se han convertido en un elemento diferenciador en el mundo de la hospitalidad. No solo son visualmente atractivos, sino que también refuerzan la identidad de tu negocio. En este artículo, exploraremos cómo las letras luminosas pueden marcar la diferencia en la experiencia de tus clientes.
               </p>
             </div>
-            <figure className='flex align-middle justify-center w-full'>
-              <img src="/blog/blog4/LETRA_NEON.png" alt="Letrero de neón en un bar" className="w-[400px] lg:w-[300px]  max-w-2xl rounded-lg shadow-lg " />
+            <figure className='flex align-middle justify-center w-full xl:w-1/2'>
+              <img src="/blog/blog4/LETRA_NEON.png" alt="Letrero de neón en un bar" className="w-[400px] lg:w-[320px]  max-w-2xl rounded-lg shadow-lg " />
             </figure>
             
           </div>
@@ -103,7 +103,7 @@ export default function Blog4() {
 
           </div>
           
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-4 m-5'>
+          <div className='grid grid-cols-1 sm:grid-cols-2 gap-4 m-5'>
             <img src="/blog/blog4/image.png" alt="Variedad de letreros neón LED" className="w-full max-w-2xl mb-4 rounded-lg shadow-lg" />
             <img src="/blog/blog4/hepner1.png" alt="Ambiente con neón en bar" className="w-full max-w-2xl mb-4 rounded-lg shadow-lg" />
           </div>
