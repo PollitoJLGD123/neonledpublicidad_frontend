@@ -1,7 +1,7 @@
 export default function Table({ headers, data, onDelete, onUpdate }) {
   const headersList = headers.map((header, index) => {
     return (
-      <th key={index} className="p-2">
+      <th key={i} className="p-2 text-center">
         {header.toUpperCase()}
       </th>
     );
@@ -12,7 +12,7 @@ export default function Table({ headers, data, onDelete, onUpdate }) {
 
     for (let i = 0; i < headers.length; i++) {
       row.push(
-        <td key={i} className="p-2">
+        <td key={i} className="p-2 text-center">
           {dataRow[headers[i]]}
         </td>
       );

@@ -5,43 +5,47 @@ import { useRouter } from 'next/navigation';
 import { User, Lock, ArrowLeft } from 'lucide-react';
   // import userService from '@/app/dashboard/users/services/user.service';
 
+
 export default function LoginPage() {
+
+  const URL = "http://127.0.0.1:8000/api/user/login"
+
+
   const [formData, setFormData] = useState({ email: '', password: '' });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
   const router = useRouter();
 
-
-  const adminTest = { email: 'pepito@gmail.com', password: 'pepe12345' };
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
     setError(false);
-
-    // const form = new FormData();
-    // form.append('email', formData.email);
-    // form.append('password', formData.password);
-
-    // userService.login(form)
-    //   .then((data) => {
-
-    //     if (parseInt(data.status) === 200) {
-    //       localStorage.setItem('token', data.token);
-    //       router.push('/dashboard/main');
-    //     } else {
-    //       setError(true);
-    //       setLoading(false);
-    //     }
-    //   });
-    if (
-      formData.email === adminTest.email &&
-      formData.password === adminTest.password
-    ) {
-      router.push('/dashboard/contactos');
-    } else {
+  
+    try {
+      const response = await fetch(URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+  
+      const data = await response.json(); // Convertir la respuesta a JSON
+  
+      if (response.ok) {
+        console.log("Login exitoso", data);
+        if (data.token) {
+          localStorage.setItem("token", data.token);
+          router.push("/dashboard/contactos");
+        } else {
+          setError(true);
+        }
+      } else {
+        setError(true);
+      }
+    } catch (error) {
+      console.error("Error en la solicitud:", error);
       setError(true);
     }
-
+  
     setLoading(false);
   };
 
@@ -139,7 +143,7 @@ export default function LoginPage() {
             <button
               disabled={loading}
               type="submit"
-              className="w-full bg-gradient-to-r from-[#90388b] to-indigo-600 text-white py-3 px-4 rounded-lg font-medium hover:opacity-90 focus:ring-2 focus:ring-offset-2 focus:ring-violet-500 disabled:opacity-50 hover:scale-105 transition-all duration-300 disabled:cursor-not-allowed"
+              className="text-center w-full bg-gradient-to-r from-[#90388b] to-indigo-600 text-white py-3 px-4 rounded-lg font-extrabold hover:opacity-90 focus:ring-2 focus:ring-offset-2 focus:ring-violet-500 disabled:opacity-50 hover:scale-105 transition-all duration-300 disabled:cursor-not-allowed"
             >
               {loading ? (
                 <span className="flex items-center justify-center gap-2">
