@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from 'react';
 import Image from 'next/image';
+import Swal from 'sweetalert2';
 
 const Contacto = () => {
   const [formData, setFormData] = useState({
@@ -37,11 +38,29 @@ const Contacto = () => {
       if (response.ok) {
         setStatus('success');
         setFormData({ nombre: '', apellido: '', telefono: '', distrito: '', email: '', tipo_reclamo: '', mensaje: '' });
+        Swal.fire({
+          title: '¡Mensaje enviado con éxito!',
+          icon: 'success',
+          showConfirmButton: false,
+          timer: 2000,
+        });
       } else {
         setStatus('error');
+        Swal.fire({
+          title: 'Error',
+          text: 'Ocurrió un error al enviar el mensaje.',
+          icon: 'error',
+          confirmButtonText: 'OK',
+        });
       }
     } catch (error) {
       setStatus('error');
+      Swal.fire({
+        title: 'Error',
+        text: 'Ocurrió un error al enviar el mensaje.',
+        icon: 'error',
+        confirmButtonText: 'OK',
+      });
     }
   };
   return (
@@ -127,9 +146,7 @@ const Contacto = () => {
         {/* Form Section */}
         <div className="relative z-10 max-w-4xl mx-auto px-8 -mt-20 pb-24">
           <div className="bg-white rounded-lg p-8 shadow-xl border-2 border-gray-200">
-            <h3 className="text-2xl font-bold text-gray-800 text-center mb-8">Solicita información</h3>
-            {status === 'success' && <p className="text-green-600 text-center">¡Mensaje enviado con éxito!</p>}
-            {status === 'error' && <p className="text-red-600 text-center">Hubo un error, inténtalo de nuevo.</p>}
+            <h3 className="text-2xl font-bold text-gray-800 text-center mb-8">Solicita información</h3>z
             <form onSubmit={handleSubmit} className="space-y-8">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <input
