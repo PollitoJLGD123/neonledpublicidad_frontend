@@ -15,8 +15,8 @@ const headers = [
   "telefono",
   "distrito",
   "email",
-  "detalle",
-  "reclamacion",
+  "mensaje",
+  "tipo_reclamo",
 ];
 
 export default function Page() {
