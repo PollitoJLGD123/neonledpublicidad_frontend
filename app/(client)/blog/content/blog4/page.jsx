@@ -33,17 +33,17 @@ export default function Blog4() {
       <SidebarMenu />
       
       {/* Contenido del blog con margen superior sobre fondo blanco y barra lateral celeste */}
-      <div className="container mx-auto px-4 py-12 relative bg-gradient-to-r from-blue-900 via-red-900 to-orange-700 text-white min-h-screen w-full">
+      <div className="container mx-auto px-4 py-12 relative bg-gradient-to-r text-black min-h-screen w-full">
         {/* Barra lateral celeste con ancho adaptativo */}
-        <div className="hidden lg:block w-20 xl:w-24 2xl:w-32 bg-[#ffffff] fixed left-0 top-0 h-full -z-10"></div>
+        <div className="hidden lg:block w-20 xl:w-24 2xl:w-32 bg-[--azul_brillante] fixed left-0 top-0 h-full -z-10"></div>
         
         {/* Contenido del artículo - Ajustado con margen derecho adicional */}
         <div className="relative lg:ml-48 lg:mr-48 justify-center">
           <div className='flex flex-col xl:flex-row lg:gap-4 '>
             {/* Título del artículo con fecha */}
             <div className='w-full lg:w-3/2'>
-              <div className="flex items-center mb-8">
-                <h2 className="text-3xl font-bold">Tu Bar, en la Mira</h2>
+              <div className="flex items-center mb-8 mt-5">
+                <h2 className="text-4xl font-bold">Tu Bar, en la Mira</h2>
                 <p className="ml-4 text-sm text-gray-500">6 de marzo de 2023</p>
               </div>             
               <p className="text-lg mb-6">
@@ -112,7 +112,7 @@ export default function Blog4() {
           
           
           {/* Conclusión */}
-          <div className="mb-10">
+          <div className="mb-4">
             <h3 className="text-2xl font-bold mb-3">Conclusión</h3>
             <p className="mb-4">
               Invertir en luces neón LED no solo mejora la estética de tu bar, sino que también influye en la percepción de los clientes y fortalece tu marca. ¡Haz que tu bar brille con luz propia!
@@ -121,7 +121,7 @@ export default function Blog4() {
           
           {/* Imágenes de ejemplos */}
           <div className="mb-10">
-            <p className="text-sm text-white mb-4">
+            <p className="text-sm text-white">
               A continuación, te presentamos unos ejemplos de nuestros productos:
             </p>
             <div className="flex flex-wrap gap-4 justify-center align-middle">
