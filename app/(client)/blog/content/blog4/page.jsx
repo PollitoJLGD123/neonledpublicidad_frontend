@@ -6,20 +6,26 @@ export default function Blog4() {
   return (
     <div>
       {/* Contenedor de la imagen y el título - SIN CAMBIOS */}
-      <div className="w-full h-[1024px] relative overflow-hidden">
-        <img
-          src="/blog/LETRANEONLED.png"
-          alt="Luces Neón LED para Bares"
-          className="w-full h-full object-cover transform scale-110 transition-transform duration-300 object-[center_40%]"
-        />
+      <div className="w-full h-screen md:h-[80vh] relative flex items-center justify-center text-center px-6 sm:px-12 bg-cover bg-center bg-no-repeat" 
+        style={{ backgroundImage: "url('/blog/LETRANEONLED.png')" }}>
         
-        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
-        
-        <div className="absolute top-[15%] left-0 right-0 flex flex-col items-center justify-center z-10">
-          <h1 className="text-5xl font-bold text-white text-center max-w-4xl px-4">
-            Tu Bar, en la Mira
+        <div className="absolute inset-0 bg-black/60"></div>
+
+        <div className="relative z-10 max-w-2xl text-white">
+
+          <h1 className="text-5xl md:text-6xl font-extrabold mb-4">
+            TU BAR EN LA MIRA
+          </h1>   
+
+          <h1 className="text-2xl md:text-xl font-bold mb-4">
+            Ilumina tu espacio, cautiva a tus clientes
           </h1>
-          <div className="w-24 h-1 bg-white mt-4"></div>
+
+          <p className="text-lg text-gray-300 font-light">
+            Transforma la atmósfera de tu bar con luces neón LED vibrantes y llenas de estilo.
+          </p>
+
+          <div className="w-20 h-1 bg-white mt-6 mx-auto"></div>
         </div>
       </div>
       
@@ -27,9 +33,9 @@ export default function Blog4() {
       <SidebarMenu />
       
       {/* Contenido del blog con margen superior sobre fondo blanco y barra lateral celeste */}
-      <div className="container mx-auto px-4 py-12 relative">
+      <div className="container mx-auto px-4 py-12 relative bg-gradient-to-r from-blue-900 via-red-900 to-orange-700 text-white min-h-screen w-full">
         {/* Barra lateral celeste con ancho adaptativo */}
-        <div className="hidden lg:block w-20 xl:w-24 2xl:w-32 bg-[#AADFFD] fixed left-0 top-0 h-full -z-10"></div>
+        <div className="hidden lg:block w-20 xl:w-24 2xl:w-32 bg-[#ffffff] fixed left-0 top-0 h-full -z-10"></div>
         
         {/* Contenido del artículo - Ajustado con margen derecho adicional */}
         <div className="relative lg:ml-24 lg:mr-72">

@@ -9,13 +9,10 @@ import axios from "axios";
 const API_BASE_URL = "http://localhost:8000/api/contactanos";
 
 const headers = [
-  "id_contactanos",
   "nombre",
   "apellido",
   "telefono",
   "distrito",
-  "email",
-  "mensaje",
   "tipo_reclamo",
 ];
 
