@@ -1,5 +1,7 @@
 "use client";
 import React, { useState } from 'react';
+import Swal from 'sweetalert2';
+
 
 export default function Page() {
 
@@ -75,11 +77,35 @@ export default function Page() {
         });
         setDeclaracion(false);
         setPolitica(false);
+
+        Swal.fire({
+          title: '¡Mensaje enviado con éxito!',
+          icon: 'success',
+          showConfirmButton: false,
+          timer: 2000,
+        });
+
       } else {
         setStatus('error');
+
+        Swal.fire({
+          title: 'Error',
+          text: 'Ocurrió un error al enviar el mensaje.',
+          icon: 'error',
+          confirmButtonText: 'OK',
+        });
+
       }
     } catch (error) {
       setStatus(error);
+
+      Swal.fire({
+        title: 'Error',
+        text: 'Ocurrió un error al enviar el mensaje.',
+        icon: 'error',
+        confirmButtonText: 'OK',
+      });
+
     }
   };
   return (
@@ -91,8 +117,6 @@ export default function Page() {
         </h1>
       </main>
       <section className="p-8 text-[#b2b2b2] md:border-2 md:my-16 border-[#b2b2b2] max-w-3xl mx-auto">
-        {status === 'success' && <p className="text-green-600 text-center">¡Mensaje enviado con éxito!</p>}
-        {status === 'error' && <p className="text-red-600 text-center">Hubo un error, inténtalo de nuevo.</p>}
         <h2 className="text-center text-black md:text-left">
           Déjanos tus datos para poder atender tu reclamo
         </h2>
