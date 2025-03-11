@@ -9,7 +9,7 @@ const Contacto = () => {
     telefono: '',
     distrito: '',
     email: '',
-    tipoReclamo: '',
+    tipo_reclamo: '',
     mensaje: '',
   });
   
@@ -21,10 +21,14 @@ const Contacto = () => {
   };
 
   const handleSubmit = async (e) => {
+    console.log(formData);
     e.preventDefault();
     setStatus('loading');
+
+    /* 1 promesa sw cumpla 2 no se cumpla                                                 */
+
     try {
-      const response = await fetch('/api/contacto', { //CAMBIAR AQUIIIIIIIIIIIIIIIIIIIIIIIII
+      const response = await fetch('http://127.0.0.1:8000/api/create_contactanos', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
@@ -32,7 +36,7 @@ const Contacto = () => {
 
       if (response.ok) {
         setStatus('success');
-        setFormData({ nombre: '', apellido: '', telefono: '', distrito: '', email: '', tipoReclamo: '', mensaje: '' });
+        setFormData({ nombre: '', apellido: '', telefono: '', distrito: '', email: '', tipo_reclamo: '', mensaje: '' });
       } else {
         setStatus('error');
       }
@@ -160,7 +164,7 @@ const Contacto = () => {
                 className="w-full p-3 border-2 border-transparent rounded-md focus:outline-none focus:ring-2 focus:ring-gray-400 bg-gradient-to-r from-gray-50 to-gray-100 [border-image:linear-gradient(to_right,#E5E7EB,#F3F4F6)_1] text-gray-900 placeholder:text-gray-400" />
 
               <select
-                name="tipoReclamo" value={formData.tipoReclamo} onChange={handleChange} required
+                name="tipo_reclamo" value={formData.tipo_reclamo} onChange={handleChange} required
                 className="w-full p-3 border-2 border-transparent rounded-md focus:outline-none focus:ring-2 focus:ring-gray-400 bg-gradient-to-r from-gray-50 to-gray-100 [border-image:linear-gradient(to_right,#E5E7EB,#F3F4F6)_1] text-gray-500"
               >
                 <option value="">Detalle de reclamación</option>

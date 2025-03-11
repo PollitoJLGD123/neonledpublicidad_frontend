@@ -2,6 +2,21 @@
 import React, { useState } from 'react';
 
 export default function Page() {
+
+  const[declaracion, setDeclaracion] = useState(false);
+  const[politica, setPolitica] = useState(false);
+
+  function cambio_politica(valor){
+    setPolitica(valor);
+    console.log(valor)
+  }
+
+  function cambio_declaracion(valor){
+    setDeclaracion(valor);
+    console.log(valor)
+  }
+
+
   const [formData, setFormData] = useState({
     nombre: '',
     apellido: '',
@@ -10,16 +25,20 @@ export default function Page() {
     departamento: '',
     direccion: '',
     distrito: '',
-    tipo: '',
-    fecha: '',
-    monto: '',
-    descripcion: '',
+    tipo_servicio: '',
+    fecha_incidente: '',
+    monto_reclamado: '',
+    descripcion_servicio: '',
+    declaracion_veraz:false,
+    acepta_politica:false,
+    estado:'Pendiente'
   });
 
   const [status, setStatus] = useState(null);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
+    console.log(formData);
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
 
@@ -29,12 +48,13 @@ export default function Page() {
     setStatus('loading');
 
     try {
-      const response = await fetch('/api/reclamaciones', { //CAMBIAR AQUIIIIIIIIIIIIIIIIIIIIIIIII
+      formData.declaracion_veraz = declaracion;
+      formData.acepta_politica = politica;
+      const response = await fetch('http://127.0.0.1:8000/api/create_reclamaciones', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
       });
-      z``
       if (response.ok) {
         setStatus('success');
         setFormData({
@@ -45,16 +65,21 @@ export default function Page() {
           departamento: '',
           direccion: '',
           distrito: '',
-          tipo: '',
-          fecha: '',
-          monto: '',
-          descripcion: ''
+          tipo_servicio: '',
+          fecha_incidente: '',
+          monto_reclamado: '',
+          descripcion_servicio: '',
+          declaracion_veraz:false,
+          acepta_politica:false,
+          estado:'Pendiente'
         });
+        setDeclaracion(false);
+        setPolitica(false);
       } else {
         setStatus('error');
       }
     } catch (error) {
-      setStatus('error');
+      setStatus(error);
     }
   };
   return (
@@ -93,8 +118,8 @@ export default function Page() {
 
           <div className="flex flex-col gap-4 md:flex-row md:flex-wrap">
             <select
-              name="tipo"
-              value={formData.tipo} 
+              name="tipo_servicio"
+              value={formData.tipo_servicio} 
               onChange={handleChange}
               className="border-[#b2b2b2] border-2 p-2 bg-white"
               required
@@ -106,11 +131,11 @@ export default function Page() {
             </select>
 
 
-            <Input placeholder="Fecha*" type="text" name="fecha" value={formData.fecha} onChange={handleChange} required />
-            <Input placeholder="Monto reclamado*" type="number" name="monto" value={formData.monto} onChange={handleChange} required />
+            <Input placeholder="Fecha*" type="date" name="fecha_incidente" value={formData.fecha_incidente} onChange={handleChange} required />
+            <Input placeholder="Monto reclamado*" type="number" name="monto_reclamado" value={formData.monto_reclamado} onChange={handleChange} required />
           </div>
           <textarea
-            name="descripcion" value={formData.descripcion} onChange={handleChange}
+            name="descripcion_servicio" value={formData.descripcion_servicio} onChange={handleChange}
             className="border-[#b2b2b2] border-2 p-2 w-full mt-4"
             rows={5}
             placeholder="Descripción del servicio*"
@@ -118,17 +143,12 @@ export default function Page() {
           ></textarea>
 
           <label className="flex gap-2 my-4" htmlFor="veraz">
-            <input className="w-8" type="checkbox" id="veraz" required />
+            <input className="w-8" value={declaracion} checked={declaracion} name="declaracion_veraz" type="checkbox" onChange={valor => cambio_declaracion(valor.target.checked)} id="veraz"  required />
             Doy fe que los datos e información proporcionados son veraces*
           </label>
 
-          <p>
-            Neon Led Publicidad deberá dar respuesta al reclamo o queja en un
-            plazo no mayor a quince (15) días hábiles.
-          </p>
-
           <label className="flex gap-2 my-4" htmlFor="politica">
-            <input className="w-8" type="checkbox" id="politica" required />
+            <input value={politica} checked={politica} name="acepta_politica"  className="w-8" type="checkbox" onChange={valor => cambio_politica(valor.target.checked)} id="politica" required />
             <span>
               Acepto la{' '}
               <a className="text-[#007bf9]">
@@ -137,6 +157,11 @@ export default function Page() {
               *
             </span>
           </label>
+
+          <p>
+            Neon Led Publicidad deberá dar respuesta al reclamo o queja en un
+            plazo no mayor a quince (15) días hábiles.
+          </p>
 
           <button type="submit" className="bg-[#0c1a27] rounded-full p-4 px-16 font-bold block m-auto text-white">
             {status === 'loading' ? 'Enviando...' : 'Enviar'}
