@@ -1,6 +1,5 @@
 import '../globals.css';
 import Link from 'next/link';
-import Image from 'next/image';
 
 export const metadata = {
   title: '.:: DigiMedia ::.',
@@ -12,12 +11,12 @@ export default function RootLayout({ children }) {
       <div className="flex bg-[#f9f9f9] w-[100vw] overflow-hidden">
         <div className="flex flex-col shrink-0 p-2 bg-white h-screen">
           <div className="flex gap-2 items-center justify-center my-10">
-            <Image src="/dashboard/main-icon.svg" alt="" width={40} />
+            <img src="/dashboard/main-icon.svg" alt="" width={40} />
             <h1 className="text-2xl font-bold">Digimedia</h1>
           </div>
 
           <button className="flex gap-2 bg-black text-white px-4 py-3 rounded-lg justify-center mb-5">
-            <Image src="/dashboard/logout-icon.svg" alt="" width={20} />
+            <img src="/dashboard/logout-icon.svg" alt="" width={20} />
             Cerrar sesión
           </button>
 
@@ -34,7 +33,7 @@ export default function RootLayout({ children }) {
           </nav>
 
           <div className="flex mt-auto gap-2 items-center">
-            <Image src="/dashboard/user-icon.svg" alt="" width={40} />
+            <img src="/dashboard/user-icon.svg" alt="" width={40} />
             <p className="font-bold">
               Bienvenido
               <span className="font-normal block">Administrador</span>
@@ -54,7 +53,7 @@ function TableLink({ href, title }) {
         href={href}
         className="flex gap-2 items-center rounded-lg hover:bg-[#eee] px-4 py-3"
       >
-        <Image src="/dashboard/section-icon.svg" alt="" width={20} />
+        <img src="/dashboard/section-icon.svg" alt="" width={20} />
         {title}
       </Link>
     </li>
