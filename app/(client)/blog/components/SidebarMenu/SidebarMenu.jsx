@@ -31,13 +31,13 @@ const SidebarMenu = () => {
   return (
     <div
       id="sidebar-menu"
-      className={`hidden lg:block fixed right-8 ${
+      className={`hidden lg:block fixed right-1 ${
         isFixed ? "top-[30%]" : "absolute"
       } bg-white p-4 rounded-l-lg shadow-lg w-64 z-10 transition-all duration-300`}
       style={!isFixed ? { top: sidebarTop } : {}}
     >
       <div className="mb-4">
-        <h3 className="text-xl font-bold text-center mb-4">¡Descubre!</h3>
+        <h3 className="text-sm font-bold text-center mb-4">¡Descubre!</h3>
       </div>
 
       <div className="flex flex-col gap-2">
