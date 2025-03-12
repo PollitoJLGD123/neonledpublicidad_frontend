@@ -13,7 +13,7 @@ export default function Blog4() {
 
         <div className="relative z-10 max-w-2xl text-white">
 
-          <h1 className="text-red-200 text-5xl md:text-6xl font-extrabold mb-4 neon-textov4">
+          <h1 className="text-red-100 text-5xl md:text-6xl font-extrabold mb-4 neon-textov4">
             TU BAR EN LA MIRA
           </h1>   
 
@@ -34,7 +34,7 @@ export default function Blog4() {
   
       <div className="container mx-auto px-4 py-12 relative bg-gradient-to-r text-black min-h-screen w-full">
 
-        <div className="hidden lg:block w-20 xl:w-24 2xl:w-32 bg-gradient-to-b from-blue-100 via-white to-blue-400 fixed left-0 top-0 h-full -z-10"></div>
+      <div className="hidden lg:block w-20 xl:w-24 2xl:w-32 bg-gradient-to-b from-red-500 via-white to-blue-500 fixed left-0 top-0 h-full -z-10"></div>
         
         <div className="relative lg:mx-48 p-6 bg-white/90 text-black rounded-lg shadow-xl">
           {/* Contenido principal */}
