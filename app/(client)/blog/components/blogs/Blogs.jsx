@@ -25,8 +25,8 @@ const Blogs = () => {
                 </p>
                 <div className="pt-8">
                 <Link href="/blog/content/blog1">
-                  <button className="w-[200px] px-6 py-2 rounded-full bg-gradient-to-r from-[--azul_cobalto] to-[--azul_cobalto] text-white hover:opacity-90 transition-all duration-300 transform hover:scale-105">
-                    Leer más
+                  <button className="w-[200px] text-center px-6 py-2 rounded-full bg-gradient-to-r from-[--azul_cobalto] to-[--azul_cobalto] text-white hover:opacity-90 transition-all duration-300 transform hover:scale-105">
+                    Leer más ...
                   </button>
                 </Link>
                 </div>
@@ -54,8 +54,8 @@ const Blogs = () => {
                 </p>
                 <div className="pt-8">
                 <Link href="/blog/content/blog2">
-                  <button className="w-[200px] px-6 py-2 rounded-full bg-gradient-to-r from-[--azul_cobalto] to-[--azul_cobalto] text-white hover:opacity-90 transition-all duration-300 transform hover:scale-105">
-                    Leer más
+                  <button className="w-[200px] text-center px-6 py-2 rounded-full bg-gradient-to-r from-[--azul_cobalto] to-[--azul_cobalto] text-white hover:opacity-90 transition-all duration-300 transform hover:scale-105">
+                  Leer más ...
                   </button>
                   </Link>
                 </div>
@@ -83,8 +83,8 @@ const Blogs = () => {
                 </p>
                 <div className="pt-8">
                 <Link href="/blog/content/blog3">
-                  <button className="w-[200px] px-6 py-2 rounded-full bg-gradient-to-r from-[--azul_cobalto] to-[--azul_cobalto] text-white hover:opacity-90 transition-all duration-300 transform hover:scale-105">
-                    Leer más
+                  <button className="w-[200px] text-center px-6 py-2 rounded-full bg-gradient-to-r from-[--azul_cobalto] to-[--azul_cobalto] text-white hover:opacity-90 transition-all duration-300 transform hover:scale-105">
+                  Leer más ...
                   </button>
                 </Link>
                 </div>
@@ -112,8 +112,8 @@ const Blogs = () => {
                 </p>
                 <div className="pt-8">
                   <Link href="/blog/content/blog4">
-                    <button className="w-[200px] px-6 py-2 rounded-full bg-gradient-to-r from-[--azul_cobalto] to-[--azul_cobalto] text-white hover:opacity-90 transition-all duration-300 transform hover:scale-105">
-                      Leer más
+                    <button className="w-[200px] text-center px-6 py-2 rounded-full bg-gradient-to-r from-[--azul_cobalto] to-[--azul_cobalto] text-white hover:opacity-90 transition-all duration-300 transform hover:scale-105">
+                    Leer más ...
                     </button>
                   </Link>
                 </div>
@@ -140,8 +140,8 @@ const Blogs = () => {
                   Brilla con estilo y distinción. Las letras doradas y plateadas aportan prestigio, presencia y posiciona tu marca o negocio. ¡Haz que te noten! 💛
                 </p>
                 <div className="pt-8">
-                  <button className="w-[200px] px-6 py-2 rounded-full bg-gradient-to-r from-[--azul_cobalto] to-[--azul_cobalto] text-white hover:opacity-90 transition-all duration-300 transform hover:scale-105">
-                    Leer más
+                  <button className="w-[200px] text-center px-6 py-2 rounded-full bg-gradient-to-r from-[--azul_cobalto] to-[--azul_cobalto] text-white hover:opacity-90 transition-all duration-300 transform hover:scale-105">
+                  Leer más ...
                   </button>
                 </div>
               </div>
@@ -167,8 +167,8 @@ const Blogs = () => {
                 Atrae con un diseño agradable, moderno y llamativo. La iluminación ideal para resaltar tu local y hacerlo inolvidable, de día y de noche. 🔆
                 </p>
                 <div className="pt-8">
-                  <button className="w-[200px] px-6 py-2 rounded-full bg-gradient-to-r from-[--azul_cobalto] to-[--azul_cobalto] text-white hover:opacity-90 transition-all duration-300 transform hover:scale-105">
-                    Leer más
+                  <button className="w-[200px] text-center px-6 py-2 rounded-full bg-gradient-to-r from-[--azul_cobalto] to-[--azul_cobalto] text-white hover:opacity-90 transition-all duration-300 transform hover:scale-105">
+                  Leer más ...
                   </button>
                 </div>
               </div>

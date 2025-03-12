@@ -13,7 +13,7 @@ export default function Blog4() {
 
         <div className="relative z-10 max-w-2xl text-white">
 
-          <h1 className="text-5xl md:text-6xl font-extrabold mb-4">
+          <h1 className="text-red-200 text-5xl md:text-6xl font-extrabold mb-4 neon-textov4">
             TU BAR EN LA MIRA
           </h1>   
 

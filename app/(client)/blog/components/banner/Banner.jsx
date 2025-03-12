@@ -44,13 +44,13 @@ const Banner = () => {
             <div className="relative h-full flex flex-col items-center justify-center text-white px-4 z-10">
                 {/* Small text */}
                 <span
-                    className={"text-[18px] sm:text-[30px] uppercase tracking-wider mb-4"}
+                    className={"text-[18px] sm:text-5xl font-extrabold uppercase tracking-wider mb-4"}
                 >
                     BLOG
                 </span>
                 {/* Main heading */}
                 <h1
-                    className={"text-[40px] sm:text-[60px] md:text-[80px] lg:text-[121px] font-bold mb-6 text-center font-title"}
+                    className={"text-[40px] sm:text-[60px] md:text-[80px] lg:text-[100px] font-bold mb-6 text-center font-title neon-textov2"}
                 >
                     ¿Quieres conocer más?
                 </h1>

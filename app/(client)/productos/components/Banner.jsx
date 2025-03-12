@@ -1,11 +1,13 @@
 "use client";
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import { useRouter } from 'next/navigation';
 import "./productoStyles.css";
 
 export default function Banner() {
   const circleRef = useRef(null);
   const isInView = useInView(circleRef, { triggerOnce: true, threshold: 0.5 });
+  const router = useRouter();
 
   return (
     <div className="bg-black w-full h-[600px] flex items-center justify-center">
@@ -31,7 +33,7 @@ export default function Banner() {
 
         <br />
 
-        <button>
+        <button onClick={()=> router.push("/contacto")}>
           Pide Ya!
           <div className="arrow-wrapper">
             <div className="arrow"></div>
