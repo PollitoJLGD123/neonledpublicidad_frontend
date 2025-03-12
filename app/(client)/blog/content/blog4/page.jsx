@@ -1,42 +1,51 @@
 import React from 'react';
 import Link from 'next/link';
+
 import SidebarMenu from '../../components/SidebarMenu/SidebarMenu';
 
 export default function Blog4() {
   return (
     <div>
       {/* Contenedor de la imagen y el título - SIN CAMBIOS */}
-      <div className="w-full h-[1024px] relative overflow-hidden">
-        <img
-          src="/blog/LETRANEONLED.png"
-          alt="Luces Neón LED para Bares"
-          className="w-full h-full object-cover transform scale-110 transition-transform duration-300 object-[center_40%]"
-        />
+      <div className="w-full h-screen sm:h-[60vh] md:h-[80vh] relative flex items-center justify-center text-center px-6 sm:px-12 bg-cover bg-center bg-no-repeat" 
+        style={{ backgroundImage: "url('/blog/LETRANEONLED2.png')" }}>
         
-        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
-        
-        <div className="absolute top-[15%] left-0 right-0 flex flex-col items-center justify-center z-10">
-          <h1 className="text-5xl font-bold text-white text-center max-w-4xl px-4">
-            Tu Bar, en la Mira
+        <div className="absolute inset-0 bg-black/60"></div>
+
+        <div className="relative z-10 max-w-2xl text-white">
+
+          <h1 className="text-5xl md:text-6xl font-extrabold mb-4">
+            TU BAR EN LA MIRA
+          </h1>   
+
+          <h1 className="text-2xl md:text-xl font-bold mb-4">
+            Ilumina tu espacio, cautiva a tus clientes
           </h1>
-          <div className="w-24 h-1 bg-white mt-4"></div>
+
+          <p className="text-lg text-gray-300 font-light">
+            Transforma la atmósfera de tu bar con luces neón LED vibrantes y llenas de estilo.
+          </p>
+
+          <div className="w-20 h-1 bg-white mt-6 mx-auto"></div>
         </div>
       </div>
       
       {/* Integramos el sidebar menu independiente del contenido principal */}
-      <SidebarMenu />
+      {/*<SidebarMenu />*/}
       
       {/* Contenido del blog con margen superior sobre fondo blanco y barra lateral celeste */}
-      <div className="container mx-auto px-4 py-12 relative">
+      <div className="container mx-auto px-4 py-12 relative bg-gradient-to-r from-blue-900 via-red-900 to-orange-700 text-white min-h-screen w-full">
         {/* Barra lateral celeste con ancho adaptativo */}
-        <div className="hidden lg:block w-20 xl:w-24 2xl:w-32 bg-[#AADFFD] fixed left-0 top-0 h-full -z-10"></div>
+        <div className="hidden lg:block w-20 xl:w-24 2xl:w-32 bg-[#ffffff] fixed left-0 top-0 h-full -z-10"></div>
         
         {/* Contenido del artículo - Ajustado con margen derecho adicional */}
         <div className="relative lg:ml-24 lg:mr-72">
+
           {/* Título del artículo con fecha */}
-          <div className="flex items-center mb-8">
-            <h2 className="text-3xl font-bold">Tu Bar, en la Mira</h2>
-            <p className="ml-4 text-sm text-gray-500">6 de marzo de 2023</p>
+          <div className="flex flex-col sm:flex-row items-center mb-8">
+            <h2 className="text-4xl font-bold">
+              {/* Título */} Tu Bar, en la Mira</h2>
+            <p className="ml-4 mt-2 text-sm text-white sm:ml-6 sm:mt-0">6 de marzo de 2023</p>
           </div>
           
           <p className="text-lg mb-6">
@@ -45,8 +54,6 @@ export default function Blog4() {
           
           {/* Sección 1 */}
           <div className="mb-10">
-            <img src="/blog/blog4/LETRA_NEON.png" alt="Letrero de neón en un bar" className="w-full max-w-2xl mb-4 rounded-lg shadow-lg" />
-            
             <h3 className="text-2xl font-bold mt-6 mb-3">1. El Factor Sorpresa y Distinción</h3>
             <p className="mb-4">
               Las letras de neón LED permiten personalizar la imagen de tu local, haciendo que el nombre de tu bar sea visible desde lejos. Un diseño llamativo puede convertirse en un sello distintivo y en un punto de referencia para los clientes.
@@ -59,7 +66,6 @@ export default function Blog4() {
             <p className="mb-4">
               La iluminación juega un papel crucial en la atmósfera de un bar. Los colores vibrantes y cálidos del neón LED pueden transformar un espacio ordinario en un entorno acogedor e instagrameable, incentivando a los clientes a compartir su experiencia en redes sociales.
             </p>
-            <img src="/blog/blog4/hepner1.png" alt="Ambiente con neón en bar" className="w-full max-w-2xl mb-4 rounded-lg shadow-lg" />
           </div>
           
           {/* Sección 3 */}
@@ -86,8 +92,22 @@ export default function Blog4() {
               <li>Elige un diseño legible y atractivo.</li>
               <li>Considera el lugar de instalación para maximizar su impacto.</li>
             </ul>
-            <img src="/blog/blog4/image.png" alt="Variedad de letreros neón LED" className="w-full max-w-2xl mb-4 rounded-lg shadow-lg" />
           </div>
+
+          {/* Galeria de Articulo */}
+          <div className="flex flex-wrap justify-center space-x-4 p-4">
+  <div className="target w-full sm:w-1/3 mb-4">
+    <img src="/blog/blog4/LETRA_NEON.png" alt="Letrero de neón en un bar" className="w-full h-auto rounded-lg shadow-lg object-cover" />
+  </div>
+  
+  <div className="target w-full sm:w-1/3 mb-4">
+    <img src="/blog/blog4/hepner1.png" alt="Ambiente con neón en bar" className="w-full h-auto rounded-lg shadow-lg object-cover" />
+  </div>
+
+  <div className="target w-full sm:w-1/3 mb-4">
+    <img src="/blog/blog4/image.png" alt="Variedad de letreros neón LED" className="w-full h-auto rounded-lg shadow-lg object-cover" />
+  </div>
+</div>
           
           {/* Conclusión */}
           <div className="mb-10">
@@ -115,6 +135,7 @@ export default function Blog4() {
               />
             </div>
           </div>
+
         </div>
       </div>
     </div>
