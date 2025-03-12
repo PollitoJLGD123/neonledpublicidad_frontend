@@ -4,7 +4,7 @@ import SidebarMenu from '../../components/SidebarMenu/SidebarMenu';
 
 export default function Blog4() {
   return (
-    <div>
+    <>
       {/* Contenedor de la imagen y el título - SIN CAMBIOS */}
       <div className="w-full h-screen md:h-[80vh] relative flex items-center justify-center text-center px-6 sm:px-12 bg-cover bg-center bg-no-repeat" 
         style={{ backgroundImage: "url('/blog/LETRANEONLED.png')" }}>
@@ -33,7 +33,7 @@ export default function Blog4() {
       <SidebarMenu />
       
       {/* Contenido del blog con margen superior sobre fondo blanco y barra lateral celeste */}
-      <div className="container mx-auto px-4 py-12 relative bg-gradient-to-r from-blue-900 via-red-900 to-orange-700 text-white min-h-screen w-full">
+      <div className="mx-0 px-4 py-12 relative bg-gradient-to-br from-blue-900 via-red-900 to-orange-800 text-white min-h-screen w-full">
         {/* Barra lateral celeste con ancho adaptativo */}
         <div className="hidden lg:block w-20 xl:w-24 2xl:w-32 bg-[#ffffff] fixed left-0 top-0 h-full -z-10"></div>
         
@@ -41,10 +41,10 @@ export default function Blog4() {
         <div className="relative lg:ml-48 lg:mr-48 justify-center">
           <div className='flex flex-col xl:flex-row lg:gap-4 '>
             {/* Título del artículo con fecha */}
-            <div className='w-full lg:w-3/2'>
+            <div className='w-full lg:w-3/2 backdrop-blur-sm bg-white/5 p-6 rounded-lg mb-10 xl:mb-0'>
               <div className="flex items-center mb-8">
                 <h2 className="text-3xl font-bold">Tu Bar, en la Mira</h2>
-                <p className="ml-4 text-sm text-gray-500">6 de marzo de 2023</p>
+                <p className="ml-4 text-sm text-gray-300">6 de marzo de 2023</p>
               </div>             
               <p className="text-lg mb-6">
                 Las luces neón LED se han convertido en un elemento diferenciador en el mundo de la hospitalidad. No solo son visualmente atractivos, sino que también refuerzan la identidad de tu negocio. En este artículo, exploraremos cómo las letras luminosas pueden marcar la diferencia en la experiencia de tus clientes.
@@ -58,7 +58,7 @@ export default function Blog4() {
           
           
           
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 mb-10 mt-20'>
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 mb-10 mt-20 backdrop-blur-sm bg-white/5 p-6 rounded-lg'>
               {/* Sección 1 */}
             <div className="mb-5">
               <h3 className="text-2xl font-bold mb-3">1. El Factor Sorpresa y Distinción</h3>
@@ -91,9 +91,9 @@ export default function Blog4() {
               </p>
             </div>
             {/* Sección 5 */}
-            <div className="mb-5">
+            <div className="mb-5 lg:col-span-2 text-center">
               <h3 className="text-2xl font-bold mb-3">5. Consejos para Elegir el Letrero Perfecto</h3>
-              <ul className="list-disc pl-6 mb-4">
+              <ul className="list-disc pl-6 mb-4 inline-block text-left">
                 <li>Opta por colores que reflejen la personalidad de tu bar.</li>
                 <li>Elige un diseño legible y atractivo.</li>
                 <li>Considera el lugar de instalación para maximizar su impacto.</li>
@@ -121,10 +121,10 @@ export default function Blog4() {
           
           {/* Imágenes de ejemplos */}
           <div className="mb-10">
-            <p className="text-sm text-white mb-4">
+            <p className="text-sm text-white mb-8">
               A continuación, te presentamos unos ejemplos de nuestros productos:
             </p>
-            <div className="flex flex-wrap gap-4 justify-center align-middle">
+            <div className="flex flex-wrap gap-12 justify-center align-middle">
               <img 
                 src="/blog/blog4/Frame7.png" 
                 alt="Ejemplo 1" 
@@ -139,6 +139,6 @@ export default function Blog4() {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
