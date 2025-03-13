@@ -1,0 +1,58 @@
+[
+    {
+      "img": "/blog/ACRILICO.png",
+      "titulo": "Brilla con Estilo",
+      "descripcion": "Modernas y llamativas, las letras acrílicas luminosas destacan tu marca o decoran con elegancia. ¡Ilumina tu creatividad! 💡🔠",
+      "link": "/blog/content/blog1",
+      "bannerBlog":{
+        "titulo": "TU BAR EN LA MIRA",
+        "subTitulo": "Ilumina tu espacio, cautiva a tus clientes",
+        "frase": "Transforma la atmósfera de tu bar con luces neón LED vibrantes y llenas de estilo.",
+        "img": "/blog/LETRANEONLED.png"
+      },
+      "blog":{
+        "titulo": "Brilla con Estilo",
+        "fecha": "6 de marzo de 2023",
+        "descripcion": "Las luces neón LED se han convertido en un elemento diferenciador en el mundo de la hospitalidad. No solo son visualmente atractivos, sino que también refuerzan la identidad de tu negocio. En este artículo, exploraremos cómo las letras luminosas pueden marcar la diferencia en la experiencia de tus clientes.",
+        "img1": "/blog/blog4/LETRA_NEON.png",
+        "img2": "/blog/blog4/image.png",
+        "img3": "/blog/blog4/hepner1.png"
+      }
+    },
+    {
+      "img": "/blog/DISPLAY.png",
+      "titulo": "Atrae Clientes ✨",
+      "descripcion": "Destaca tu marca con carteles iluminados que captan miradas. Innovadores, atractivos y efectivos. ¡Haz que tu publicidad brille! 💡🚀",
+      "link": "/blog/content/blog2"
+    },
+    {
+      "img": "/blog/HOLOGRAFICO.png",
+      "titulo" : "Hipnotizalos",
+      "descripcion" : "Cautiva con visuales 3D futuristas. Tus anuncios cobrarán vida con hologramas que atraen, sorprenden y convierten. 🚀 🎥",
+      "link": "/blog/content/blog3"
+    },
+    {
+      "img": "/blog/LETRANEONLED.png",
+      "titulo": "Tu Bar, en la Mira",
+      "descripcion": "Haz que el nombre de tu bar destaque con letras neón LED. Crea un ambiente único que atraiga miradas y clientes. ¡Ilumina tu identidad! 🍹🔆",
+      "link": "/blog/content/blog4"
+    },
+    {
+      "img": "/blog/LETRASDORADAS.png",
+      "titulo": "Puro Lujo",
+      "descripcion": "Brilla con estilo y distinción. Las letras doradas y plateadas aportan prestigio, presencia y posiciona tu marca o negocio. ¡Haz que te noten! 💛",
+      "link": "/blog/content/blog5"
+    },
+    {
+      "img": "/blog/LETREROLUMINOSO.png",
+      "titulo": "Conquista Miradas",
+      "descripcion": "Atrae con un diseño agradable, moderno y llamativo. La iluminación ideal para resaltar tu local y hacerlo inolvidable, de día y de noche. 🔆",
+      "link": "/blog/content/blog6"
+    },
+    {
+      "img": "/blog/LETREROLUMINOSO.png",
+      "titulo": "Conquista Miradas",
+      "descripcion": "Atrae con un diseño agradable, moderno y llamativo. La iluminación ideal para resaltar tu local y hacerlo inolvidable, de día y de noche. 🔆",
+      "link": "/blog/content/blog7"
+    }
+]
