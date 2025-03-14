@@ -15,12 +15,12 @@ export default function Home() {
     { 
       title: "Dulcería", 
       description: "Espacio interior", 
-      image: "/productos/LETRA NEÓN LED.jpg" 
+      image: "/productos/letra_neon_led_1.jpg" 
     },
     { 
       title: "Restaurante", 
       description: "Espacio exterior", 
-      image: "/productos/LETRA NEÓN LED2.jpg" 
+      image: "/productos/letra_neon_led_2.jpg" 
     }
   ];
   const idProducto = 4;

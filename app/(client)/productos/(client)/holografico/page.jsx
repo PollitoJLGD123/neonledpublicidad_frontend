@@ -15,12 +15,12 @@ export default function Home() {
     { 
       title: "Ballena - Animal", 
       description: "Espacio interior", 
-      image: "/productos/HOLOGRÁFICO1.jpg"  
+      image: "/productos/holografico_1.jpg"  
     },
     { 
       title: "Dinosaurio", 
       description: "Espacio interior",  
-      image: "/productos/HOLOGRÁFICO2.jpg"        
+      image: "/productos/holografico_2.jpg"        
     }
   ];
   const idProducto = 11;

@@ -17,12 +17,12 @@ export default function Home() {
     { 
       title: "Juguetería", 
       description: "Espacio interior", 
-      image: "/productos/ACRÍLICO1PRODUCTO.jpg" 
+      image: "/productos/acrilico_producto_1.jpg" 
     },
     { 
       title: "Feria", 
       description: "Espacio interior", 
-      image: "/productos/ACRÍLICO2PRODUCTO.jpg" 
+      image: "/productos/acrilico_producto_2.jpg" 
     }
   ];
   return (

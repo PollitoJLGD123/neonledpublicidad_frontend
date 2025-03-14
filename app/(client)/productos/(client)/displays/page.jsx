@@ -15,12 +15,12 @@ export default function Home() {
     { 
       title: "Tienda de arte", 
       description: "Espacio interior", 
-      image: "/productos/DISPLAY1.jpg"  
+      image: "/productos/display_1.jpg"  
     },
     { 
       title: "Centro comercial", 
       description: "Espacio interior",  
-      image: "/productos/DISPLAY2.jpg"       
+      image: "/productos/display_2.jpg"       
     }
   ];
   const idProducto = 9;

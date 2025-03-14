@@ -10,7 +10,7 @@ export default function Blog2() {
  <div className="flex flex-col md:flex-row items-center  w-screen h-screen   rounded-lg shadow-lg">
   {/* Imagen iluminada */}
   <div className="w-full md:w-1/2 h-screen">
-    <img className="w-full h-full object-cover" src="/Productos/DISPLAY1.jpg" alt="Publicidad iluminada" />
+    <img className="w-full h-full object-cover" src="/Productos/display_1.jpg" alt="Publicidad iluminada" />
   </div>
 
   {/* Texto atractivo */}
