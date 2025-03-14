@@ -20,7 +20,7 @@ export default function Home() {
     { 
       title: "Cosmetologia", 
       description: "Espacio exterior", 
-      image: "/productos/LETREROLUMINOSO2.jpg" 
+      image: "/productos/letrero_luminoso_2.jpg" 
     }
   ];
   const idProducto = 3;
