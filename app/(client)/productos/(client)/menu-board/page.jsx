@@ -15,12 +15,12 @@ export default function Home() {
     { 
       title: "Cafetería", 
       description: "Espacio interior", 
-      image: "/productos/MENÚ BOARD1.jpg"  
+      image: "/productos/menu_boards1.jpg"  
     },
     { 
       title: "Establecimiento", 
       description: "Espacio interior",  
-      image: "/productos/MENÚ BOARD2.jpg"    
+      image: "/productos/menu_boards2.jpg"    
     }
   ];
   const idProducto = 7;

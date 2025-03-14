@@ -15,12 +15,12 @@ export default function Home() {
     { 
       title: "Jardin ", 
       description: "Espacio exterior", 
-      image: "/productos/TÚNEL LED1.jpg"  
+      image: "/productos/tunel_led1.jpg"  
     },
     { 
       title: "Feria", 
       description: "Espacio interior",  
-      image: "/productos/TÚNEL LED2.jpg"        
+      image: "/productos/tunel_led2.jpg"        
     }
   ];
   const idProducto = 12;

@@ -15,12 +15,12 @@ export default function Home() {
     { 
       title: "Decorado", 
       description: "Espacio interior", 
-      image: "/productos/TECHO LED2.jpg"  
+      image: "/productos/techos_led1.jpg"  
     },
     { 
       title: "Estudio", 
       description: "Espacio interior",  
-      image: "/productos/TECHO LED1.jpg"       
+      image: "/productos/techos_led2.jpg"       
     }
   ];
   const idProducto = 14;
