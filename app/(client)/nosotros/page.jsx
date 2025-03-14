@@ -8,7 +8,7 @@ const Nosotros = () => {
         {/* Imagen de fondo semi-transparente */}
         <div className="absolute inset-0 z-0">
           <img
-            src="/Nosotros/FONDO WEB_NOSOTROS.jpg"
+            src="/nosotros/fondo_web.jpg"
             alt="Fondo Neon Led Store"
             className="w-full h-full object-cover opacity-60"
           />

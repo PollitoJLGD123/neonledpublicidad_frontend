@@ -15,12 +15,12 @@ export default function Home() {
     { 
       title: "Juguería", 
       description: "Espacio interior", 
-      image: "/Productos/IMPRESIÓN EN VINIL1.jpg"  
+      image: "/productos/IMPRESIÓN EN VINIL1.jpg"  
     },
     { 
       title: "Hogar", 
       description: "Espacio interior",  
-      image: "/Productos/IMPRESIÓN EN VINIL2.jpg"  
+      image: "/productos/IMPRESIÓN EN VINIL2.jpg"  
     }
   ];
   const idProducto = 6;

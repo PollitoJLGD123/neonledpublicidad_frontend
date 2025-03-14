@@ -15,12 +15,12 @@ export default function Home() {
     { 
       title: "Dormitorio", 
       description: "Espacio interior", 
-      image: "/Productos/SILLAS LUMINOSAS1.jpg"  
+      image: "/productos/SILLAS LUMINOSAS1.jpg"  
     },
     { 
       title: "Jardin", 
       description: "Espacio exterior",  
-      image: "/Productos/SILLAS LUMINOSAS2.jpg"        
+      image: "/productos/SILLAS LUMINOSAS2.jpg"        
     }
   ];
   const idProducto = 13;

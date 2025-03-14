@@ -15,12 +15,12 @@ export default function Home() {
     { 
       title: "Decorado", 
       description: "Espacio interior", 
-      image: "/Productos/NEÓN LED1.jpg"  
+      image: "/productos/NEÓN LED1.jpg"  
     },
     { 
       title: "Estudio de música", 
       description: "Espacio interior", 
-      image: "/Productos/NEÓN LED2.jpg"
+      image: "/productos/NEÓN LED2.jpg"
     }
   ];
   const idProducto = 5;

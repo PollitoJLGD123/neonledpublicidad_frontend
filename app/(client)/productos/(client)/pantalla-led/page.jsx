@@ -15,12 +15,12 @@ export default function Home() {
     { 
       title: "Tienda de ropa", 
       description: "Espacio interior", 
-      image: "/Productos/PANTALLA LED1.jpg"  
+      image: "/productos/PANTALLA LED1.jpg"  
     },
     { 
       title: "Centro comercial", 
       description: "Espacio interior",  
-      image: "/Productos/PANTALLA LED2.jpg"       
+      image: "/productos/PANTALLA LED2.jpg"       
     }
   ];
   const idProducto = 10;

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, Suspense } from "react";
 import Pagination from "../components/Pagination";
 import Table from "../components/Table";
 import { useSearchParams } from "next/navigation";
@@ -8,15 +8,9 @@ import axios from "axios";
 
 const API_BASE_URL = "http://localhost:8000/api/contactanos";
 
-const headers = [
-  "nombre",
-  "apellido",
-  "telefono",
-  "distrito",
-  "tipo_reclamo",
-];
+const headers = ["nombre", "apellido", "telefono", "distrito", "tipo_reclamo"];
 
-export default function Page() {
+function ContactsTable() {
   const searchParams = useSearchParams();
   const currentPage = searchParams.get("page") || 1;
   const [data, setData] = useState([]);
@@ -58,8 +52,7 @@ export default function Page() {
   }, [currentPage]);
 
   return (
-    <main className="p-4 overflow-scroll flex flex-col w-full h-[100vh] flex-1">
-      <h2 className="text-4xl font-bold mb-4">Sección principal</h2>
+    <>
       <Table
         headers={headers}
         onDelete={false}
@@ -89,6 +82,17 @@ export default function Page() {
         }))}
       />
       <Pagination count={totalPages} />
+    </>
+  );
+}
+
+export default function Page() {
+  return (
+    <main className="p-4 overflow-scroll flex flex-col w-full h-[100vh] flex-1">
+      <h2 className="text-4xl font-bold mb-4">Sección principal</h2>
+      <Suspense fallback={<p>Cargando contactos...</p>}>
+        <ContactsTable />
+      </Suspense>
     </main>
   );
 }

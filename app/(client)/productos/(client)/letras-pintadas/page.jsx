@@ -15,12 +15,12 @@ export default function Home() {
     { 
       title: "Panadería", 
       description: "Espacio interior", 
-      image: "/Productos/MDF1.jpg"  
+      image: "/productos/MDF1.jpg"  
     },
     { 
       title: "Centro médico", 
       description: "Espacio interior",  
-      image: "/Productos/MDF2.jpg"     
+      image: "/productos/MDF2.jpg"     
     }
   ];
   const idProducto = 8;
