@@ -15,12 +15,12 @@ export default function Home() {
     { 
       title: "Recepción", 
       description: "Espacio interior", 
-      image: "/blog/LETRASDORADAS.png" 
+      image: "/blog/letras_doradas.png" 
     },
     { 
       title: "Tienda", 
       description: "Espacio exterior", 
-      image: "/blog/LETRAS DORADAS2.jpg" 
+      image: "/blog/letras_doradas2.jpg" 
     }
   ];
   const idProducto = 2;

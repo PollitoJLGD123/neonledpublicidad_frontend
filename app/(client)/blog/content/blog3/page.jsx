@@ -8,7 +8,7 @@ export default function Blog3() {
       <div className="w-full h-[1024px] relative overflow-hidden">
         {/* Imagen de fondo con zoom out y posición ajustada más arriba */}
         <img
-          src="/blog/HOLOGRAFICO.png"
+          src="/blog/holografico.png"
           alt="Hologramas 3D en Publicidad"
           className="w-full h-full object-cover transform scale-110 transition-transform duration-300 object-[center_40%]" // Ajustado de object-top a object-[center_40%]
         />

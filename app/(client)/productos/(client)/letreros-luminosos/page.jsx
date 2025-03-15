@@ -15,7 +15,7 @@ export default function Home() {
     { 
       title: "Cafetería", 
       description: "Espacio exterior", 
-      image: "/blog/LETREROLUMINOSO.png" 
+      image: "/blog/letrero_luminoso.png" 
     },
     { 
       title: "Cosmetologia", 

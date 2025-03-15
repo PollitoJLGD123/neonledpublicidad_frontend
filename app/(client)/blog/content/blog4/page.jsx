@@ -7,7 +7,7 @@ export default function Blog4() {
     <div>
       {/* Contenedor de la imagen y el título - SIN CAMBIOS */}
       <div className="w-full h-screen md:h-[80vh] relative flex items-center justify-center text-center px-6 sm:px-12 bg-cover bg-center bg-no-repeat" 
-        style={{ backgroundImage: "url('/blog/LETRANEONLED2.png')" }}>
+        style={{ backgroundImage: "url('/blog/letra_neonled2.png')" }}>
         
         <div className="absolute inset-0 bg-black/60"></div>
 
@@ -49,7 +49,7 @@ export default function Blog4() {
                   </p>
             </div>
             <figure className='flex justify-center w-full xl:w-1/2'>
-              <img src="/blog/blog4/LETRA_NEON.png" alt="Letrero de neón en un bar" className="w-80 xl:w-96 rounded-3xl shadow-lg border-2 border-red-500" />
+              <img src="/blog/blog4/letra_neon.png" alt="Letrero de neón en un bar" className="w-80 xl:w-96 rounded-3xl shadow-lg border-2 border-red-500" />
             </figure>
           </div>
 

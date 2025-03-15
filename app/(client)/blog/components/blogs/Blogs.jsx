@@ -10,7 +10,7 @@ const Blogs = () => {
           <div className="flex flex-col lg:flex-row lg:h-80">
             <div className="relative h-56 lg:h-full lg:w-2/5">
               <img 
-                src="/blog/ACRILICO.png" 
+                src="/blog/acrilico.png" 
                 alt="Brilla con Estilo" 
                 className="w-full h-full object-cover"
               />
@@ -40,7 +40,7 @@ const Blogs = () => {
           <div className="flex flex-col lg:flex-row lg:h-80">
             <div className="relative h-56 lg:h-full lg:w-2/5">
               <img 
-                src="/blog/DISPLAY.png" 
+                src="/blog/display.png" 
                 alt="Hipnotizalos" 
                 className="w-full h-full object-cover"
               />
@@ -69,7 +69,7 @@ const Blogs = () => {
           <div className="flex flex-col lg:flex-row lg:h-80">
             <div className="relative h-56 lg:h-full lg:w-2/5">
               <img 
-                src="/blog/HOLOGRAFICO.png" 
+                src="/blog/holografico.png" 
                 alt="Hipnotizalos" 
                 className="w-full h-full object-cover"
               />
@@ -98,7 +98,7 @@ const Blogs = () => {
           <div className="flex flex-col lg:flex-row lg:h-80">
             <div className="relative h-56 lg:h-full lg:w-2/5">
               <img 
-                src="/blog/LETRANEONLED.png" 
+                src="/blog/letra_neonled.png" 
                 alt="Hipnotizalos" 
                 className="w-full h-full object-cover"
               />
@@ -127,7 +127,7 @@ const Blogs = () => {
           <div className="flex flex-col lg:flex-row lg:h-80">
             <div className="relative h-56 lg:h-full lg:w-2/5">
               <img 
-                src="/blog/LETRASDORADAS.png" 
+                src="/blog/letras_doradas.png" 
                 alt="Hipnotizalos" 
                 className="w-full h-full object-cover"
               />
@@ -154,7 +154,7 @@ const Blogs = () => {
           <div className="flex flex-col lg:flex-row lg:h-80">
             <div className="relative h-56 lg:h-full lg:w-2/5">
               <img 
-                src="/blog/LETREROLUMINOSO.png" 
+                src="/blog/letrero_luminoso.png" 
                 alt="Hipnotizalos" 
                 className="w-full h-full object-cover"
               />

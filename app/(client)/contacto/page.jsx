@@ -70,7 +70,7 @@ const Contacto = () => {
         {/* Background Image */}
         <div className="absolute inset-0 w-full h-full">
           <Image
-            src="/contacto/Banner_Contacto.webp"
+            src="/contacto/banner_contacto.webp"
             alt="Banner Contacto"
             fill
             priority
@@ -97,7 +97,7 @@ const Contacto = () => {
             <div className="flex flex-col items-center text-center">
               <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mb-4">
                 <Image
-                  src="/contacto/icono-ContactoCelular.svg"
+                  src="/contacto/icono_contacto_celular.svg"
                   alt="Icono Celular"
                   width={42}
                   height={42}
@@ -218,7 +218,7 @@ const Contacto = () => {
                 <a href="#" className="hover:opacity-75 transition-opacity">
                   <div className="rounded-full p-3">
                     <Image
-                      src="/contacto/REDES-SOCIALES-01.svg"
+                      src="/contacto/redes_sociales1.svg"
                       alt="TikTok"
                       width={44}
                       height={44}
@@ -231,7 +231,7 @@ const Contacto = () => {
                 <a href="#" className="hover:opacity-75 transition-opacity">
                   <div className="rounded-full p-3">
                     <Image
-                      src="/contacto/REDES-SOCIALES-03.svg"
+                      src="/contacto/redes_sociales3.svg"
                       alt="YouTube"
                       width={44}
                       height={44}
@@ -244,7 +244,7 @@ const Contacto = () => {
                 <a href="#" className="hover:opacity-75 transition-opacity">
                   <div className="rounded-full p-3">
                     <Image
-                      src="/contacto/REDES-SOCIALES-04.svg"
+                      src="/contacto/redes_sociales4.svg"
                       alt="Facebook"
                       width={44}
                       height={44}
@@ -257,7 +257,7 @@ const Contacto = () => {
                 <a href="#" className="hover:opacity-75 transition-opacity">
                   <div className="rounded-full p-3">
                     <Image
-                      src="/contacto/REDES-SOCIALES-02.svg"
+                      src="/contacto/redes_sociales2.svg"
                       alt="Instagram"
                       width={44}
                       height={44}
@@ -279,7 +279,7 @@ const Contacto = () => {
           <div className="max-w-5xl mx-auto relative -mb-40 md:-mb-96 z-10"> {/* Margen negativo responsive */}
             <div className="relative aspect-video w-full h-[300px] md:h-[500px]"> {/* Altura responsive y relación de aspecto */}
               <Image
-                src="/contacto/LAPTOP-MAPA.webp"
+                src="/contacto/laptop_mapa.webp"
                 alt="Ubicación en mapa"
                 fill
                 className="object-contain md:object-cover" /* Mobile: contain, Desktop: cover */
