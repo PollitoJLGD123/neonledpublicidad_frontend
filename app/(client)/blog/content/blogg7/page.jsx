@@ -1,45 +1,29 @@
-"use client"
 import React from 'react';
 import Link from 'next/link';
-import SidebarMenu from '../../components/SidebarMenu/SidebarMenu';
-import { usePathname } from "next/navigation";
-import { useState, useEffect } from 'react';
-import axios from "axios";
+import SidebarMenu from '../SidebarMenu/SidebarMenu';
 
-
-export default function Blog1() {
-  const [datoBlog, setDatoBlog] = useState({});
-
-    const pathname = usePathname();
-    useEffect(() => {
-      axios
-        .get("/data/datosblog.json") 
-        .then((res) => {
-          const blogEncontrado = res.data.find((blog) => blog.link === pathname);
-          if (blogEncontrado) setDatoBlog(blogEncontrado);
-        })
-        .catch((error) => console.error("Error cargando datos:", error));
-    }, [pathname]);
-
+export default function page() {
+    
   return (
     <div>
+      {/* Contenedor de la imagen y el título - SIN CAMBIOS */}
       <div className="w-full h-screen md:h-[80vh] relative flex items-center justify-center text-center px-6 sm:px-12 bg-cover bg-center bg-no-repeat" 
-        style={{ backgroundImage: `url(${datoBlog.bannerBlog?.img || ''})` }}>
+        style={{ backgroundImage: "url('/blog/LETRANEONLED.png')" }}>
         
         <div className="absolute inset-0 bg-black/60"></div>
 
         <div className="relative z-10 max-w-2xl text-white">
 
           <h1 className="text-5xl md:text-6xl font-extrabold mb-4">
-            {datoBlog.bannerBlog?.titulo || "Cargando..."}
+            TU BAR EN LA MIRA
           </h1>   
 
           <h1 className="text-2xl md:text-xl font-bold mb-4">
-            {datoBlog.bannerBlog?.subTitulo || "Cargando..."}
+            Ilumina tu espacio, cautiva a tus clientes
           </h1>
 
           <p className="text-lg text-gray-300 font-light">
-            {datoBlog.bannerBlog?.frase || "Cargando..."}
+            Transforma la atmósfera de tu bar con luces neón LED vibrantes y llenas de estilo.
           </p>
 
           <div className="w-20 h-1 bg-white mt-6 mx-auto"></div>
@@ -60,15 +44,15 @@ export default function Blog1() {
             {/* Título del artículo con fecha */}
             <div className='w-full lg:w-3/2'>
               <div className="flex items-center mb-8 mt-5">
-                <h2 className="text-4xl font-bold">{datoBlog.blog?.titulo || "Cargando..."}</h2>
-                <p className="ml-4 text-sm text-gray-500">{datoBlog.blog?.fecha || "Cargando..."}</p>
+                <h2 className="text-4xl font-bold">Tu Bar, en la Mira</h2>
+                <p className="ml-4 text-sm text-gray-500">6 de marzo de 2023</p>
               </div>             
               <p className="text-lg mb-6">
-                {datoBlog.blog?.descripcion || "Cargando..."}
+                Las luces neón LED se han convertido en un elemento diferenciador en el mundo de la hospitalidad. No solo son visualmente atractivos, sino que también refuerzan la identidad de tu negocio. En este artículo, exploraremos cómo las letras luminosas pueden marcar la diferencia en la experiencia de tus clientes.
               </p>
             </div>
             <figure className='flex align-middle justify-center w-full xl:w-1/2'>
-              <img src={datoBlog.blog?.img1} alt="Letrero de neón en un bar" className="w-[400px] lg:w-[320px]  max-w-2xl rounded-lg shadow-lg " />
+              <img src="/blog/blog4/LETRA_NEON.png" alt="Letrero de neón en un bar" className="w-[400px] lg:w-[320px]  max-w-2xl rounded-lg shadow-lg " />
             </figure>
             
           </div>
