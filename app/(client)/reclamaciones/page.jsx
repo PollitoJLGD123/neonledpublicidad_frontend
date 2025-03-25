@@ -105,7 +105,6 @@ export default function Page() {
         icon: 'error',
         confirmButtonText: 'OK',
       });
-
     }
   };
   return (
