@@ -187,7 +187,8 @@ button:hover .arrow:before {
 }
 
 .producto:hover::before {
-  animation: shine 0.75s ease forwards; /* Duración y función de tiempo ajustadas */
+  -webkit-animation: shine 0.75s ease forwards;
+  animation: shine 0.75s ease forwards;
 }
 
 @keyframes shine {
@@ -200,7 +201,7 @@ button:hover .arrow:before {
 }
 
 .producto:hover {
-  border: 3px solid #fff;
+  box-shadow: 0 0 0 2px rgb(255, 255, 255); 
 }
 
 .producto-img {
