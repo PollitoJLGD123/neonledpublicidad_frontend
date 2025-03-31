@@ -160,14 +160,14 @@ export default function Descripcion() {
                             ¿Buscas ...?
                         </p>
 
-                        <div className="relative flex items-center justify-center mt-6 w-full gap-4">
-                            <button onClick={prevSlide} className="w-12 h-12 flex items-center justify-center flex-shrink-0">
+                        <div className="relative flex flex-wrap items-center justify-center mt-6 w-full">
+                            <button onClick={prevSlide} className="w-full sm:w-12 h-12 flex items-center justify-center flex-shrink-0">
                                 <span className="text-[#00BFFF] text-4xl">&#10094;</span>
                             </button>
-                            <div className="inline-flex items-center justify-center bg-gradient-to-r from-[#00BFFF] to-[#2257D2] text-white px-6 py-3 rounded-full text-lg font-bold shadow-lg text-center whitespace-nowrap">
+                            <div className="inline-flex items-center justify-center bg-gradient-to-r from-[#00BFFF] to-[#2257D2] text-white px-1 sm:px-6 py-3 rounded-full text-lg font-bold shadow-lg text-center whitespace-nowrap">
                                 {items[currentIndex]}
                             </div>
-                            <button onClick={nextSlide} className="w-12 h-12 flex items-center justify-center flex-shrink-0">
+                            <button onClick={nextSlide} className="w-full sm:w-12 h-12 flex items-center justify-center flex-shrink-0">
                                 <span className="text-[#00BFFF] text-4xl">&#10095;</span>
                             </button>
                         </div>
