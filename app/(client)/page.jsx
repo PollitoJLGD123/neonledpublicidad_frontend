@@ -3,6 +3,21 @@ import NuestrosProductos from "./productos/components/NuestrosProductos";
 import FilaProductos from "./productos/components/FilaProductos";
 import Slider from "./components/slider/Slider";
 
+const AboutStatic = () => (
+  <section className="flex flex-col justify-center items-center text-center bg-gradient-to-r from-[--azul_brillante] to-[--azul_cobalto] text-white p-8 w-4/5 max-w-4xl mx-auto rounded-2xl shadow-lg mb-12">
+    <h2 className="text-sm md:text-lg font-semibold mb-3">
+      Conoce más sobre
+    </h2>
+    <h1 className="text-sm md:text-4xl font-bold mb-3">NOSOTROS</h1>
+    <hr className="w-16 border-2 border-white mb-3" />
+    <p className="text-sm font-medium md:text-lg leading-relaxed max-w-xl text-justify">
+      Somos Neon Led Store, una empresa dedicada a la creación de diseños
+      personalizados de luces LED que transforman cualquier espacio en un
+      reflejo único de estilo y personalidad.
+    </p>
+  </section>
+);
+
 export default function Home() {
   const fila1 = [
     {
@@ -33,21 +48,6 @@ export default function Home() {
     { imgSrc: "/home/fondo3.webp", altText: "Descripción 3" },
     { imgSrc: "/home/fondo4.webp", altText: "Descripción 4" },
   ];
-
-  const AboutStatic = () => (
-    <section className="flex flex-col justify-center items-center text-center bg-gradient-to-r from-[--azul_brillante] to-[--azul_cobalto] text-white p-8 w-4/5 max-w-4xl mx-auto rounded-2xl shadow-lg mb-12">
-      <h2 className="text-sm md:text-lg font-semibold mb-3">
-        Conoce más sobre
-      </h2>
-      <h1 className="text-sm md:text-4xl font-bold mb-3">NOSOTROS</h1>
-      <hr className="w-16 border-2 border-white mb-3" />
-      <p className="text-sm font-medium md:text-lg leading-relaxed max-w-xl text-justify">
-        Somos Neon Led Store, una empresa dedicada a la creación de diseños
-        personalizados de luces LED que transforman cualquier espacio en un
-        reflejo único de estilo y personalidad.
-      </p>
-    </section>
-  );
 
   return (
     <>
