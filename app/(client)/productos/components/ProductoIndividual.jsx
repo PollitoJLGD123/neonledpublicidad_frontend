@@ -7,7 +7,7 @@ function Producto({ imgSrc, altText, description, route }) {
       <div className="producto">
         <img src={imgSrc} alt={altText} className="producto-img" />
         <div className="producto-description">
-          <h3 className="producto-description__text">{description}</h3>
+          <h3 className="producto-description__text text-xs md:text-base">{description}</h3>
         </div>
       </div>
     </a>
