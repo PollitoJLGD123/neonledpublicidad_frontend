@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { items } from "../Descripcion";
+import { items } from "../../../Descripcion";
 
 export const Carousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);

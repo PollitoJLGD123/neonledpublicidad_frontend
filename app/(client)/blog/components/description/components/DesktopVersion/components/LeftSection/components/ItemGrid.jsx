@@ -1,6 +1,8 @@
+"use client";
+
 import React from "react";
-import Item from "./item";
-import { items } from "../Descripcion";
+import { items } from "../../../../../Descripcion";
+import Item from "./Item";
 
 export const ItemGrid = () => {
   return (

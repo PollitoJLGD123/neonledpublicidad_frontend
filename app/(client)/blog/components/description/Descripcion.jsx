@@ -1,7 +1,7 @@
 "use client";
 
 import { DesktopVersion } from "./components/DesktopVersion";
-import { MobileVersion } from "./components/MobileVersion";
+import { MobileVersion } from "./components/MobileVersion/MobileVersion";
 
 export const items = [
   "Letreros",
