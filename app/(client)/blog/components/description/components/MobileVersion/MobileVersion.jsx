@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { WelcomeSection } from "../common/WelcomeSection";
 import { ImageSection, SectionCarousel } from "./components";
