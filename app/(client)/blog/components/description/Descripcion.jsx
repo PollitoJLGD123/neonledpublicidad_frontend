@@ -90,14 +90,10 @@ export default function Descripcion() {
                 </span>
               </p>
               <div className="mt-8 grid grid-cols-1 md:grid-cols-4 gap-4">
-                <Item title="Letreros" />
-                <Item title="Carteles" />
-                <Item title="Impresiones" />
-                <Item title="Otros" />
-                <Item title="Consultas" />
-                <Item title="Tendencias" />
-                <Item title="Instalaciones" />
-                <Item title="Garantía" />
+                { items.map((item, index)=>(
+                    <Item key={index} title={item} />
+                ))
+                }
               </div>
             </div>
           </div>
