@@ -17,7 +17,7 @@ export const items = [
 export default function Descripcion() {
   return (
     <div className="relative w-full mt-10">
-      <div className="absolute top-0 left-0 w-full h-[18rem] md:h-[60%] bg-gradient-to-r from-[--azul_brillante] to-[--azul_intenso]"></div>
+      <div className="absolute top-0 left-0 w-full md:h-[18rem] h-[60%] bg-gradient-to-r from-[--azul_brillante] to-[--azul_intenso]"></div>
       <DesktopVersion />
       <MobileVersion />
     </div>
