@@ -8,6 +8,7 @@ export const SlideItem = ({ slides, current }) => {
     <>
       {slides.map((slide, index) => (
         <div
+          key={index}
           className={`absolute inset-0 transition-opacity duration-500 ${
             index === current ? "opacity-100" : "opacity-0"
           }`}
