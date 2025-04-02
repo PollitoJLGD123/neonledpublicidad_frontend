@@ -39,9 +39,7 @@ const Slider = ({ slides }) => {
 
       {/* Contenedor principal del slide */}
       <div className="relative w-full h-full">
-        {slides.map((slide, index) => (
-          <SlideItem key={index} slide={slide} isActive={index === current} />
-        ))}
+        <SlideItem slides={slides} current={current} />
 
         {/* Panel de previsualización - Responsive y oculto en móviles */}
         <SlideThumbnails
