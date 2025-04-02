@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Image from "next/image";
 import { SliderContent } from "./components/SliderContent";
 import { SlideItem } from "./components/SlideItem";
 import { SlideThumbnails } from "./components/SlideThumbnails";
@@ -49,10 +48,17 @@ const Slider = ({ slides }) => {
         />
 
         {/* Indicadores de slide para móviles */}
-        <SlideIndicators slides={slides} current={current} setCurrent={setCurrent} />
+        <SlideIndicators
+          slides={slides}
+          current={current}
+          setCurrent={setCurrent}
+        />
 
         {/* Botones de navegación - Ajustados para móviles */}
-        <SlideNavigation onPrev={prevSlide} onNext={nextSlide} />
+        <SlideNavigation 
+          onPrev={prevSlide} 
+          onNext={nextSlide} 
+        />
       </div>
     </div>
   );
