@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { SliderContent } from "./components/SliderContent";
+import { SlideItem } from "./components/SlideItem";
 
 const Slider = ({ slides }) => {
   const [current, setCurrent] = useState(0);
@@ -30,49 +31,14 @@ const Slider = ({ slides }) => {
 
   return (
     <div className="relative w-full h-[60vh] md:h-[70vh] lg:h-[80vh]">
+      {/* Texto superpuesto - Ajustado para móviles */}
+      <SliderContent />
 
-    {/* Texto superpuesto - Ajustado para móviles */}
-    <SliderContent />
-    
       {/* Contenedor principal del slide */}
       <div className="relative w-full h-full">
         {slides.map((slide, index) => (
-          <div
-            key={index}
-            className={`absolute inset-0 transition-opacity duration-500 ${
-              index === current ? "opacity-100" : "opacity-0"
-            }`}
-          >
-            <Image
-              src={slide.imgSrc}
-              alt={slide.altText}
-              fill
-              className="object-cover object-center brightness-75"
-              priority
-            />
-          </div>
+          <SlideItem key={index} slide={slide} isActive={index === current} />
         ))}
-
-        {/* Botones de navegación - Ajustados para móviles */}
-        <div className="absolute bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2 flex gap-2 md:gap-4 z-10">
-          <button
-            onClick={prevSlide}
-            className="bg-white/30 p-1.5 md:p-2 rounded-full backdrop-blur-sm hover:bg-white/40 transition-colors"
-          >
-            <span className="text-xl md:text-2xl font-bold text-[--azul_oscuro] block w-6 h-6 md:w-8 md:h-8">
-              &#10094;
-            </span>
-          </button>
-
-          <button
-            onClick={nextSlide}
-            className="bg-white/30 p-1.5 md:p-2 rounded-full backdrop-blur-sm hover:bg-white/40 transition-colors"
-          >
-            <span className="text-xl md:text-2xl font-bold text-[--azul_oscuro] block w-6 h-6 md:w-8 md:h-8">
-              &#10095;
-            </span>
-          </button>
-        </div>
 
         {/* Panel de previsualización - Responsive y oculto en móviles */}
         <div className="hidden md:flex absolute bottom-24 right-8 z-20 flex-row gap-4 lg:gap-8">
@@ -107,6 +73,27 @@ const Slider = ({ slides }) => {
               }`}
             />
           ))}
+        </div>
+
+        {/* Botones de navegación - Ajustados para móviles */}
+        <div className="absolute bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2 flex gap-2 md:gap-4 z-10">
+          <button
+            onClick={prevSlide}
+            className="bg-white/30 p-1.5 md:p-2 rounded-full backdrop-blur-sm hover:bg-white/40 transition-colors"
+          >
+            <span className="text-xl md:text-2xl font-bold text-[--azul_oscuro] block w-6 h-6 md:w-8 md:h-8">
+              &#10094;
+            </span>
+          </button>
+
+          <button
+            onClick={nextSlide}
+            className="bg-white/30 p-1.5 md:p-2 rounded-full backdrop-blur-sm hover:bg-white/40 transition-colors"
+          >
+            <span className="text-xl md:text-2xl font-bold text-[--azul_oscuro] block w-6 h-6 md:w-8 md:h-8">
+              &#10095;
+            </span>
+          </button>
         </div>
       </div>
     </div>
