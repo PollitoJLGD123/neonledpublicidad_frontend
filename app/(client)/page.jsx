@@ -50,7 +50,7 @@ export default function Home() {
   return (
     <>
       <div className="bg-[--azul_oscuro] overflow-hidden">
-        <Slider slides={slidesData} />
+      <Slider slides={slidesData} />
 
         <div className="px-4 lg:px-8 mt-20 mb-24">
           <NuestrosProductos />
