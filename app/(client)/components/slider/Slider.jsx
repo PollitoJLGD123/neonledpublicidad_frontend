@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import { SliderContent } from "./components/SliderContent";
 import { SlideItem } from "./components/SlideItem";
+import { SlideThumbnails } from "./components/SlideThumbnails";
 
 const Slider = ({ slides }) => {
   const [current, setCurrent] = useState(0);
@@ -41,26 +42,11 @@ const Slider = ({ slides }) => {
         ))}
 
         {/* Panel de previsualización - Responsive y oculto en móviles */}
-        <div className="hidden md:flex absolute bottom-24 right-8 z-20 flex-row gap-4 lg:gap-8">
-          {slides.map((slide, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrent(index)}
-              className={`relative h-32 w-24 lg:h-48 lg:w-32 transition-all duration-300 transform overflow-hidden ${
-                index === current
-                  ? "ring-4 ring-[--azul_brillante] scale-110 brightness-100"
-                  : "opacity-70 hover:opacity-90 hover:scale-105 brightness-75"
-              }`}
-            >
-              <Image
-                src={slide.imgSrc}
-                alt={slide.altText}
-                fill
-                className="object-cover rounded-xl shadow-2xl"
-              />
-            </button>
-          ))}
-        </div>
+        <SlideThumbnails
+          slides={slides}
+          current={current}
+          setCurrent={setCurrent}
+        />
 
         {/* Indicadores de slide para móviles */}
         <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2 flex gap-2 md:hidden z-10">
