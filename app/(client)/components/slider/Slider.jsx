@@ -52,7 +52,7 @@ const Slider = ({ slides }) => {
           <div className="text-white">
             <hr className="w-16 md:w-24 border-2 border-white mb-4 md:mb-6" />
             <h1 className="text-2xl sm:text-3xl lg:text-4xl font-semibold mb-2 md:mb-4">Luces Neón Led</h1>
-            <h2 className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-4 md:mb-6">
+            <h2 className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-4 md:mb-6 whitespace-normal break-words">
               PARA TU<br className="hidden sm:block"/>
               <span className="sm:hidden"> </span>
               DORMITORIO
