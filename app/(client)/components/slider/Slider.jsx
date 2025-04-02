@@ -5,6 +5,8 @@ import Image from "next/image";
 import { SliderContent } from "./components/SliderContent";
 import { SlideItem } from "./components/SlideItem";
 import { SlideThumbnails } from "./components/SlideThumbnails";
+import { SlideIndicators } from "./components/SlideIndicators";
+import { SlideNavigation } from "./components/SlideNavigation";
 
 const Slider = ({ slides }) => {
   const [current, setCurrent] = useState(0);
@@ -49,38 +51,10 @@ const Slider = ({ slides }) => {
         />
 
         {/* Indicadores de slide para móviles */}
-        <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2 flex gap-2 md:hidden z-10">
-          {slides.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrent(index)}
-              className={`w-2 h-2 rounded-full transition-all ${
-                index === current ? "bg-white w-4" : "bg-white/50"
-              }`}
-            />
-          ))}
-        </div>
+        <SlideIndicators slides={slides} current={current} setCurrent={setCurrent} />
 
         {/* Botones de navegación - Ajustados para móviles */}
-        <div className="absolute bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2 flex gap-2 md:gap-4 z-10">
-          <button
-            onClick={prevSlide}
-            className="bg-white/30 p-1.5 md:p-2 rounded-full backdrop-blur-sm hover:bg-white/40 transition-colors"
-          >
-            <span className="text-xl md:text-2xl font-bold text-[--azul_oscuro] block w-6 h-6 md:w-8 md:h-8">
-              &#10094;
-            </span>
-          </button>
-
-          <button
-            onClick={nextSlide}
-            className="bg-white/30 p-1.5 md:p-2 rounded-full backdrop-blur-sm hover:bg-white/40 transition-colors"
-          >
-            <span className="text-xl md:text-2xl font-bold text-[--azul_oscuro] block w-6 h-6 md:w-8 md:h-8">
-              &#10095;
-            </span>
-          </button>
-        </div>
+        <SlideNavigation onPrev={prevSlide} onNext={nextSlide} />
       </div>
     </div>
   );
