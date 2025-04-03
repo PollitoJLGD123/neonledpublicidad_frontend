@@ -7,14 +7,14 @@ import { SectionBackground } from "./components/SectionBackground";
 
 const AboutStatic = () => {
   return (
-    <div className="text-center max-w-xl lg:max-w-2xl px-4 z-10 relative">
-      <h2 className="text-xl md:text-2xl mb-2 md:mb-4 text-white">
+    <div className="text-center max-w-xl lg:max-w-2xl px-4 z-10 relative w-full">
+      <h2 className="text-base md:text-2xl mb-2 md:mb-4 text-white">
         Conoce más sobre
       </h2>
-      <h1 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6 text-white neon-textov2">
+      <h1 className="text-lg md:text-5xl font-bold mb-4 md:mb-6 text-white neon-textov2">
         NOSOTROS
       </h1>
-      <p className="text-base md:text-lg text-white">
+      <p className="text-xs md:text-lg text-white">
         Somos Neon Led Store, una empresa dedicada a la creación de diseños
         personalizados de luces LED que transforman cualquier espacio en un
         reflejo único de estilo y personalidad.
