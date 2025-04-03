@@ -5,7 +5,7 @@ import React from "react";
 export const CompanyValues = ({ companyValues }) => {
   return (
     <section className="bg-[#B7E5FD] rounded-lg py-8 md:py-16 px-3 mx-4 md:mx-10">
-      <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12 text-black">
+      <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12 text-black truncate">
         VALORES
       </h2>
       <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
@@ -18,11 +18,11 @@ export const CompanyValues = ({ companyValues }) => {
               >
                 {item.icon}
               </div>
-              <h3 className="font-bold text-black text-sm md:text-base">
+              <h3 className="font-bold text-black text-sm md:text-base truncate">
                 {item.title}
               </h3>
               <p
-                className={`text-blue-400 font-bold ${
+                className={`text-blue-400 font-bold truncate${
                   item.value === "AL CLIENTE" ? "text-black" : ""
                 }`}
               >
