@@ -13,11 +13,11 @@ export default function NuestrosProductos() {
   }
 
   return (
-    <div ref={ref} className="flex flex-col items-center text-center md:flex-row md:text-left justify-center gap-4 md:gap-12 mt-[5%] overflow-hidden">
+    <div ref={ref} className="flex flex-col items-center text-center md:flex-row md:text-left justify-center gap-4 md:gap-12">
 
       {/* Título */}
       <motion.div
-        className="text-2xl md:text-2xl font-bold text-white"
+        className="w-full text-sm sm:text-2xl font-bold text-white whitespace-normal break-words"
         initial={{ x: -200, opacity: 0 }}
         animate={hasAnimated ? { x: 0, opacity: 1 } : {}}
         transition={{ duration: 2, ease: "easeOut" }}
@@ -44,7 +44,7 @@ export default function NuestrosProductos() {
 
       {/* Texto */}
       <motion.div
-        className="text-xl text-white max-w-3xl text-center md:text-left leading-relaxed"
+        className="text-sm sm:text-xl text-white max-w-3xl text-center md:text-left leading-relaxed"
         initial={{ x: 200, opacity: 0 }}
         animate={hasAnimated ? { x: 0, opacity: 1 } : {}}
         transition={{ duration: 2, ease: "easeOut" }}
