@@ -10,16 +10,7 @@ import axios from "axios";
 export default function Blog1() {
   const [datoBlog, setDatoBlog] = useState({});
 
-    const pathname = usePathname();
-    useEffect(() => {
-      axios
-        .get("/data/datosblog.json") 
-        .then((res) => {
-          const blogEncontrado = res.data.find((blog) => blog.link === pathname);
-          if (blogEncontrado) setDatoBlog(blogEncontrado);
-        })
-        .catch((error) => console.error("Error cargando datos:", error));
-    }, [pathname]);
+    
 
   return (
     <div>
