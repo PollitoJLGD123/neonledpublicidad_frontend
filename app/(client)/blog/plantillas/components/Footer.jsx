@@ -3,10 +3,17 @@
 import React from "react";
 import './Footer.css';
 
-export function Footer({ url_image1, url_image2, url_image3, descripcion }) {
+function Footer({
+    url_image1 = "/blog/letra_neonled2.png",
+    url_image2 = "/blog/letra_neonled2.png",
+    url_image3 = "/blog/letra_neonled2.png",
+    descripcion
+}) {
+
+    const images = [url_image1, url_image2, url_image3];
 
     return (
-        <div className="max-w-[1000px] md:mx-auto bg-gradient-to-br bg-gray-900 rounded-lg shadow-[0px_8px_20px_rgba(0,0,0,0.3)] overflow-hidden mb-12 mx-4">
+        <div className="lg:mx-48 bg-gradient-to-br bg-gray-900 rounded-lg shadow-[0px_8px_20px_rgba(0,0,0,0.3)] overflow-hidden mt-12">
             <div className="relative">
                 <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-red-500 via-blue-400 to-blue-500"></div>
 
@@ -27,10 +34,10 @@ export function Footer({ url_image1, url_image2, url_image3, descripcion }) {
 
                     {
                         <div className="flex flex-wrap justify-center gap-3 ">
-                            {[url_image1, url_image2, url_image3].map((image, index) => {
+                            {images.map((image, index) => {
 
                                 return (
-                                    <div key={index} className="relative group">
+                                    <div key={index} className="relative group shineEffect">
                                         <div className="absolute inset-0 bg-gradient-to-br bg-blue-600 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                                         <img
                                             src={image}
@@ -50,4 +57,6 @@ export function Footer({ url_image1, url_image2, url_image3, descripcion }) {
         </div>
     )
 }
+
+export { Footer };
 

@@ -4,9 +4,9 @@ import React from "react";
 
 import { useParallaxEffect } from "./useParallaxEffect";
 
-export default function Header({
+function Header({
     /*SI Referenciables para el cambio de contenido*/
-    url_image,
+    url_image = "/blog/letra_neonled2.png",
     tituloPrincipal = "TU BAR EN LA MIRA",
     tituloSecundario = "El Letro Perfecto para Cautivar a los Clientes",
     descripcion = "Haz que tu bar sea tu mejor amigo en la mira de tus clientes",
@@ -44,4 +44,6 @@ export default function Header({
         </div>
     );
 }
+
+export { Header };
 
