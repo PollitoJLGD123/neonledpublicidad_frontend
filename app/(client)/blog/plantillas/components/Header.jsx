@@ -4,7 +4,7 @@ import React from "react";
 
 import { useParallaxEffect } from "./useParallaxEffect";
 
-export function Header({
+export default function Header({
     /*SI Referenciables para el cambio de contenido*/
     url_image,
     tituloPrincipal = "TU BAR EN LA MIRA",
