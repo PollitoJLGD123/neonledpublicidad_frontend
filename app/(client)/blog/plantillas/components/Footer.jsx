@@ -6,7 +6,7 @@ import './Footer.css';
 function Footer({ url_image1, url_image2, url_image3, descripcion }) {
 
     return (
-        <div className="max-w-[1000px] md:mx-auto bg-gradient-to-br bg-gray-900 rounded-lg shadow-[0px_8px_20px_rgba(0,0,0,0.3)] overflow-hidden mb-12 mx-4">
+        <div className="lg:mx-48 bg-gradient-to-br bg-gray-900 rounded-lg shadow-[0px_8px_20px_rgba(0,0,0,0.3)] overflow-hidden mt-12">
             <div className="relative">
                 <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-red-500 via-blue-400 to-blue-500"></div>
 
