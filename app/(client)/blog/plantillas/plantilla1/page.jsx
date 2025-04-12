@@ -5,10 +5,10 @@ import { Footer, Header, Body1 } from '../components';
 export default function Page() {
     return (
         <div>
-            <Header url_image={"/blog/blog-13.jpg   "} 
-            tituloPrincipal="Gestion de redes sociales"
-            tituloSecundario='Experimenta el contenido con las redes sociales'
-            descripcion='Explora las tendencias emergentes en las redes sociales, con las nuevas aplicaciones y contenidos '/>
+            <Header url_image={"/blog/letra_neonled2.png"} 
+            tituloPrincipal="Tu Bar en la mira"
+            tituloSecundario='Ilumina tu espacio, cautiva a tus clientes'
+            descripcion='Transforma la atmósfera de tu bar con luces neón LED vibrantes y llenas de estilo. '/>
             
             <div className="container mx-auto px-4 py-12 relative bg-gradient-to-r text-black min-h-screen w-full">
                 <div className="hidden lg:block w-20 xl:w-24 2xl:w-32 bg-gradient-to-b from-red-700 via-sky to-blue-800 fixed left-0 top-0 h-full -z-10"></div>

@@ -28,24 +28,27 @@ export  function Body1() {
 
     return (
         <div className="relative lg:mx-48 p-0 text-black rounded-lg shadow-[0px_10px_25px_rgba(0,0,0,0.25)] overflow-hidden">
-            <div className="relative h-[400px] overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40 z-10"></div>
+            <div className="relative h-[470] overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-black/40 z-10"></div>
                 <img
-                    src="/blog/blog-4.jpg"
+                    src="/blog/blog4/image.png"
                     alt="Imagen principal"
                     className="absolute inset-0 w-full h-full object-cover"
                 />
                 <div className="relative z-20 h-full flex flex-col justify-end p-8">
-                    <p className="text-red-300 mb-2">{"2025-03-31"}</p>
+                    <p className="text-teal-600 mb-2">{"2025-03-31"}</p>
                     <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-4 drop-shadow-lg">TU BAR EN LA MIRA</h2>
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-red-500 via-purple-500 to-blue-500"></div>
+                    <p className='text-lg leading-relaxed text-white'>Las luces neón LED se han convertido en un elemento diferenciador en el mundo de la hospitalidad. No solo son visualmente atractivos, sino que también refuerzan la identidad de tu negocio. En este artículo, exploraremos cómo las letras luminosas pueden marcar la diferencia en la experiencia de tus clientes.</p>
+
                 </div>
+                
             </div>
 
             <div className="bg-black/5 p-8">
-                <div className="relative mb-16 bg-white p-6 rounded-lg shadow-md -mt-12">
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-red-500 via-purple-500 to-blue-500"></div>
-                    <p className="text-lg leading-relaxed text-gray-700">Las luces neón LED se han convertido en un elemento diferenciador en el mundo de la hospitalidad. No solo son visualmente atractivos, sino que también refuerzan la identidad de tu negocio. En este artículo, exploraremos cómo las letras luminosas pueden marcar la diferencia en la experiencia de tus clientes.</p>
-                </div>
+                
+            { /*<div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-red-500 via-purple-500 to-blue-500"></div>*/}
+    
 
                 <div className="mb-16 p-6 bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg shadow-[0px_10px_25px_rgba(0,0,0,0.25)] text-center text-gray-100">
                     <div className="flex items-center justify-center mb-4">
@@ -100,26 +103,27 @@ export  function Body1() {
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-8">
-                        {
-                            tarjetas.map((section, index) => {
-                                const styles = [
-                                    "bg-gradient-to-br from-gray-900 to-gray-800 border-l-4 border-blue-400",
-                                    "bg-gradient-to-br from-gray-800 to-gray-900 border-r-4 border-red-400",
-                                    "bg-gradient-to-br from-gray-900 to-gray-800 border-l-4 border-green-400",
-                                    "bg-gradient-to-br from-gray-800 to-gray-900 border-r-4 border-purple-400",
-                                ]
+    {
+        tarjetas.map((section, index) => {
+            const styles = [
+                "text-gray-100 bg-gradient-to-br from-blue-800 to-black ", //Tarjeta 1
+                "text-gray-100 bg-gradient-to-br from-purple-800 to-gray-900", //Tarjeta 2 xd
+                "text-black bg-gradient-to-br from-white", // Tarjeta 3
+                "text-black bg-gradient-to-br from-gray-300 ", // Tarjeta 4
+            ];
 
-                                return (
-                                    <div
-                                        key={`tarjeta-${index}`}
-                                        className={`p-5 rounded-lg shadow-lg transform transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${styles[index % styles.length]}`}
-                                    >
-                                        <h3 className="text-xl font-bold mb-3 text-blue-400">{section.titulo}</h3>
-                                        <p className="text-gray-100">{section.descripcion}</p>
-                                    </div>
-                                )
-                            })}
-                    </div>
+            return (
+                <div
+                    key={`tarjeta-${index}`}
+                    className={`p-5 rounded-lg shadow-lg transform transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${styles[index % styles.length]}`}
+                >
+                    <h3 className={`text-xl font-bold mb-3 ${index === 2 || index === 3 ? 'text-black' : 'text-white'}`}>{section.titulo}</h3>
+                    <p className={`${index === 2 || index === 3 ? 'text-black' : 'text-white'}`}>{section.descripcion}</p>
+                </div>
+            );
+        })
+    }
+</div>
                 </div>
             </div>
         </div>
