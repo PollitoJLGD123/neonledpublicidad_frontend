@@ -1,30 +1,33 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import "./productoStyles.css";
 
 export default function NuestrosProductos() {
   const [hasAnimated, setHasAnimated] = useState(false);
-  const ref = React.useRef(null);
+  const ref = useRef(null);
   const isInView = useInView(ref, { triggerOnce: true, threshold: 0.3 });
 
-  if (isInView && !hasAnimated) {
-    setHasAnimated(true); 
-  }
+  useEffect(() => {
+    if (isInView && !hasAnimated) {
+      setHasAnimated(true);
+    }
+  }, [isInView, hasAnimated]);
 
   return (
-    <div ref={ref} className="flex flex-col items-center text-center md:flex-row md:text-left justify-center gap-4 md:gap-12">
-
+    <div
+      ref={ref}
+      className="flex flex-col items-center text-center mt-10 md:flex-row md:text-left justify-center gap-4 md:gap-12"
+    >
       {/* Título */}
       <motion.div
-        className="w-full text-sm sm:text-2xl font-bold text-white whitespace-normal break-words"
+        className="w-full text-center text-sm sm:text-2xl font-bold text-white whitespace-normal break-words"
         initial={{ x: -200, opacity: 0 }}
         animate={hasAnimated ? { x: 0, opacity: 1 } : {}}
         transition={{ duration: 2, ease: "easeOut" }}
       >
         NUESTROS PRODUCTOS
       </motion.div>
-
 
       {/* Línea vertical (solo en pantallas medianas y grandes) */}
       <motion.div
@@ -51,7 +54,6 @@ export default function NuestrosProductos() {
       >
         Ofrecemos una gran variedad de productos en NEON LED para tu negocio tanto exterior como interior.
       </motion.div>
-
     </div>
   );
 }
