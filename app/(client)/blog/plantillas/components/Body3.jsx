@@ -3,7 +3,7 @@
 
 import { CheckCircle, Calendar, ArrowDownCircle, ExternalLink } from "lucide-react"
 
-export default function Body3() {
+function Body3() {
 
     const tarjetas = [
         {
@@ -175,4 +175,6 @@ export default function Body3() {
         </div>
     )
 }
+
+export { Body3 };
 

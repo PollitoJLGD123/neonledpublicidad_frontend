@@ -3,7 +3,7 @@
 import React from "react";
 import './Footer.css';
 
-export function Footer({ url_image1, url_image2, url_image3, descripcion }) {
+function Footer({ url_image1, url_image2, url_image3, descripcion }) {
 
     return (
         <div className="max-w-[1000px] md:mx-auto bg-gradient-to-br bg-gray-900 rounded-lg shadow-[0px_8px_20px_rgba(0,0,0,0.3)] overflow-hidden mb-12 mx-4">
@@ -50,4 +50,6 @@ export function Footer({ url_image1, url_image2, url_image3, descripcion }) {
         </div>
     )
 }
+
+export { Footer };
 
