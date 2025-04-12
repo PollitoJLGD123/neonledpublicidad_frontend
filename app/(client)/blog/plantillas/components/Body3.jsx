@@ -7,16 +7,16 @@ export default function Body3() {
 
     const tarjetas = [
         {
-            titulo: "Identidad Digital y Reconocimiento de Marca",
+            titulo: "Manifestaciones de letreros",
             descripcion: "Una gestión efectiva de redes sociales permite construir una imagen sólida y coherente de tu negocio. Tu marca se vuelve reconocible a través del contenido visual, el tono de comunicación y la interacción constante con la audiencia.",
         },
 
         {
-            titulo: "Interacción y Fidelización de Clientes",
+            titulo: "Creatividad de letreros",
             descripcion: "Las redes sociales no solo son vitrinas, sino canales de diálogo. Escuchar, responder y generar contenido valioso crea una comunidad activa, lo que incrementa la fidelidad y la confianza del cliente.",
         },
         {
-            titulo: "Monitoreo de Resultados y Optimización",
+            titulo: "Explora la maravillosa de las hipnotizaciones",
             descripcion: "El análisis de métricas como el alcance, la interacción y el crecimiento de seguidores permite ajustar las estrategias de contenido en tiempo real, maximizando el impacto de cada publicación.",
         },
         {
@@ -43,9 +43,9 @@ export default function Body3() {
                 <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-indigo-100 to-transparent"></div>
                 <div className="relative z-10 p-8 md:p-12 flex flex-col md:flex-row items-center">
                     <div className="md:w-1/2 mb-8 md:mb-0 md:pr-8">
-                        <h1 className="text-4xl md:text-5xl font-black text-indigo-900 leading-tight mb-6">GESTIÓN INTELIGENTE DE REDES</h1>
+                        <h1 className="text-4xl md:text-5xl font-black text-indigo-900 leading-tight mb-6">Hipnotizalos</h1>
                         <div className="w-20 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 mb-6"></div>
-                        <p className="text-lg text-gray-700 leading-relaxed">Las redes sociales se han convertido en uno de los pilares de la estrategia digital moderna. Una buena gestión no solo mejora la presencia online, sino que potencia la conexión con los usuarios y la visibilidad de tu negocio.</p>
+                        <p className="text-lg text-gray-700 leading-relaxed">Los letreros ned son como una desplazamiento a la creatividad de efectos hipnotizar</p>
                         <button
                             className="mt-6 inline-flex items-center text-indigo-600 font-medium hover:text-indigo-800 transition-colors"
                         >
@@ -104,7 +104,7 @@ export default function Body3() {
                         <div className="w-8 h-8 rounded-full bg-green-600 flex items-center justify-center text-white font-bold mr-3">
                             C
                         </div>
-                        <h2 className="text-2xl font-bold text-green-600">Consejos para una Gestión Efectiva</h2>
+                        <h2 className="text-2xl font-bold text-green-600">Consejos para una compra de letrero</h2>
                         <div className="h-px flex-grow bg-green-200 ml-4"></div>
                     </div>
 
