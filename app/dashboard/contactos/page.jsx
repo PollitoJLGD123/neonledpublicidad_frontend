@@ -2,7 +2,7 @@
 
 import { useEffect, useState, Suspense } from "react";
 import Pagination from "../components/Pagination";
-import Table from "../components/Table";
+import DataTable from "../components/DataTable";
 import { useSearchParams } from "next/navigation";
 import axios from "axios";
 
@@ -53,7 +53,7 @@ function ContactsTable() {
 
   return (
     <>
-      <Table
+      <DataTable
         headers={headers}
         onDelete={false}
         onUpdate={false}
