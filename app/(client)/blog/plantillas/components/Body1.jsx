@@ -50,34 +50,33 @@ export  function Body1() {
             { /*<div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-red-500 via-purple-500 to-blue-500"></div>*/}
     
 
-                <div className="mb-16 p-6 bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg shadow-[0px_10px_25px_rgba(0,0,0,0.25)] text-center text-gray-100">
-                    <div className="flex items-center justify-center mb-4">
-                        <div className="h-0.5 w-12 bg-green-400 mr-4"></div>
-                        <h3 className="text-2xl font-bold text-green-400">Consejos para Elegir el Letrero Perfecto</h3>
-                        <div className="h-0.5 w-12 bg-green-400 ml-4"></div>
-                    </div>
+            <div className="mb-16 p-6 bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg shadow-[0px_10px_25px_rgba(0,0,0,0.25)] text-gray-100">
+                <div className="flex items-center justify-center mb-8">
+                    <div className="h-0.5 w-12 bg-green-400 mr-4"></div>
+                    <h3 className="text-2xl font-bold text-green-400 text-center">Consejos para Elegir el Letrero Perfecto</h3>
+                    <div className="h-0.5 w-12 bg-green-400 ml-4"></div>
+                </div>
 
-                    <ul className="list-none text-black-600 space-y-3 max-w-2xl mx-auto">
-                        {
-                            [
-                                "Opta por colores que reflejen la personalidad de tu bar.",
-                                "Elige un diseño legible y atractivo.",
-                                "Considera el lugar de instalación para maximizar su impacto.",
-                                "Asegúrate de que la iluminación sea adecuada para resaltar el letrero.",
-                                "Utiliza materiales de alta calidad para garantizar la durabilidad.",
-                            ]
-                                .filter((text) => text)
-                                .map((text, index) => (
-                                    <li key={`commend-${index}`} className="flex items-center gap-3 bg-gray-800/50 p-3 rounded-lg">
-                                        <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
-                                        <span className="text-left">{text}</span>
-                                    </li>
-                                ))}
-                    </ul>
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 justify-items-center">
+                    {
+                    [
+                        "Opta por colores que reflejen la personalidad de tu bar.",
+                        "Elige un diseño legible y atractivo.",
+                        "Considera el lugar de instalación para maximizar su impacto.",
+                        "Asegúrate de que la iluminación sea adecuada para resaltar el letrero.",
+                        "Utiliza materiales de alta calidad para garantizar la durabilidad.",
+                    ].map((text, index) => (
+                        <div key={`advice-${index}`} className="flex flex-col items-center bg-gray-800/50 p-5 rounded-xl text-center w-full max-w-[220px]">
+                        <CheckCircle className="w-8 h-8 text-green-400 mb-3" />
+                        <p className="text-sm">{text}</p>
+                        </div>
+                    ))
+                    }
+                </div>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-16">
-                    {["/blog/blog-10.jpg", "/blog/blog-1.jpg"].map((src, index) => (
+                    {["/blog/blog4/hepner1.png", "/blog/blog4/LETRA_NEON.png"].map((src, index) => (
                         <div key={index} className="group relative overflow-hidden rounded-xl shadow-xl">
                             <div className="absolute inset-0 bg-gradient-to-t from-purple-900/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
                             <img
