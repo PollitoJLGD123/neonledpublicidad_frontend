@@ -1,6 +1,7 @@
 import Link from "next/link";
 import './footer.css'
-export default function Footer() {
+import { SocialMedia } from "./SocialMedia";
+export default function Footer() {   
     return (
         <>
             <footer className="overflow-hidden h-[900px] lg:h-auto bg-gradient-to-r from-[--azul_brillante] to-[--azul_intenso] w-full pb-20">
@@ -34,17 +35,14 @@ export default function Footer() {
                                 <p>Lunes a Viernes</p>
                                 <p>8:00 a.m - 7:00 p.m</p>
                             </li>
-                            
+
                         </ul>
                         <ul>
                             <li className="flex flex-col">
-                            <h2 className="text-[--azul_brillante] text-lg lg:text-xl">Redes sociales</h2>
-                            <span className="w-[30px] mx-auto lg:mx-0 h-[6px] border-t-2 border-solid border-t-[--azul_brillante]"></span>
-                                <div className="flex gap-4 justify-center align-middle lg:justify-between mt-2">
-                                    <a className="h-12 w-12 md:h-10 md:w-10" href="#"><img className="w-full" src="/header_footer/tiktock.svg" alt="" /></a>
-                                    <a className="h-12 w-12 md:h-10 md:w-10" href="#"><img className="w-full" src="/header_footer/youtube.svg" alt="" /></a>
-                                    <a className="h-12 w-12 md:h-10 md:w-10" href="#"><img className="w-full" src="/header_footer/facebook.svg" alt="" /></a>
-                                    <a className="h-12 w-12 md:h-10 md:w-10" href="#"><img className="w-full" src="/header_footer/instagram.svg" alt="" /></a>
+                                <h2 className="text-[--azul_brillante] text-lg lg:text-xl">Redes sociales</h2>
+                                <span className="w-[30px] mx-auto lg:mx-0 h-[6px] border-t-2 border-solid border-t-[--azul_brillante]"></span>
+                                <div className="flex gap-4 justify-center align-middle lg:justify-between mt-2">                                    
+                                    <SocialMedia />
                                 </div>
                             </li>
                         </ul>

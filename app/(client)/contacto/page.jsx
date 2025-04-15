@@ -1,6 +1,8 @@
 "use client";
+
 import React, { useState } from 'react';
 import Image from 'next/image';
+import { SocialMedia } from '../components/footer/SocialMedia';
 const Contacto = () => {
   const [formData, setFormData] = useState({
     nombre: '',
@@ -11,7 +13,7 @@ const Contacto = () => {
     tipo_reclamo: '',
     mensaje: '',
   });
-  
+
   const [status, setStatus] = useState(null);
 
   const handleChange = (e) => {
@@ -212,64 +214,13 @@ const Contacto = () => {
               {/* ... Contenido de redes sociales ... */}
               <h2 className="text-2xl font-bold mb-4 text-gray-900">Síguenos en nuestras redes</h2>
               <div className="flex justify-center space-x-8">
-                {/* TikTok */}
-                <a href="#" className="hover:opacity-75 transition-opacity">
-                  <div className="rounded-full p-3">
-                    <Image
-                      src="/contacto/redes_sociales1.svg"
-                      alt="TikTok"
-                      width={44}
-                      height={44}
-                      className="text-white"
-                      unoptimized
-                    />
-                  </div>
-                </a>
-                {/* YouTube */}
-                <a href="#" className="hover:opacity-75 transition-opacity">
-                  <div className="rounded-full p-3">
-                    <Image
-                      src="/contacto/redes_sociales3.svg"
-                      alt="YouTube"
-                      width={44}
-                      height={44}
-                      className="text-white"
-                      unoptimized
-                    />
-                  </div>
-                </a>
-                {/* Facebook */}
-                <a href="#" className="hover:opacity-75 transition-opacity">
-                  <div className="rounded-full p-3">
-                    <Image
-                      src="/contacto/redes_sociales4.svg"
-                      alt="Facebook"
-                      width={44}
-                      height={44}
-                      className="text-white"
-                      unoptimized
-                    />
-                  </div>
-                </a>
-                {/* Instagram */}
-                <a href="#" className="hover:opacity-75 transition-opacity">
-                  <div className="rounded-full p-3">
-                    <Image
-                      src="/contacto/redes_sociales2.svg"
-                      alt="Instagram"
-                      width={44}
-                      height={44}
-                      className="text-white"
-                      unoptimized
-                    />
-                  </div>
-                </a>
+                <SocialMedia />
               </div>
             </div>
           </div>
         </div>
       </div>
-      
+
       {/* Sección Oscura Modificada */}
       <section className="relative bg-gray-900 py-24 md:py-40"> {/* Ajuste responsive del padding */}
         <div className="container mx-auto px-4">
