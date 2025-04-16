@@ -56,7 +56,7 @@ export default function LoginPage() {
   return (
     <div className="flex flex-col lg:flex-row min-h-screen bg-gray-50">
       {/* Sección izquierda con diseño mejorado */}
-      <div className="lg:w-1/2 w-full bg-gradient-to-br from-violet-600 via-purple-600 to-indigo-700 flex flex-col items-center justify-center p-8 relative overflow-hidden">
+      <div className="lg:w-1/2 w-full bg-gradient-to-br from-cyan-600 via-blue-600 to-blue-700 flex flex-col items-center justify-center p-8 relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('/login/pattern.svg')] opacity-10"></div>
         <div className="relative z-10 text-center">
           <h1 className="text-4xl lg:text-5xl font-bold text-white mb-6">¡Bienvenido!</h1>
@@ -85,7 +85,7 @@ export default function LoginPage() {
         {/* Formulario con diseño mejorado */}
         <div className="bg-white p-8 lg:p-10 rounded-2xl shadow-xl w-full max-w-md border border-gray-100">
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold bg-gradient-to-r from-violet-600 to-indigo-600 bg-clip-text text-transparent">
+            <h2 className="text-3xl font-bold bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent">
               Iniciar Sesión
             </h2>
             <p className="text-gray-500 mt-2">Ingresa tus credenciales para continuar</p>
@@ -111,7 +111,7 @@ export default function LoginPage() {
                 <input
                   type="text"
                   id="email"
-                  className="block w-full pl-10 pr-3 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-violet-500 focus:border-violet-500 bg-gray-50 transition-colors duration-200"
+                  className="block w-full pl-10 pr-3 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 bg-gray-50 transition-colors duration-200"
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="Ingresa tu usuario"
@@ -131,7 +131,7 @@ export default function LoginPage() {
                 <input
                   type="password"
                   id="password"
-                  className="block w-full pl-10 pr-3 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-violet-500 focus:border-violet-500 bg-gray-50 transition-colors duration-200"
+                  className="block w-full pl-10 pr-3 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 bg-gray-50 transition-colors duration-200"
                   value={formData.password}
                   onChange={handleChange}
                   placeholder="Ingresa tu contraseña"
@@ -143,7 +143,7 @@ export default function LoginPage() {
             <button
               disabled={loading}
               type="submit"
-              className="text-center w-full bg-gradient-to-r from-[#90388b] to-indigo-600 text-white py-3 px-4 rounded-lg font-extrabold hover:opacity-90 focus:ring-2 focus:ring-offset-2 focus:ring-violet-500 disabled:opacity-50 hover:scale-105 transition-all duration-300 disabled:cursor-not-allowed"
+              className="text-center w-full bg-gradient-to-r from-cyan-600 to-blue-600 text-white py-3 px-4 rounded-lg font-extrabold hover:opacity-90 focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500 disabled:opacity-50 hover:scale-105 transition-all duration-300 disabled:cursor-not-allowed"
             >
               {loading ? (
                 <span className="flex items-center justify-center gap-2">
