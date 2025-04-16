@@ -66,7 +66,7 @@ export default function LoginPage() {
           <img
             src="/login/sesion.png"
             alt="Inicio de sesión"
-            className="w-64 lg:w-80 h-auto mx-auto animate-float"
+            className="w-64 lg:w-80 h-auto mx-auto animate-float hue-rotate-[330deg]"
           />
         </div>
       </div>
