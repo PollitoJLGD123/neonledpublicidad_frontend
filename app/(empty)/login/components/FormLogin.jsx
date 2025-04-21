@@ -110,11 +110,16 @@ export const FormLogin = () => {
                         />
                     </div>
                 </div>
+                {/*<div className="mt-4">
+                 <Link href="./email/" className="text-sm text-blue-500 hover:underline">
+                ¿Olvidaste tu contraseña?
+                 </Link>
+                  </div>*/}
 
                 <button
                     disabled={loading}
                     type="submit"
-                    className="text-center w-full bg-gradient-to-r from-cyan-600 to-blue-600 text-white py-3 px-4 rounded-lg font-extrabold hover:opacity-90 focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500 disabled:opacity-50 hover:scale-105 transition-all duration-300 disabled:cursor-not-allowed"
+                    className="flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-3 px-4 rounded-lg font-extrabold hover:opacity-90 focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500 disabled:opacity-50 hover:scale-105 transition-all duration-300 disabled:cursor-not-allowed"
                 >
                     {loading ? (
                         <span className="flex items-center justify-center gap-2">

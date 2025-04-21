@@ -4,7 +4,7 @@ import React from 'react'
 
 export const WelcomeUser = () => {
     return (
-        <div className="lg:w-1/2 w-full bg-gradient-to-br from-cyan-600 via-blue-600 to-blue-700 flex flex-col items-center justify-center p-8 relative overflow-hidden">
+        <div className="lg:w-1/2 w-full bg-gradient-to-br from-cyan-500 via-blue-600 to-blue-700 flex flex-col items-center justify-center p-8 relative overflow-hidden">
             <div className="absolute inset-0 bg-[url('/login/pattern.svg')] opacity-10">ss</div>
             <div className="relative z-10 text-center">
                 <h1 className="text-4xl lg:text-5xl font-bold text-white mb-6">¡Bienvenido!</h1>
