@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { User, Lock } from 'lucide-react';
 import { api_url } from '@/app/dashboard/users/services/user.service';
+import Link from 'next/link';
 
 export const FormLogin = () => {
 
@@ -110,11 +111,11 @@ export const FormLogin = () => {
                         />
                     </div>
                 </div>
-                {/*<div className="mt-4">
+                <div className="mt-4">
                  <Link href="./email/" className="text-sm text-blue-500 hover:underline">
                 ¿Olvidaste tu contraseña?
                  </Link>
-                  </div>*/}
+                  </div>
 
                 <button
                     disabled={loading}

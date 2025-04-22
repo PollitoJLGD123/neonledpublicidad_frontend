@@ -12,7 +12,7 @@ export const WelcomeUser = () => {
                     Accede a tu cuenta para gestionar tus recursos y servicios
                 </p>
                 <img
-                    src="/login/login.svg"
+                    src="/login/login3.png"
                     alt="Inicio de sesión"
                     className="w-72 lg:w-96 h-auto mx-auto animate-float hue-rotate-[330deg]"
                 />
