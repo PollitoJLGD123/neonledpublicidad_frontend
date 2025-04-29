@@ -27,7 +27,6 @@ export default function RootLayout({ children }) {
                 title="Libro de Reclamaciones"
                 href="/dashboard/reclamaciones"
               />
-              <TableLink title="Usuarios" href="/dashboard/users" />
               <TableLink title="Productos" href="/dashboard/productos" />
             </ul>
           </nav>

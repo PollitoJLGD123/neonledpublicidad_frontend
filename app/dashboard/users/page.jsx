@@ -7,7 +7,7 @@ import { useEffect, useState, Suspense } from "react";
 import Modal_usuario from "./components/Modal_usuario";
 import user_service from "./services/user.service";
 
-const headers = ["id", "name", "email", "created_at"];
+const headers = ["id", "name", "email"];
 
 function UsersTable() {
   const searchParams = useSearchParams();
