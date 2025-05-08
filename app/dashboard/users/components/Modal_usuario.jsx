@@ -2,10 +2,12 @@
 
 import { useState, useEffect } from "react";
 import user_service from "../services/user.service";
+import { useRouter } from "next/navigation";
 
 export default function Modal_usuario({ isVisible, onclose, data }) {
     if (!isVisible) return null;
 
+    const router = useRouter()
     const [formData, setFormData] = useState({ name: data == false ? "" : data.name, email: "", password: "" });
     const [error, setError] = useState({ status: undefined, message: "" });
     const [button, setButtonStatus] = useState(true);
@@ -25,7 +27,13 @@ export default function Modal_usuario({ isVisible, onclose, data }) {
             password: formData.password
         }
 
-        user_service.updatePass(form, data.id).then(data => {
+        user_service.updatePass(form, data.id).then((data) => {
+            if (data.status == 500) {
+                user_service.logoutClient(router);
+            } else {
+                return data.json()
+            }
+        }).then(data => {
             setButtonStatus(false)
 
             if (parseInt(data.status) == 200) {
@@ -41,32 +49,40 @@ export default function Modal_usuario({ isVisible, onclose, data }) {
     }
 
     function createUser() {
-
-        if (formData.name.length <= 2) return setError({ status: true, message: "Ingresar correctamente el nombre" })
-        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-        if (!regex.test(formData.email)) return setError({ status: true, message: "Ingresar correctamente el email" })
-        if (formData.password.length < 4) return setError({ status: true, message: "Contraseña muy pequeña" })
-
-        const form = new FormData()
-        form.append("name", formData.name)
-        form.append("email", formData.email)
-        form.append("password", formData.password)
-
-        setButtonStatus(false)
-
-        user_service.create(form).then(data => {
-            if (parseInt(data.status) == 200) {
-                setError({ status: false, message: "Usuario creado" })
-                setTimeout(() => {
-                    onclose()
-                }, 3000);
-            } else {
-                setError({ status: true, message: "Hubo un error intentalo de nuevo" })
-                setButtonStatus(true)
-            }
-
-        })
-
+        if (formData.name.length <= 2) return setError({ status: true, message: "Ingresar correctamente el nombre" });
+        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!regex.test(formData.email)) return setError({ status: true, message: "Ingresar correctamente el email" });
+        if (formData.password.length < 4) return setError({ status: true, message: "Contraseña muy pequeña" });
+    
+        const form = new FormData();
+        form.append("name", formData.name);
+        form.append("email", formData.email);
+        form.append("password", formData.password);
+    
+        setButtonStatus(false);
+    
+        user_service.create(form)
+            .then((response) => {
+                if (response.error) {
+                    setError({ status: true, message: "Hubo un error al crear el usuario" });
+                    setButtonStatus(true);
+                } else {
+                    if (response.status === 200) {
+                        setError({ status: false, message: "Usuario creado correctamente" });
+                        setTimeout(() => {
+                            onclose();
+                        }, 3000);
+                    } else {
+                        setError({ status: true, message: "Hubo un error al crear el usuario" });
+                        setButtonStatus(true);
+                    }
+                }
+            })
+            .catch((error) => {
+                console.error("Error al crear usuario:", error);
+                setError({ status: true, message: "Hubo un error al crear el usuario" });
+                setButtonStatus(true);
+            });
     }
 
     function updateUser() {
@@ -76,7 +92,13 @@ export default function Modal_usuario({ isVisible, onclose, data }) {
         }
         setButtonStatus(false)
 
-        user_service.update(form, data.id).then(data => {
+        user_service.update(form, data.id).then((data) => {
+            if (data.status == 500) {
+                user_service.logoutClient(router);
+            } else {
+                return data.json()
+            }
+        }).then(data => {
             if (parseInt(data.status) == 200) {
                 setError({ status: false, message: "Actualizado correctamente" })
                 setTimeout(() => {
@@ -86,7 +108,6 @@ export default function Modal_usuario({ isVisible, onclose, data }) {
                 setError({ status: true, message: "Hubo un error intentalo de nuevo" })
                 setButtonStatus(true)
             }
-
         })
     }
 
@@ -99,7 +120,8 @@ export default function Modal_usuario({ isVisible, onclose, data }) {
     }
 
     return (
-        <section className="fixed inset-0 bg-black bg-opacity-45 backdrop-blur-md flex justify-center items-center px-4">
+    
+    <section className="fixed inset-0 bg-black bg-opacity-45 backdrop-blur-md flex justify-center items-center px-4">
             <div className="max-w-[400px] w-[400px] bg-white rounded-xl">
                 <form className="p-6 flex flex-col gap-6 ">
                     <legend className="font-bold text-lg">Usuarios</legend>
@@ -123,14 +145,15 @@ export default function Modal_usuario({ isVisible, onclose, data }) {
                         />
                     </fieldset>
 
-                    <fieldset hidden={data != false} className="flex flex-col gap-3">
-                        <label className="font-medium text-md" htmlFor="email">
+                    <fieldset className="flex flex-col gap-3">
+                        <label hidden={data != false} className="font-medium text-md" htmlFor="email">
                             Correo
                         </label>
                         <input
                             id="email"
                             onChange={handleChange}
                             value={formData.email}
+                            hidden={data != false}
                             className="border-solid border-gray-300 border-[0.5px] py-2 px-4 outline-none"
                             type="email"
                         />

@@ -86,7 +86,7 @@ function PageContent() {
             if (response.status === 200) {
                 Swal.fire({
                     title: "Correo Enviado Correctamente",
-                    text: "Es recomendable que revises el correo de DIGIMEDIA para ver si este correo existe.",
+                    text: "Es recomendable que revises el correo de Neon Led Publicidad para ver si este correo existe.",
                     icon: "success",
                     confirmButtonText: "OK",
                 })
