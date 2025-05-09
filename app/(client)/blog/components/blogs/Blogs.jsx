@@ -2,31 +2,55 @@
 import React from "react";
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import axios from "axios";
+import fetch from "../../services/fetch";
+import { Loader2 } from "lucide-react";
 
 const Blogs = () => {
-  const [datosBlog, setDatosBlog] = useState([]);
+  const [data, setDataResponse] = useState([])
+  const [isLoading, setIsLoading] = useState(true)
+
+  async function fetchData() {
+    try {
+      setIsLoading(true);
+      const response = await fetch.fetchCards();
+
+      console.log(response);
+
+      setDataResponse(response);
+    } catch (error) {
+      console.log(error)
+      Swal.fire({
+        title: "Error",
+        text: "Ocurrió un error inesperado.",
+        icon: "error",
+        confirmButtonText: "OK"
+      })
+    } finally {
+      setIsLoading(false);
+    }
+  }
 
   useEffect(() => {
-    axios
-      .get("/data/datosblog.json")
-      .then((res) => setDatosBlog(res.data))
-      .catch((error) => console.error("Error cargando datos:", error));
-  }, []);
+    fetchData()
+  }, [])
+
+  if(isLoading){
+    return <Loader2/>
+  }
 
   return (
     <>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {datosBlog.map((dato, index) => (
+          {data.map((dato, index) => (
             <div
-              key={dato.link}
+              key={`${dato.id_card}-Card`}
               className="bg-[#0e1721] rounded-2xl shadow-lg overflow-hidden min-w-[11.25rem]"
             >
               <div className="flex flex-col lg:flex-row lg:h-80">
                 <div className="relative h-56 lg:h-full lg:w-2/5">
                   <img
-                    src={dato.img}
+                    src={dato.public_image}
                     alt="Hipnotizalos"
                     className="w-full h-full object-cover"
                   />
@@ -41,7 +65,7 @@ const Blogs = () => {
                       {dato.descripcion}
                     </p>
                     <div className="pt-8">
-                      <Link href={dato.link}>
+                      <Link href={`./plantillas/plantilla${dato.id_plantilla}?id_blog=${dato.id_blog}`}>
                         <button className="w-full md:w-[200px] text-xs md:text-base text-center px-6 py-2 rounded-full bg-gradient-to-r from-[--azul_cobalto] to-[--azul_cobalto] text-white hover:opacity-90 transition-all duration-300 transform hover:scale-105">
                           Leer más ...
                         </button>
