@@ -2,7 +2,7 @@
 
 import { useEffect, useState, Suspense } from "react";
 import Pagination from "../components/Pagination";
-import Table from "../components/Table";
+import Table from "../components/DataTable";
 import { useSearchParams } from "next/navigation";
 
 const headers = [

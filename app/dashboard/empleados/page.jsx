@@ -229,7 +229,7 @@ export default function Page() {
   return (
     <div className="container mx-auto px-4 py-6 max-w-7xl ">
       <Card className="border-none shadow-md">
-        <CardHeader className="bg-gradient-to-r from-[#8c52ff] to-[#7a45e6] text-white rounded-t-lg pb-6">
+        <CardHeader className="bg-gradient-to-r from-[#305dfe] to-[#1342ec] text-white rounded-t-lg pb-6">
           <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-4">
             <div>
               <CardTitle className="text-2xl font-bold flex items-center gap-2">
@@ -242,7 +242,7 @@ export default function Page() {
             </div>
             { auth_service.hasPermission("crear-empleados") && (
             <Button
-              className="bg-white text-[#8c52ff] hover:bg-gray-100 transition-colors shadow-sm w-full md:w-auto"
+              className="bg-white text-[#305dfe] hover:bg-gray-100 transition-colors shadow-sm w-full md:w-auto"
               onClick={() => {
                 setDataUpdate(null)
                 setModal(true)
@@ -259,7 +259,7 @@ export default function Page() {
           {/* Filtros y controles */}
           <div className="mb-6 space-y-4">
             <div className="flex flex-col sm:flex-row gap-3 justify-between items-center">
-              <div className="relative w-full sm:w-64">
+              <div className="relative border border-[#305dfe] w-full sm:w-64">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
                 <Input
                   type="text"
@@ -283,8 +283,8 @@ export default function Page() {
             </div>
 
             {/* Filtro por rol */}
-            <div className="flex items-center gap-3 bg-gray-50 p-3 rounded-lg border border-gray-100 dark:border-gray-800 dark:bg-[#6b3acb]">
-              <Filter className="h-4 w-4 text-[#8c52ff]" />
+            <div className="flex items-center gap-3 bg-gray-50 p-3 rounded-lg border border-gray-100 dark:border-gray-800 dark:bg-[#305dfe]">
+              <Filter className="h-4 w-4 text-white" />
               <div className="text-sm font-medium">Filtrar por rol:</div>
               <Select value={selectedRole} onValueChange={setSelectedRole} className="w-[180px] bg-white dark:bg-gray-800">
                 <SelectTrigger className="w-[180px] bg-white dark:bg-gray-800">
