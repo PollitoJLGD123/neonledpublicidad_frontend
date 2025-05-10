@@ -17,7 +17,7 @@ export default function ProfileImageUpload({ empleadoId, onImageUpload }) {
         icon: "error",
         title: "Error",
         text: "No se encontró el ID del empleado",
-        confirmButtonColor: "#8c52ff",
+        confirmButtonColor: "rgb(17, 87, 211)", // Azul primario
       });
       return;
     }
@@ -28,7 +28,7 @@ export default function ProfileImageUpload({ empleadoId, onImageUpload }) {
         icon: "error",
         title: "Error",
         text: "No se recibió la información completa de la imagen",
-        confirmButtonColor: "#8c52ff",
+        confirmButtonColor: "rgb(17, 87, 211)", // Azul primario
       });
       return;
     }
@@ -72,7 +72,7 @@ export default function ProfileImageUpload({ empleadoId, onImageUpload }) {
         icon: "success",
         title: "¡Imagen actualizada!",
         text: "Tu foto de perfil se ha actualizado correctamente",
-        confirmButtonColor: "#8c52ff",
+        confirmButtonColor: "rgb(17, 87, 211)", // Azul primario
       });
     } catch (error) {
       console.error("Error completo:", error);
@@ -80,7 +80,7 @@ export default function ProfileImageUpload({ empleadoId, onImageUpload }) {
         icon: "error",
         title: "Error al actualizar la imagen",
         text: error.message || "Ocurrió un error inesperado. Por favor, inténtelo de nuevo.",
-        confirmButtonColor: "#8c52ff",
+        confirmButtonColor: "rgb(17, 87, 211)", // Azul primario
       });
     } finally {
       setUploading(false);
@@ -104,16 +104,16 @@ export default function ProfileImageUpload({ empleadoId, onImageUpload }) {
         styles: {
           palette: {
             window: "#FFFFFF",
-            windowBorder: "#8c52ff",
-            tabIcon: "#8c52ff",
-            menuIcons: "#8c52ff",
+            windowBorder: "rgb(17, 87, 211)", // Azul primario
+            tabIcon: "rgb(17, 87, 211)", // Azul primario
+            menuIcons: "rgb(17, 87, 211)", // Azul primario
             textDark: "#000000",
             textLight: "#FFFFFF",
-            link: "#8c52ff",
-            action: "#8c52ff",
+            link: "rgb(17, 87, 211)", // Azul primario
+            action: "rgb(17, 87, 211)", // Azul primario
             inactiveTabIcon: "#555555",
             error: "#F44235",
-            inProgress: "#8c52ff",
+            inProgress: "rgb(17, 87, 211)", // Azul primario
             complete: "#20B832",
             sourceBg: "#F5F5F5"
           }
@@ -128,7 +128,7 @@ export default function ProfileImageUpload({ empleadoId, onImageUpload }) {
           icon: "error",
           title: "Error",
           text: "Ocurrió un error al subir la imagen a Cloudinary",
-          confirmButtonColor: "#8c52ff",
+          confirmButtonColor: "rgb(17, 87, 211)", // Azul primario
         });
       }}
     >
@@ -139,7 +139,7 @@ export default function ProfileImageUpload({ empleadoId, onImageUpload }) {
             size="icon"
             onClick={() => open()}
             disabled={uploading}
-            className="rounded-full h-8 w-8 bg-[#8c52ff] hover:bg-[#7a45e6] text-white shadow-md border-2 border-white"
+            className="rounded-full h-8 w-8 bg-blue-primary hover:bg-blue-dark text-white shadow-md border-2 border-white"
           >
             {uploading ? (
               <Loader2 className="h-4 w-4 animate-spin" />

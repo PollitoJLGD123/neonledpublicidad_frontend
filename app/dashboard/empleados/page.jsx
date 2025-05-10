@@ -43,7 +43,7 @@ export default function Page() {
         icon: "error",
         title: "Error",
         text: "Hubo un error al cargar el perfil del empleado.",
-        confirmButtonColor: "#6f4be8",
+        confirmButtonColor: "rgb(17, 87, 211)",
       })
     }
   }
@@ -69,7 +69,7 @@ export default function Page() {
           icon: "error",
           title: "Sesión expirada",
           text: "Tu sesión ha expirado. Por favor, inicia sesión nuevamente.",
-          confirmButtonColor: "#6f4be8",
+          confirmButtonColor: "rgb(17, 87, 211)",
         }).then(() => {
           user_service.logoutClient(router)
         })
@@ -96,7 +96,7 @@ export default function Page() {
         icon: "error",
         title: "Error",
         text: "Hubo un error al obtener los datos.",
-        confirmButtonColor: "#6f4be8",
+        confirmButtonColor: "rgb(17, 87, 211)",
       })
     } finally {
       setIsLoading(false)
@@ -109,7 +109,7 @@ export default function Page() {
       text: "¡No podrás revertir esto!",
       icon: "warning",
       showCancelButton: true,
-      confirmButtonColor: "#6f4be8",
+      confirmButtonColor: "rgb(17, 87, 211)",
       cancelButtonColor: "#d33",
       confirmButtonText: "Sí, eliminar",
       cancelButtonText: "Cancelar",
@@ -126,14 +126,14 @@ export default function Page() {
                 icon: "error",
                 title: "Error",
                 text: "Hubo un error al eliminar el empleado.",
-                confirmButtonColor: "#6f4be8",
+                confirmButtonColor: "rgb(17, 87, 211)",
               })
             } else if (response.status === 200) {
               Swal.fire({
                 icon: "success",
                 title: "Eliminado",
                 text: "El empleado ha sido eliminado correctamente.",
-                confirmButtonColor: "#6f4be8",
+                confirmButtonColor: "rgb(17, 87, 211)",
               })
               fetchEmpleados()
             } else {
@@ -141,7 +141,7 @@ export default function Page() {
                 icon: "error",
                 title: "Error",
                 text: "Hubo un error al eliminar el empleado.",
-                confirmButtonColor: "#6f4be8",
+                confirmButtonColor: "rgb(17, 87, 211)",
               })
             }
           })
@@ -151,7 +151,7 @@ export default function Page() {
               icon: "error",
               title: "Error",
               text: "Hubo un error al eliminar el empleado.",
-              confirmButtonColor: "#6f4be8",
+              confirmButtonColor: "rgb(17, 87, 211)",
             })
           })
           .finally(() => {
@@ -229,7 +229,7 @@ export default function Page() {
   return (
     <div className="container mx-auto px-4 py-6 max-w-7xl ">
       <Card className="border-none shadow-md">
-        <CardHeader className="bg-gradient-to-r from-[#8c52ff] to-[#7a45e6] text-white rounded-t-lg pb-6">
+       <CardHeader className="bg-gradient-to-r from-[rgb(17,87,211)] to-[rgb(14,70,170)] text-white rounded-t-lg pb-6">
           <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-4">
             <div>
               <CardTitle className="text-2xl font-bold flex items-center gap-2">
@@ -242,7 +242,7 @@ export default function Page() {
             </div>
             { auth_service.hasPermission("crear-empleados") && (
             <Button
-              className="bg-white text-[#8c52ff] hover:bg-gray-100 transition-colors shadow-sm w-full md:w-auto"
+              className="bg-white text-blue-primary hover:bg-gray-100 transition-colors shadow-sm w-full md:w-auto"
               onClick={() => {
                 setDataUpdate(null)
                 setModal(true)
@@ -283,8 +283,8 @@ export default function Page() {
             </div>
 
             {/* Filtro por rol */}
-            <div className="flex items-center gap-3 bg-gray-50 p-3 rounded-lg border border-gray-100 dark:border-gray-800 dark:bg-[#6b3acb]">
-              <Filter className="h-4 w-4 text-[#8c52ff]" />
+            <div className="flex items-center gap-3 bg-gray-50 p-3 rounded-lg border border-gray-100 dark:border-gray-700 dark:bg-blue-900/20">
+              <Filter className="h-4 w-4 text-blue-primary" />
               <div className="text-sm font-medium">Filtrar por rol:</div>
               <Select value={selectedRole} onValueChange={setSelectedRole} className="w-[180px] bg-white dark:bg-gray-800">
                 <SelectTrigger className="w-[180px] bg-white dark:bg-gray-800">
@@ -314,8 +314,8 @@ export default function Page() {
 
           {isLoading ? (
             <div className="flex justify-center items-center py-20">
-              <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-[#8c52ff]"></div>
-              <p className="ml-4 text-[#8c52ff]">Cargando empleados...</p>
+              <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-primary"></div>
+              <p className="ml-4 text-blue-primary">Cargando empleados...</p>
             </div>
           ) : (
             <>
@@ -362,4 +362,3 @@ export default function Page() {
     </div>
   )
 }
-
