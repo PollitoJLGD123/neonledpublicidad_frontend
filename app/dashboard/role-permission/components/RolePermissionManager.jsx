@@ -201,7 +201,7 @@ export default function RolePermissionManager() {
 
   return (
     <Card className="border-none shadow-md dark:bg-gray-800/95 dark:border dark:border-gray-700">
-      <CardHeader className="bg-[#8c52ff] text-white pb-4">
+      <CardHeader className="bg-gradient-to-r from-[rgb(17,87,211)] to-[rgb(14,70,170)] text-white pb-4">
         <div className="flex justify-between items-center">
           <div>
             <CardTitle className="text-xl md:text-2xl font-bold">Gestión de Roles y Permisos</CardTitle>
@@ -235,7 +235,7 @@ export default function RolePermissionManager() {
                                 <div className="flex items-center">
                                 <span>{rol.nombre}</span>
                                 {rol.nombre?.toLowerCase() === "administrador" && (
-                                    <Badge className="ml-2 bg-[#4d2994] text-white text-xs">Admin</Badge>
+                                    <Badge className="ml-2 bg-blue-700 text-white text-xs">Admin</Badge>
                                 )}
                                 </div>
                             </SelectItem>
@@ -249,10 +249,10 @@ export default function RolePermissionManager() {
             </div>
 
             {rolSeleccionado && (
-              <div className="w-full md:w-2/3 bg-[#f0ebff] dark:bg-[#4d2994]/20 rounded-lg p-4">
+              <div className="w-full md:w-2/3 bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4">
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-2">
                   <div>
-                    <h3 className="font-medium text-[#8c52ff] dark:text-[#a67dff] flex items-center">
+                    <h3 className="font-medium text-blue-primary dark:text-blue-300 flex items-center">
                       <Users className="h-4 w-4 mr-1.5" />
                       Rol: <span className="font-bold ml-1">{rolSeleccionado.nombre}</span>
                     </h3>
@@ -264,7 +264,7 @@ export default function RolePermissionManager() {
                   </div>
 
                   {esAdmin ? (
-                    <Badge className="bg-[#4d2994] text-white flex items-center px-3 py-1">
+                    <Badge className="bg-blue-700 text-white flex items-center px-3 py-1">
                       <Lock className="h-3 w-3 mr-1" />
                       Permisos Bloqueados
                     </Badge>
@@ -272,7 +272,7 @@ export default function RolePermissionManager() {
                     <Button
                       onClick={handleGuardar}
                       disabled={isSaving || isLoading}
-                      className="bg-[#8c52ff] hover:bg-[#7a45e6] text-white"
+                      className="bg-blue-primary hover:bg-blue-dark text-white"
                     >
                       {isSaving ? (
                         <>
@@ -316,7 +316,7 @@ export default function RolePermissionManager() {
                         className={cn(
                           "w-full justify-start text-sm font-normal",
                           activeCategory === "all" &&
-                            "bg-[#f0ebff] text-[#8c52ff] dark:bg-[#4d2994]/20 dark:text-[#a67dff]",
+                            "bg-blue-50 text-blue-primary dark:bg-blue-900/20 dark:text-blue-300",
                         )}
                         onClick={() => setActiveCategory("all")}
                       >
@@ -331,7 +331,7 @@ export default function RolePermissionManager() {
                             className={cn(
                             "w-full justify-start text-sm font-normal",
                             activeCategory === key &&
-                                "bg-[#f0ebff] text-[#8c52ff] dark:bg-[#4d2994]/20 dark:text-[#a67dff]",
+                                "bg-blue-50 text-blue-primary dark:bg-blue-900/20 dark:text-blue-300",
                             )}
                             onClick={() => setActiveCategory(key)}
                         >
@@ -346,24 +346,24 @@ export default function RolePermissionManager() {
                     <div className="space-y-2">
                       <h3 className="font-medium text-gray-700 dark:text-gray-300 mb-1 text-sm">Estadísticas</h3>
 
-                      <div className="bg-[#f0ebff] dark:bg-[#4d2994]/20 p-3 rounded-md">
+                      <div className="bg-blue-50 dark:bg-blue-900/20 p-3 rounded-md">
                         <div className="flex justify-between items-center mb-1">
                           <span className="text-xs text-gray-600 dark:text-gray-400">Progreso</span>
-                          <span className="text-xs font-medium text-[#8c52ff] dark:text-[#a67dff]">
+                          <span className="text-xs font-medium text-blue-primary dark:text-blue-300">
                             {esAdmin ? "100%" : `${stats.percentage}%`}
                           </span>
                         </div>
 
                         <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
                           <div
-                            className="bg-[#8c52ff] h-2 rounded-full"
+                            className="bg-blue-primary h-2 rounded-full"
                             style={{ width: esAdmin ? "100%" : `${stats.percentage}%` }}
                           ></div>
                         </div>
 
                         <div className="mt-2 grid grid-cols-2 gap-2 text-center">
                           <div className="bg-white dark:bg-gray-800 p-2 rounded">
-                            <div className="text-[#8c52ff] dark:text-[#a67dff] font-bold">
+                            <div className="text-blue-primary dark:text-blue-300 font-bold">
                               {esAdmin ? permisosDisponibles.length : stats.assigned}
                             </div>
                             <div className="text-xs text-gray-500 dark:text-gray-400">Asignados</div>
@@ -402,9 +402,9 @@ export default function RolePermissionManager() {
                         animate={{ rotate: 360 }}
                         transition={{ duration: 1.5, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
                       >
-                        <Shield className="h-8 w-8 text-[#8c52ff] dark:text-[#a67dff]" />
+                        <Shield className="h-8 w-8 text-blue-primary dark:text-blue-300" />
                       </motion.div>
-                      <span className="ml-2 text-[#8c52ff] dark:text-[#a67dff]">Cargando permisos...</span>
+                      <span className="ml-2 text-blue-primary dark:text-blue-300">Cargando permisos...</span>
                     </div>
                   ) : (
                     <>
@@ -414,7 +414,7 @@ export default function RolePermissionManager() {
                           <p className="text-gray-500 dark:text-gray-400">No se encontraron permisos con ese filtro</p>
                           <Button
                             variant="link"
-                            className="text-[#8c52ff] dark:text-[#a67dff] mt-1"
+                            className="text-blue-primary dark:text-blue-300 mt-1"
                             onClick={() => {
                               setSearchTerm("")
                               setActiveCategory("all")
@@ -444,7 +444,7 @@ export default function RolePermissionManager() {
                                 className={cn(
                                     "flex items-center p-3 rounded-md border",
                                     isChecked
-                                    ? "bg-[#f0ebff] border-[#d9c6ff] dark:bg-[#4d2994]/30 dark:border-[#6b42c9]"
+                                    ? "bg-blue-50 border-blue-200 dark:bg-blue-900/30 dark:border-blue-800/70"
                                     : "bg-white border-gray-200 dark:bg-gray-800 dark:border-gray-700",
                                 )}
                                 >
@@ -456,7 +456,7 @@ export default function RolePermissionManager() {
                                     className={cn(
                                     esAdmin && "opacity-60",
                                     isChecked &&
-                                        "bg-[#8c52ff] border-[#8c52ff] dark:bg-[#8c52ff] dark:border-[#8c52ff]",
+                                        "bg-blue-primary border-blue-primary dark:bg-blue-primary dark:border-blue-primary",
                                     )}
                                 />
                                 <div className="ml-3 flex-1">
@@ -471,7 +471,7 @@ export default function RolePermissionManager() {
                                     </label>
                                     <Badge
                                     variant="outline"
-                                    className="ml-2 text-xs bg-white text-[#8c52ff] border-[#d9c6ff] dark:bg-[#4d2994]/30 dark:text-[#a67dff] dark:border-[#6b42c9]"
+                                    className="ml-2 text-xs bg-white text-blue-primary border-blue-200 dark:bg-blue-900/30 dark:text-blue-300 dark:border-blue-800/70"
                                     >
                                     {PERMISSION_CATEGORIES[category]?.nombre || "Otro"}
                                     </Badge>
@@ -494,9 +494,9 @@ export default function RolePermissionManager() {
           )}
 
           {!rolSeleccionado && !isLoading && (
-            <div className="text-center py-12 bg-[#f0ebff] dark:bg-[#4d2994]/20 rounded-lg">
-              <Shield className="h-12 w-12 text-[#8c52ff] dark:text-[#a67dff] mx-auto mb-3" />
-              <h3 className="text-lg font-medium text-[#8c52ff] dark:text-[#a67dff] mb-1">Selecciona un Rol</h3>
+            <div className="text-center py-12 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
+              <Shield className="h-12 w-12 text-blue-primary dark:text-blue-300 mx-auto mb-3" />
+              <h3 className="text-lg font-medium text-blue-primary dark:text-blue-300 mb-1">Selecciona un Rol</h3>
               <p className="text-gray-600 dark:text-gray-400 max-w-md mx-auto">
                 Selecciona un rol del menú desplegable para ver y administrar sus permisos
               </p>
