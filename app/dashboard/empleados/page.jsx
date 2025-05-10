@@ -259,7 +259,7 @@ export default function Page() {
           {/* Filtros y controles */}
           <div className="mb-6 space-y-4">
             <div className="flex flex-col sm:flex-row gap-3 justify-between items-center">
-              <div className="relative w-full sm:w-64">
+              <div className="relative border border-[#305dfe] w-full sm:w-64">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
                 <Input
                   type="text"

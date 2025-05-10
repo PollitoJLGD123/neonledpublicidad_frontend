@@ -126,11 +126,11 @@ export default function RootLayout({ children }) {
 
                 {auth_service.hasPermission("ver-contactos") && (
                   <NavLink
-                    href="/dashboard/contactanos"
-                    title="Contactanos"
+                    href="/dashboard/contactos"
+                    title="Contactos"
                     icon={<Mail className="h-5 w-5" />}
                     isCollapsed={!isSidebarOpen}
-                    isActive={pathname.includes("/dashboard/contactanos")}
+                    isActive={pathname.includes("/dashboard/contactos")}
                   />
                 )}
 
