@@ -61,8 +61,8 @@ export function Body2() {
       <div className=" relative lg:mx-48 p-0 text-black rounded-lg shadow-[0px_10px_25px_rgba(0,0,0,0.25)] overflow-hidden">
         {/* Encabezado tipo blog */}
         <div className="relative h-[400px] overflow-hidden">
-          <div class=" top-0 z-30 bg-gradient-to-br from-blue-600 to-indigo-700 border-b border-gray-200 px-6 py-4 flex justify-between items-center">
-            <div class="flex items-center space-x-2 text-white  text-sm">
+          <div className=" top-0 z-30 bg-gradient-to-br from-blue-600 to-indigo-700 border-b border-gray-200 px-6 py-4 flex justify-between items-center">
+            <div className="flex items-center space-x-2 text-white  text-sm">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -73,15 +73,15 @@ export function Body2() {
                 stroke-width="2"
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                class="lucide lucide-clock w-4 h-4"
+                className="lucide lucide-clock w-4 h-4"
               >
                 <circle cx="12" cy="12" r="10"></circle>
                 <polyline points="12 6 12 12 16 14"></polyline>
               </svg>
               <span>2025-03-31</span>
             </div>
-            <div class="flex space-x-3">
-              <button class="p-2 rounded-fulltransition-colors">
+            <div className="flex space-x-3">
+              <button className="p-2 rounded-fulltransition-colors">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -92,12 +92,12 @@ export function Body2() {
                   stroke-width="2"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  class="lucide lucide-bookmark w-5 h-5 text-white"
+                  className="lucide lucide-bookmark w-5 h-5 text-white"
                 >
                   <path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"></path>
                 </svg>
               </button>
-              <button class="p-2 rounded-full transition-colors">
+              <button className="p-2 rounded-full transition-colors">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -108,7 +108,7 @@ export function Body2() {
                   stroke-width="2"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  class="lucide lucide-share2 w-5 h-5 text-white"
+                  className="lucide lucide-share2 w-5 h-5 text-white"
                 >
                   <circle cx="18" cy="5" r="3"></circle>
                   <circle cx="6" cy="12" r="3"></circle>
@@ -129,11 +129,11 @@ export function Body2() {
               <h2 className="text-3xl md:text-5xl font-bold text-white mb-2 leading-tight">
                 Brilla con estilo
               </h2>
-              <div class="w-16 h-1 bg-blue-500 mb-4"></div>
+              <div className="w-16 h-1 bg-blue-500 mb-4"></div>
             </div>
           </div>
         </div>
-        <div class="mx-10 m-5 text-lg text-gray-700 leading-relaxed">
+        <div className="mx-10 m-5 text-lg text-gray-700 leading-relaxed">
           Las luces neón LED se han convertido en un elemento diferenciador en
           el mundo de la hospitalidad. No solo son visualmente atractivos, sino
           que también refuerzan la identidad de tu negocio. En este artículo,
@@ -258,8 +258,8 @@ export function Body2() {
             )}
           </div>
         </div>
-        <div class="bg-gradient-to-br from-blue-600 to-indigo-700 text-white p-6 text-center">
-          <p class="text-sm">© 2025 - Todos los derechos reservados</p>
+        <div className="bg-gradient-to-br from-blue-600 to-indigo-700 text-white p-6 text-center">
+          <p className="text-sm">© 2025 - Todos los derechos reservados</p>
         </div>
       </div>
     </div>

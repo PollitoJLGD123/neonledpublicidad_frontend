@@ -50,7 +50,7 @@ const Banner = () => {
                 </span>
                 {/* Main heading */}
                 <h1
-                    className={"text-[40px] sm:text-[60px] md:text-[80px] lg:text-[100px] font-bold mb-6 text-center font-title neon-textov2"}
+                    className={"text-[40px] sm:text-[50px] md:text-[60px] lg:text-[70px] font-bold mb-6 text-center font-title neon-textov2"}
                 >
                     ¿Quieres conocer más?
                 </h1>
