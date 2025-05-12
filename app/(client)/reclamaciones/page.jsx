@@ -27,12 +27,12 @@ export default function Page() {
     departamento: '',
     direccion: '',
     distrito: '',
-    tipo_servicio: '',
-    fecha_incidente: '',
-    monto_reclamado: '',
-    descripcion_servicio: '',
-    declaracion_veraz:false,
-    acepta_politica:false,
+    id_servicio: '',
+    fechaIncidente: '',
+    montoReclamado: '',
+    descripcionServicio: '',
+    checkReclamoForm:false,
+    aceptaPoliticaPrivacidad:false,
     estado:'Pendiente'
   });
 
@@ -50,9 +50,9 @@ export default function Page() {
     setStatus('loading');
 
     try {
-      formData.declaracion_veraz = declaracion;
-      formData.acepta_politica = politica;
-      const response = await fetch('http://127.0.0.1:8000/api/create_reclamaciones', {
+      formData.checkReclamoForm = declaracion;
+      formData.aceptaPoliticaPrivacidad = politica;
+      const response = await fetch('http://127.0.0.1:8000/api/reclamaciones', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
@@ -67,12 +67,12 @@ export default function Page() {
           departamento: '',
           direccion: '',
           distrito: '',
-          tipo_servicio: '',
-          fecha_incidente: '',
-          monto_reclamado: '',
-          descripcion_servicio: '',
-          declaracion_veraz:false,
-          acepta_politica:false,
+          id_servicio: '',
+          fechaIncidente: '',
+          montoReclamado: '',
+          descripcionServicio: '',
+          checkReclamoForm:false,
+          aceptaPoliticaPrivacidad:false,
           estado:'Pendiente'
         });
         setDeclaracion(false);
@@ -141,24 +141,25 @@ export default function Page() {
 
           <div className="flex flex-col gap-4 md:flex-row md:flex-wrap">
             <select
-              name="tipo_servicio"
-              value={formData.tipo_servicio} 
+              name="id_servicio"
+              value={formData.id_servicio} 
               onChange={handleChange}
               className="border-[#b2b2b2] border-2 p-2 bg-white"
               required
             >
               <option value="" disabled>Tipo</option> 
-              <option value="Tipo A">Tipo A</option>
-              <option value="Tipo B">Tipo B</option>
-              <option value="Tipo C">Tipo C</option>
+              <option value={1}>Diseño Web y Desarrollo Web</option>
+              <option value={2}>Gestión de Redes Sociales</option>
+              <option value={3}>Marketing y Gestión Digital</option>
+              <option value={4}>Branding y Diseño</option>
             </select>
 
 
-            <Input placeholder="Fecha*" type="date" name="fecha_incidente" value={formData.fecha_incidente} onChange={handleChange} required />
-            <Input placeholder="Monto reclamado*" type="number" name="monto_reclamado" value={formData.monto_reclamado} onChange={handleChange} required />
+            <Input placeholder="Fecha*" type="date" name="fechaIncidente" value={formData.fechaIncidente} onChange={handleChange} required />
+            <Input placeholder="Monto reclamado*" type="number" name="montoReclamado" value={formData.montoReclamado} onChange={handleChange} required />
           </div>
           <textarea
-            name="descripcion_servicio" value={formData.descripcion_servicio} onChange={handleChange}
+            name="descripcionServicio" value={formData.descripcionServicio} onChange={handleChange}
             className="border-[#b2b2b2] border-2 p-2 w-full mt-4"
             rows={5}
             placeholder="Descripción del servicio*"
@@ -166,12 +167,12 @@ export default function Page() {
           ></textarea>
 
           <label className="flex gap-2 my-4" htmlFor="veraz">
-            <input className="w-8" value={declaracion} checked={declaracion} name="declaracion_veraz" type="checkbox" onChange={valor => cambio_declaracion(valor.target.checked)} id="veraz"  required />
+            <input className="w-8" value={declaracion} checked={declaracion} name="checkReclamoForm" type="checkbox" onChange={valor => cambio_declaracion(valor.target.checked)} id="veraz"  required />
             Doy fe que los datos e información proporcionados son veraces*
           </label>
 
           <label className="flex gap-2 my-4" htmlFor="politica">
-            <input value={politica} checked={politica} name="acepta_politica"  className="w-8" type="checkbox" onChange={valor => cambio_politica(valor.target.checked)} id="politica" required />
+            <input value={politica} checked={politica} name="aceptaPoliticaPrivacidad"  className="w-8" type="checkbox" onChange={valor => cambio_politica(valor.target.checked)} id="politica" required />
             <span>
               Acepto la{' '}
               <a className="text-[#007bf9]">

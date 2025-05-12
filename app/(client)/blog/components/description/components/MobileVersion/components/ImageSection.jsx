@@ -2,7 +2,7 @@
 
 import React from "react";
 
-export const ImageSection = () => {
+const ImageSection = () => {
   return (
     <div className="relative top-3 max-w-[90vw] flex flex-col items-center p-5 bg-[#0F1721] rounded-br-lg rounded-tr-lg shadow-lg">
       <p className="text-white font-bold italic text-[18px] text-center">
@@ -19,3 +19,6 @@ export const ImageSection = () => {
     </div>
   );
 };
+
+
+export default ImageSection;
