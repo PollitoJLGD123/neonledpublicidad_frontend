@@ -86,7 +86,7 @@ export default function RootLayout({ children }) {
                 <>
                 <img src="/dashboard/main-icon.svg" alt="Logo" className="h-8 w-8" />
 
-                  <span className="ml-2 text-lg font-semibold text-rgb(17, 87, 211) dark:text-white">
+                  <span className="ml-2 text-lg font-semibold text-blue-primary dark:text-white">
                     Neon Led Publicidad
                   </span>
                 </>
@@ -130,6 +130,7 @@ export default function RootLayout({ children }) {
                     title="Contactanos"
                     icon={<Mail className="h-5 w-5" />}
                     isCollapsed={!isSidebarOpen}
+                    isActive={pathname.includes("/dashboard/contactos")}
                     isActive={pathname.includes("/dashboard/contactos")}
                   />
                 )}
@@ -182,7 +183,7 @@ export default function RootLayout({ children }) {
                 <div className="flex flex-col space-y-3">
                   <div className="flex items-center space-x-3">
                     <div className="flex-shrink-0">
-                      <div className="h-10 w-10 rounded-full bg-rgb(17, 87, 211) flex items-center justify-center text-white">
+                      <div className="h-10 w-10 rounded-full bg-blue-primary flex items-center justify-center text-white">
                         <User className="h-5 w-5" />
                       </div>
                     </div>
@@ -203,7 +204,7 @@ export default function RootLayout({ children }) {
                     <button
                       onClick={handleLogout}
                       disabled={isLoggingOut}
-                      className="flex items-center justify-center px-3 py-2 text-sm font-medium rounded-md text-white bg-rgb(17, 87, 211) hover:bg-rgb(14, 70, 170) transition-colors disabled:opacity-70"
+                      className="flex items-center justify-center px-3 py-2 text-sm font-medium rounded-md text-white bg-blue-primary hover:bg-blue-dark transition-colors disabled:opacity-70"
                     >
                       {isLoggingOut ? (
                         <div className="flex items-center">
@@ -240,7 +241,7 @@ export default function RootLayout({ children }) {
                 </div>
               ) : (
                 <div className="flex flex-col items-center space-y-4">
-                  <div className="h-10 w-10 rounded-full bg-rgb(17, 87, 211) flex items-center justify-center text-white">
+                  <div className="h-10 w-10 rounded-full bg-blue-primary flex items-center justify-center text-white">
                     <User className="h-5 w-5" />
                   </div>
                   <button
@@ -252,7 +253,7 @@ export default function RootLayout({ children }) {
                   <button
                     onClick={handleLogout}
                     disabled={isLoggingOut}
-                    className="p-2 rounded-md text-white bg-rgb(17, 87, 211) hover:bg-rgb(14, 70, 170) transition-colors disabled:opacity-70"
+                    className="p-2 rounded-md text-white bg-blue-primary hover:bg-blue-dark transition-colors disabled:opacity-70"
                   >
                     {isLoggingOut ? (
                       <svg
@@ -310,11 +311,11 @@ function NavLink({ href, title, icon, isActive, isCollapsed }) {
         href={href}
         className={`flex items-center ${isCollapsed ? "justify-center" : "justify-start"} p-2 rounded-lg transition-colors ${
           isActive
-            ? "bg-rgb(17, 87, 211) text-white"
+            ? "bg-blue-primary text-white"
             : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
         }`}
       >
-        <span className={`${isActive ? "text-white" : "text-rgb(17, 87, 211) dark:text-gray-300"}`}>{icon}</span>
+        <span className={`${isActive ? "text-white" : "text-blue-primary dark:text-gray-300"}`}>{icon}</span>
         {!isCollapsed && <span className="ml-3">{title}</span>}
       </Link>
     </li>

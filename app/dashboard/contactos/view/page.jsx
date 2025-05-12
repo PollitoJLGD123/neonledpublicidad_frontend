@@ -37,7 +37,7 @@ export default function Page() {
       <div className="max-w-5xl mx-auto flex">
         <button
           className="text-center h-14 w-52 bg-[#0d6fdc] text-white px-4 py-2 rounded-lg hover:bg-[#0b5dc0] transition-all duration-300 flex items-center shadow-sm group"
-          onClick={() => router.push("/dashboard/contactanos/")}
+          onClick={() => router.push("/dashboard/contactos/")}
         >
           <ArrowLeft className="w-5 h-5 mr-2 transition-transform group-hover:-translate-x-1" />
           Volver a la lista

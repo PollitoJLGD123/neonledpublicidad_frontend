@@ -170,7 +170,7 @@ export default function DataTable({ headers, data, onDelete, onUpdate, onShow })
                         <Button
                           variant="ghost"
                           size="icon"
-                          className="h-8 w-8 text-[#3024a0] hover:text-[#ca53e7] hover:bg-[#f0ebff]"
+                          className="h-8 w-8 text-[#7794ff] hover:text-[#ca53e7] hover:bg-[#f0ebff]"
                           onClick={() => onShow(dataRow.id)}
                         >
                           <Eye className="h-4 w-4" />
