@@ -26,7 +26,7 @@ const templates = [
 export default function Page() {
     return (
         <div className="flex w-full justify-center items-center">
-            <div className="bg-gradient-to-r from-purple-500 to-indigo-600 rounded-2xl shadow-xl w-full max-w-6xl overflow-hidden">
+            <div className="bg-gradient-to-r from-blue-500 to-sky-600 rounded-2xl shadow-xl w-full max-w-6xl overflow-hidden">
                 <div className="py-1 px-10 text-center relative">
                     <div className="absolute top-0 left-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.1)_0,_rgba(255,255,255,0)_70%)]"></div>
                     <div className="relative z-10">
@@ -57,7 +57,7 @@ export default function Page() {
                                 <div className="p-3 text-center">
                                     <h1 className="text-sm font-sans font-bold text-gray-700 mb-2">{template.name}</h1>
                                     <Link href={template.editLink}>
-                                        <button className="flex items-center justify-center gap-2 w-full bg-teal-600 text-white py-2 rounded-lg shadow-md hover:bg-teal-700 transition">
+                                        <button className="flex items-center justify-center gap-2 w-full bg-blue-700 text-white py-2 rounded-lg shadow-md hover:bg-blue-900 transition">
                                             <Pencil className="w-4 h-4" /> Editar
                                         </button>
                                     </Link>
