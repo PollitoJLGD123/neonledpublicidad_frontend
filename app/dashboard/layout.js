@@ -131,7 +131,6 @@ export default function RootLayout({ children }) {
                     icon={<Mail className="h-5 w-5" />}
                     isCollapsed={!isSidebarOpen}
                     isActive={pathname.includes("/dashboard/contactos")}
-                    isActive={pathname.includes("/dashboard/contactos")}
                   />
                 )}
 
