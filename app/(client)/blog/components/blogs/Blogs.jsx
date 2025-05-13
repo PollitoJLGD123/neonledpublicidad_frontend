@@ -6,23 +6,25 @@ import { Loader2, BookOpen, AlertCircle } from "lucide-react";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-import { useRouter, useSearchParams } from "next/navigation"; 
+import { useRouter, useSearchParams } from "next/navigation";
 
 const ITEMS_PER_PAGE = 4;
 
+// Función para normalizar el texto (eliminar puntuación, convertir todo a minúsculas)
 const normalizeText = (text) => {
-  return text.toLowerCase().replace(/[^a-zA-Z0-9\s]/g, "").trim();
+  return text.toLowerCase().replace(/[^a-zA-Z0-9\s]/g, "").trim(); // Eliminar caracteres no alfanuméricos
 };
 
 const Blogs = () => {
   const router = useRouter();
   const searchParams = useSearchParams();
   const currentPage = Number(searchParams.get("page") || 1);
+  const searchQuery = searchParams.get("search") || ""; // Obtener el término de búsqueda desde la URL
 
   const [data, setDataResponse] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [searchTerm, setSearchTerm] = useState("");
+  const [searchTerm, setSearchTerm] = useState(searchQuery); // Inicializar con el término de búsqueda de la URL
   const [filteredData, setFilteredData] = useState([]);
   const [totalPages, setTotalPages] = useState(1);
 
@@ -45,20 +47,10 @@ const Blogs = () => {
   }, []);
 
   useEffect(() => {
-    if (searchTerm.trim() === "") {
-      setFilteredData(data);
-      setTotalPages(Math.ceil(data.length / ITEMS_PER_PAGE));
-    } else {
-      const normalizedSearchTerm = normalizeText(searchTerm);
-      const filtered = data.filter(
-        (card) =>
-          normalizeText(card.titulo).includes(normalizedSearchTerm) ||
-          normalizeText(card.descripcion).includes(normalizedSearchTerm)
-      );
-      setFilteredData(filtered);
-      setTotalPages(Math.ceil(filtered.length / ITEMS_PER_PAGE));
-    }
-  }, [searchTerm, data]);
+    // Aquí no filtramos nada, solo preparamos los datos
+    setFilteredData(data);
+    setTotalPages(Math.ceil(data.length / ITEMS_PER_PAGE));
+  }, [data]);
 
   const getCurrentPageItems = () => {
     const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
@@ -68,7 +60,22 @@ const Blogs = () => {
 
   const handlePageChange = (page) => {
     if (page < 1 || page > totalPages) return;
-    router.push(`?page=${page}`);
+    router.push(`?search=${searchTerm}&page=${page}`); // Asegurarse de que el término de búsqueda se mantenga
+  };
+
+  // Maneja la búsqueda al presionar el botón
+  const handleSearch = () => {
+    // Filtramos los datos solo cuando se presiona el botón
+    const normalizedSearchTerm = normalizeText(searchTerm);
+    const filtered = data.filter(
+      (card) =>
+        normalizeText(card.titulo).includes(normalizedSearchTerm) ||
+        normalizeText(card.descripcion).includes(normalizedSearchTerm)
+    );
+    setFilteredData(filtered);
+    setTotalPages(Math.ceil(filtered.length / ITEMS_PER_PAGE));
+    // Actualizamos la URL solo cuando se presiona el botón
+    router.push(`?search=${searchTerm}&page=1`);
   };
 
   if (isLoading) {
@@ -127,10 +134,16 @@ const Blogs = () => {
           className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500"
           value={searchTerm}
           onChange={(e) => {
-            setSearchTerm(e.target.value);
+            setSearchTerm(e.target.value); // Solo actualiza el estado, no la URL mientras escribe
           }}
         />
-
+        {/* Botón de búsqueda */}
+        <button
+          onClick={handleSearch}
+          className="ml-2 px-4 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 focus:outline-none"
+        >
+          Buscar
+        </button>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -169,41 +182,40 @@ const Blogs = () => {
       {/* Paginación */}
       {totalPages > 1 && (
         <div className="flex justify-center items-center space-x-2 mt-8">
-            <button
-              onClick={() => handlePageChange(currentPage - 1)}
-              disabled={currentPage <= 1}
-              className={`p-2 rounded-full ${currentPage <= 1 ? "bg-gray-100 text-gray-400 cursor-not-allowed" : "bg-blue-500 text-white hover:bg-blue-600 transition-all"}`}
-              aria-label="Página anterior"
-            >
-              <span className="text-2xl">{'<'}</span>
-            </button>
+          <button
+            onClick={() => handlePageChange(currentPage - 1)}
+            disabled={currentPage <= 1}
+            className={`p-2 rounded-full ${currentPage <= 1 ? "bg-gray-100 text-gray-400 cursor-not-allowed" : "bg-blue-500 text-white hover:bg-blue-600 transition-all"}`}
+            aria-label="Página anterior"
+          >
+            <span className="text-2xl">{'<'}</span>
+          </button>
 
-            {/* Páginas */}
-            <div className="flex space-x-1">
-              {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-                <button
-                  key={page}
-                  onClick={() => handlePageChange(page)}
-                  className={`w-10 h-10 flex items-center justify-center rounded-full text-lg font-semibold transition-all duration-300 
-                    ${currentPage === page ? "bg-blue-600 text-white" : "bg-white text-blue-600 hover:bg-blue-50"}`}
-                  aria-label={`Página ${page}`}
-                  aria-current={currentPage === page ? "page" : undefined}
-                >
-                  {page}
-                </button>
-              ))}
-            </div>
-
-            <button
-              onClick={() => handlePageChange(currentPage + 1)}
-              disabled={currentPage >= totalPages}
-              className={`p-2 rounded-full ${currentPage >= totalPages ? "bg-gray-100 text-gray-400 cursor-not-allowed" : "bg-blue-500 text-white hover:bg-blue-600 transition-all"}`}
-              aria-label="Página siguiente"
-            >
-              <span className="text-2xl">{'>'}</span>
-            </button>
+          {/* Páginas */}
+          <div className="flex space-x-1">
+            {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+              <button
+                key={page}
+                onClick={() => handlePageChange(page)}
+                className={`w-10 h-10 flex items-center justify-center rounded-full text-lg font-semibold transition-all duration-300 
+                  ${currentPage === page ? "bg-blue-600 text-white" : "bg-white text-blue-600 hover:bg-blue-50"}`}
+                aria-label={`Página ${page}`}
+                aria-current={currentPage === page ? "page" : undefined}
+              >
+                {page}
+              </button>
+            ))}
           </div>
 
+          <button
+            onClick={() => handlePageChange(currentPage + 1)}
+            disabled={currentPage >= totalPages}
+            className={`p-2 rounded-full ${currentPage >= totalPages ? "bg-gray-100 text-gray-400 cursor-not-allowed" : "bg-blue-500 text-white hover:bg-blue-600 transition-all"}`}
+            aria-label="Página siguiente"
+          >
+            <span className="text-2xl">{'>'}</span>
+          </button>
+        </div>
       )}
     </div>
   );
