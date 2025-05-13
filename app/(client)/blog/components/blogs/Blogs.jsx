@@ -115,7 +115,7 @@ const Blogs = () => {
       <h1 className="text-3xl font-bold mb-8 text-center lg:text-center mt-8 lg:mt-0">Nuestros Blogs</h1>
 
       {/* Barra de búsqueda */}
-      <div className="mb-8 w-full sm:w-full lg:w-1/2 sm:mx-auto">
+      <div className="mb-8 w-full sm:w-full lg:w-1/2 sm:mx-auto flex items-center">
         <input
           type="text"
           placeholder="Buscar blogs..."
@@ -123,9 +123,9 @@ const Blogs = () => {
           value={searchTerm}
           onChange={(e) => {
             setSearchTerm(e.target.value);
-            router.push("?page=1");
           }}
         />
+
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
