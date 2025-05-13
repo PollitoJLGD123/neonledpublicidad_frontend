@@ -15,16 +15,24 @@ export default function Header({
 }) {
   return (
     <div
-      className="w-full h-screen md:h-[80vh] relative flex items-center justify-center md:justify-end text-center px-6 sm:px-12 bg-cover bg-center bg-no-repeat overflow-hidden"
-      style={{ backgroundImage: `url(${url_image})` }}
+      className="flex flex-col items-center justify-center text-center p-8"
+      style={{
+        backgroundImage: `url(${url_image.trim()})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        minHeight: '60vh',
+      }}
     >
-      {/* <div className={`absolute inset-0 ${backgroundOverlay}`}></div> */}
-      <div className="relative z-10 max-w-4xl text-white md:text-right overflow-hidden">
-        <h1 className={tituloClase}>{tituloPrincipal}</h1>
-        <h2 className={subtituloClase}>{tituloSecundario}</h2>
-        <p className={descripcionClase}>{descripcion}</p>
-        {decoracion && <div className="absolute right-0 w-20 h-1 bg-white mt-6 mx-auto"></div>}
-      </div>
+      <h1 className="text-4xl font-bold text-white mb-4 drop-shadow-[0_0_10px_red]">
+        {tituloPrincipal}
+      </h1>
+      <h2 className="text-2xl text-white mb-2 drop-shadow-[0_0_10px_red]">
+        {tituloSecundario}
+      </h2>
+      <p className="text-white text-lg max-w-2xl drop-shadow-[0_0_10px_red]">
+        {descripcion}
+      </p>
     </div>
   );
 }

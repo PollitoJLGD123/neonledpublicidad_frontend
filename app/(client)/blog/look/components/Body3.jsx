@@ -7,21 +7,21 @@ export default function Body3() {
 
     const tarjetas = [
         {
-            titulo: "Identidad Digital y Reconocimiento de Marca",
-            descripcion: "Una gestión efectiva de redes sociales permite construir una imagen sólida y coherente de tu negocio. Tu marca se vuelve reconocible a través del contenido visual, el tono de comunicación y la interacción constante con la audiencia.",
+            titulo: "El Factor Sorpresa y Distinción",
+            descripcion: "Las letras de neón LED permiten personalizar la imagen de tu local, haciendo que el nombre de tu bar sea visible desde lejos. Un diseño llamativo puede convertirse en un sello distintivo y en un punto de referencia para los clientes.",
         },
 
         {
-            titulo: "Interacción y Fidelización de Clientes",
-            descripcion: "Las redes sociales no solo son vitrinas, sino canales de diálogo. Escuchar, responder y generar contenido valioso crea una comunidad activa, lo que incrementa la fidelidad y la confianza del cliente.",
+            titulo: "Ambiente y Experiencia Visual",
+            descripcion: "La iluminación juega un papel crucial en la atmósfera de un bar. Los colores vibrantes y cálidos del neón LED pueden transformar un espacio ordinario en un entorno acogedor e instagrameable.",
         },
         {
-            titulo: "Monitoreo de Resultados y Optimización",
-            descripcion: "El análisis de métricas como el alcance, la interacción y el crecimiento de seguidores permite ajustar las estrategias de contenido en tiempo real, maximizando el impacto de cada publicación.",
+            titulo: "Eficiencia Energética y Durabilidad",
+            descripcion: "A diferencia del neón tradicional, las luces LED son más eficientes, consumen menos energía y tienen una vida útil más prolongada.",
         },
         {
-            titulo: "Aumento de Visibilidad y Oportunidades",
-            descripcion: "Una presencia activa y bien gestionada en redes sociales puede llevar tu marca a nuevos públicos, generar leads y aumentar tus oportunidades de venta o colaboración.",
+            titulo: "Marketing y Atracción de Clientes",
+            descripcion: "Un letrero de neón LED bien diseñado es una herramienta de marketing poderosa, capaz de captar la atención y aumentar la visibilidad de tu local.",
         }
     ]
 
@@ -43,9 +43,9 @@ export default function Body3() {
                 <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-indigo-100 to-transparent"></div>
                 <div className="relative z-10 p-8 md:p-12 flex flex-col md:flex-row items-center">
                     <div className="md:w-1/2 mb-8 md:mb-0 md:pr-8">
-                        <h1 className="text-4xl md:text-5xl font-black text-indigo-900 leading-tight mb-6">GESTIÓN INTELIGENTE DE REDES</h1>
+                        <h1 className="text-4xl md:text-5xl font-black text-indigo-900 leading-tight mb-6">TITULO DEL BLOG</h1>
                         <div className="w-20 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 mb-6"></div>
-                        <p className="text-lg text-gray-700 leading-relaxed">Las redes sociales se han convertido en uno de los pilares de la estrategia digital moderna. Una buena gestión no solo mejora la presencia online, sino que potencia la conexión con los usuarios y la visibilidad de tu negocio.</p>
+                        <p className="text-lg text-gray-700 leading-relaxed">Las luces neón LED se han convertido en un elemento diferenciador en el mundo de la hospitalidad. No solo son visualmente atractivos, sino que también refuerzan la identidad de tu negocio. En este artículo, exploraremos cómo las letras luminosas pueden marcar la diferencia en la experiencia de tus clientes.</p>
                         <button
                             className="mt-6 inline-flex items-center text-indigo-600 font-medium hover:text-indigo-800 transition-colors"
                         >
@@ -58,7 +58,7 @@ export default function Body3() {
                             <div className="absolute -inset-1 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-3xl blur"></div>
                             <div className="relative overflow-hidden rounded-2xl shadow-2xl">
                                 <img
-                                    src="/blog/blog-11.jpg"
+                                    src="/blog/blog-4.jpg"
                                         alt="Imagen principal"
                                     className="w-[22rem] h-[22rem] object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-110 rounded-2xl shadow-lg object-cover relative z-10"
                                 />
@@ -81,7 +81,7 @@ export default function Body3() {
                     </div>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                        {["/blog/blog-12.jpg", "/blog/blog-1.jpg"].map((src, index) => (
+                        {["/blog/blog-2.jpg", "/blog/blog-2.jpg"].map((src, index) => (
                             <div key={index} className="group relative overflow-hidden rounded-xl shadow-lg">
                                 <div className="absolute inset-0 bg-gradient-to-t from-indigo-900/80 via-indigo-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                                 <img
@@ -104,7 +104,7 @@ export default function Body3() {
                         <div className="w-8 h-8 rounded-full bg-green-600 flex items-center justify-center text-white font-bold mr-3">
                             C
                         </div>
-                        <h2 className="text-2xl font-bold text-green-600">Consejos para una Gestión Efectiva</h2>
+                        <h2 className="text-2xl font-bold text-green-600">Consejos para un letrero efectivo</h2>
                         <div className="h-px flex-grow bg-green-200 ml-4"></div>
                     </div>
 
@@ -112,11 +112,11 @@ export default function Body3() {
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                             {
                                 [
-                                    "Define claramente los objetivos de tu presencia digital.",
-                                    "Planifica tu contenido con calendarios editoriales.",
-                                    "Utiliza herramientas como Hootsuite o Meta Business Suite para automatizar.",
-                                    "Analiza los resultados y ajusta tus estrategias regularmente.",
-                                    "Mantén una identidad visual coherente en todas las plataformas.",
+                                    "Opta por colores que reflejen la personalidad de tu bar.",
+                                    "Elige un diseño legible y atractivo.",
+                                    "Considera el lugar de instalación para maximizar su impacto.",
+                                    "Opta por colores que reflejen la personalidad de tu bar.",
+                                    "Considera el lugar de instalación para maximizar su impacto.",
                                 ]
                                     .filter((text) => text)
                                     .map((text, index) => (

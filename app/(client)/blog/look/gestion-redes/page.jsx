@@ -7,9 +7,9 @@ import Body3 from '../components/Body3'
 export default function Page() {
     return (
         <div>
-            <Header url_image={"/blog/blog-13.jpg   "} 
-            tituloPrincipal="Gestion de redes sociales"
-            tituloSecundario='Experimenta el contenido con las redes sociales'
+            <Header url_image={"/blog/Blog4_header.webp   "} 
+            tituloPrincipal="TITULO DEL HEADER"
+            tituloSecundario='SUBTITULO DEL BLOG'
             descripcion='Explora las tendencias emergentes en las redes sociales, con las nuevas aplicaciones y contenidos '/>
             
             <div className="container mx-auto px-4 py-12 relative bg-gradient-to-r text-black min-h-screen w-full">
