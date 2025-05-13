@@ -10,6 +10,10 @@ import { useRouter, useSearchParams } from "next/navigation";
 
 const ITEMS_PER_PAGE = 4;
 
+const normalizeText = (text) => {
+  return text.toLowerCase().replace(/[^a-zA-Z0-9\s]/g, "").trim();
+};
+
 const Blogs = () => {
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -45,10 +49,11 @@ const Blogs = () => {
       setFilteredData(data);
       setTotalPages(Math.ceil(data.length / ITEMS_PER_PAGE));
     } else {
+      const normalizedSearchTerm = normalizeText(searchTerm);
       const filtered = data.filter(
         (card) =>
-          card.titulo.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          card.descripcion.toLowerCase().includes(searchTerm.toLowerCase())
+          normalizeText(card.titulo).includes(normalizedSearchTerm) ||
+          normalizeText(card.descripcion).includes(normalizedSearchTerm)
       );
       setFilteredData(filtered);
       setTotalPages(Math.ceil(filtered.length / ITEMS_PER_PAGE));
