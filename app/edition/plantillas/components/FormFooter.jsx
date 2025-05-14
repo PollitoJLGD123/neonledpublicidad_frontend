@@ -128,7 +128,7 @@ export default function FormFooter({ formFooter, setFormData, setFileFooterFile1
                 )}
             </div>
 
-            <div className="relative w-full md:w-[450px] h-auto p-6">
+            <div className="relative W-[750PX] md:w-[450px] h-auto p-6">
                 <div className="bg-black/75 backdrop-blur-md rounded-lg p-5 border border-white/10 shadow-lg">
                     <h1 className="text-lg font-semibold text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-500 mb-4">
                         Editar Pie de Página
