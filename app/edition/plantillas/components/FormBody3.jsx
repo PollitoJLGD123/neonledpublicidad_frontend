@@ -278,7 +278,7 @@ export default function FormBody3(props) {
   return (
     <div className="relative text-black rounded-lg shadow-[0px_10px_25px_rgba(0,0,0,0.25)] flex flex-row my-5 justify-center">
       <div className="w-[700px]">
-        <div className="bg-gradient-to-r from-indigo-900 to-purple-900 py-3 px-6 flex justify-between items-center">
+        <div className="bg-gradient-to-r from-blue-950 to-slate-900 py-3 px-6 flex justify-between items-center">
           <div className="flex items-center text-white">
             <Calendar className="w-4 h-4 mr-2" />
             <span className="text-sm font-medium">
