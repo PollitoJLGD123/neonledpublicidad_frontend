@@ -107,12 +107,21 @@ export default function EditionLayout({ children }) {
     <div className="flex flex-col min-h-screen">
       <Header />
 
+      
+
       <div className="flex flex-1">
-        <div className="w-64 bg-gradient-to-b from-slate-800 to-slate-900 text-white fixed top-0 left-0 h-full pt-20 shadow-xl">
+        <div className="w-64 bg-gradient-to-b from-blue-800 to-slate-900 text-white fixed top-0 left-0 h-full pt-20 shadow-xl">
           <div className="px-6 py-4 border-b border-slate-700/50">
+
+        <div className="flex items-center justify-center">
+                <Link href="/">
+                  <img src="/header_footer/logo.png" alt="NeonLedPublicidad" width="50" height="50" className="h-auto" />
+               </Link>
+        </div>
             <div className="flex items-center justify-center space-x-2">
-              <div className="h-2 w-2 rounded-full bg-emerald-500"></div>
+              <div className="h-2 w-2 rounded-full bg-blue-500"></div>
               <h1 className="text-lg tracking-wide font-extrabold">MODO EDICIÓN</h1>
+              
               <Pencil className="mb-1 h-4 w-4" />
             </div>
           </div>
@@ -128,13 +137,13 @@ export default function EditionLayout({ children }) {
               <button
                 className={`section group w-full py-3 px-4 rounded-lg text-sm font-medium transition-all duration-300 flex items-center
                   ${selectedSection === "header"
-                    ? "bg-gradient-to-r from-slate-700 to-slate-800 text-white shadow-lg border-l-4 border-emerald-500"
+                    ? "bg-gradient-to-r from-slate-700 to-slate-800 text-white shadow-lg border-l-4 border-blue-500"
                     : "bg-slate-800/30 hover:bg-slate-700/50 hover:translate-x-1"
                   }`}
                 onClick={() => handleSectionClick("header")}
               >
                 <Layout
-                  className={`mr-3 h-4 w-4 ${selectedSection === "header" ? "text-emerald-400" : "text-slate-400 group-hover:text-white"}`}
+                  className={`mr-3 h-4 w-4 ${selectedSection === "header" ? "text-blue-400" : "text-slate-400 group-hover:text-white"}`}
                 />
                 Header
               </button>
@@ -142,13 +151,13 @@ export default function EditionLayout({ children }) {
               <button
                 className={`section group w-full py-3 px-4 rounded-lg text-sm font-medium transition-all duration-300 flex items-center
                   ${selectedSection === "body"
-                    ? "bg-gradient-to-r from-slate-700 to-slate-800 text-white shadow-lg border-l-4 border-emerald-500"
+                    ? "bg-gradient-to-r from-slate-700 to-slate-800 text-white shadow-lg border-l-4 border-blue-500"
                     : "bg-slate-800/30 hover:bg-slate-700/50 hover:translate-x-1"
                   }`}
                 onClick={() => handleSectionClick("body")}
               >
                 <Layout
-                  className={`mr-3 h-4 w-4 ${selectedSection === "body" ? "text-emerald-400" : "text-slate-400 group-hover:text-white"}`}
+                  className={`mr-3 h-4 w-4 ${selectedSection === "body" ? "text-blue-400" : "text-slate-400 group-hover:text-white"}`}
                 />
                 Body
               </button>
@@ -156,13 +165,13 @@ export default function EditionLayout({ children }) {
               <button
                 className={`section group w-full py-3 px-4 rounded-lg text-sm font-medium transition-all duration-300 flex items-center
                   ${selectedSection === "footer"
-                    ? "bg-gradient-to-r from-slate-700 to-slate-800 text-white shadow-lg border-l-4 border-emerald-500"
+                    ? "bg-gradient-to-r from-slate-700 to-slate-800 text-white shadow-lg border-l-4 border-blue-500"
                     : "bg-slate-800/30 hover:bg-slate-700/50 hover:translate-x-1"
                   }`}
                 onClick={() => handleSectionClick("footer")}
               >
                 <FooterIcon
-                  className={`mr-3 h-4 w-4 ${selectedSection === "footer" ? "text-emerald-400" : "text-slate-400 group-hover:text-white"}`}
+                  className={`mr-3 h-4 w-4 ${selectedSection === "footer" ? "text-blue-400" : "text-slate-400 group-hover:text-white"}`}
                 />
                 Footer
               </button>
