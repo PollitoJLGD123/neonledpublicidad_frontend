@@ -656,7 +656,7 @@ const PageContent = () => {
             </>
           ) : (
             <>
-              <Save className="mr-2 h-4 w-4 text-blue-950" />
+              <Save className="mr-2 h-4 w-4 text-green-800" />
               Guardar Cambios
             </>
           )}

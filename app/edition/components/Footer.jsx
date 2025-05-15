@@ -10,10 +10,10 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="flex items-center space-x-2">
             <img
-              src="/headerFooter/logoFooter.webp"
+              src="/header_footer/logo.png"
               alt="Digimedia"
               loading="lazy"
-              className="w-[120px] h-auto object-contain"
+              className="w-[25px] h-auto object-contain"
             />
             <span className="text-slate-400 text-sm hidden md:inline-block">|</span>
             <span className="text-slate-500 text-sm hidden md:inline-block">Plataforma de edición</span>
@@ -21,7 +21,7 @@ export default function Footer() {
 
           <div className="mt-4 md:mt-0 flex items-center">
             <div className="text-xs text-slate-500 flex items-center">
-              <span>© {currentYear} Digimedia. RUC: 20605116559</span>
+              <span>© {currentYear} Neon Led Publicidad RUC: 20492552250</span>
             </div>
           </div>
         </div>
