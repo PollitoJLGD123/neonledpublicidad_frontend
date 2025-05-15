@@ -1,6 +1,9 @@
 
 import axios from 'axios'
 import url from '../../../../api/url'
+import { getCookie } from 'cookies-next';
+
+const URL_API = `${url}/api`
 
 const Fetch = {
     fetchBlogs: async function fetchBlogs(){
@@ -169,14 +172,19 @@ const Fetch = {
                     'Content-Type': 'application/json',
                 },
             });
+
+            console.log("Respuesta updateCommendTarjeta status:", response.status);
+            console.log("Respuesta updateCommendTarjeta data:", response.data);
+
             if(response.status === 200){
                 return response.data.id;
             }
             else{
+                console.warn("updateCommendTarjeta no retornó 200:", response.status);
                 return null;
             }
         }catch(error){
-            console.log(error);
+            console.log("Error en updateCommendTarjeta catch:", error.response ? error.response.data : error);
             return null;
         }
     },
@@ -190,6 +198,11 @@ const Fetch = {
                     'Content-Type': 'application/json',
                 },
             });
+
+            console.log("Respuesta updateTarjeta status:", response.status);
+            console.log("Respuesta updateTarjeta data:", response.data);
+
+
             if(response.status === 200){
                 return response.data.id;
             }
@@ -211,6 +224,10 @@ const Fetch = {
                     'Content-Type': 'application/json',
                 },
             });
+
+            console.log("Respuesta Blog status:", response.status);
+            console.log("Respuesta Blog data:", response.data);
+
             if(response.status === 200){
                 return response.data.id;
             }

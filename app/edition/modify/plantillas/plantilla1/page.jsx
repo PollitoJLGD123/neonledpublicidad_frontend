@@ -69,7 +69,7 @@ const PageContent = () => {
   const [isDisabled, setIsDisabled] = useState(true);
 
   useEffect(() => {
-    setIsDisabled((validacionHeader && validacionFooter && validacionBody));
+    setIsDisabled(!(validacionHeader && validacionFooter && validacionBody));
   }, [validacionHeader, validacionFooter, validacionBody]);
 
   useEffect(() => {
@@ -320,7 +320,7 @@ const PageContent = () => {
 
   async function guardarCommendTarjeta() {
 
-    const formCommendBody = {
+    const formCommendBodySend = {
       titulo: formCommendBody.titulo,
       texto1: formCommendBody.texto1,
       texto2: formCommendBody.texto2,
@@ -349,7 +349,7 @@ const PageContent = () => {
       id_blog_head: dataBlog.id_blog_head,
       id_blog_footer: dataBlog.id_blog_footer,
       id_blog_body: dataBlog.id_blog_body,
-      fecha: dataBody.fecha,
+      fecha: dataBody.fecha || new Date().toISOString().slice(0,10), 
     }
     const id = await Fetch.updateBlog(dataBlog.id_blog, formBlog);
     if (id && id > 0) {
@@ -375,7 +375,9 @@ const PageContent = () => {
       url_image: dataHeader.url_image,
       id_plantilla: 1,
       id_empleado: id_empleado,
-    }
+    };
+
+     console.log("Datos que se enviarán para guardar la card:", formCard);
 
     const id = await Fetch.updateCard(dataBlog.card.id_card, formCard);
     if (id && id > 0) {
