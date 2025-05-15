@@ -102,7 +102,7 @@ export default function Body3() {
                 </div>
 
                <div className="mb-16">
-  {/* Título centrado con ícono arriba */}
+
   <div className="flex flex-col items-center mb-8">
     <div className="w-10 h-10 rounded-full bg-blue-700 flex items-center justify-center text-white font-bold mb-2">
       C
@@ -113,7 +113,7 @@ export default function Body3() {
     <div className="w-24 h-1 bg-blue-200 mt-3"></div>
   </div>
 
-  {/* Fondo principal suave con bordes redondeados */}
+
   <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6 shadow-md">
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
       {[
