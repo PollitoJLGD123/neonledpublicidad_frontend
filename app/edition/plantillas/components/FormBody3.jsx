@@ -278,7 +278,7 @@ export default function FormBody3(props) {
   return (
     <div className="relative text-black rounded-lg shadow-[0px_10px_25px_rgba(0,0,0,0.25)] flex flex-row my-5 justify-center">
       <div className="w-[700px]">
-        <div className="bg-gradient-to-r from-indigo-900 to-purple-900 py-3 px-6 flex justify-between items-center">
+        <div className="bg-gradient-to-r from-blue-950 to-slate-900 py-3 px-6 flex justify-between items-center">
           <div className="flex items-center text-white">
             <Calendar className="w-4 h-4 mr-2" />
             <span className="text-sm font-medium">
@@ -364,17 +364,17 @@ export default function FormBody3(props) {
           </div>
 
           <div className="mb-16">
-            <div className="flex items-center mb-8">
-              <div className="w-8 h-8 rounded-full bg-green-600 flex items-center justify-center text-white font-bold mr-3">
+            <div className="flex flex-col items-center mb-8">
+              <div className="w-10 h-10 rounded-full bg-blue-700 flex items-center justify-center text-white font-bold mb-2">
                 C
               </div>
-              <h2 className="text-2xl font-bold text-green-600">
+              <h2 className="text-2xl font-bold text-blue-950 text-center">
                 {formCommendBody.titulo || "Consejos"}
               </h2>
-              <div className="h-px flex-grow bg-green-200 ml-4"></div>
+              <div className="w-24 h-1 bg-blue-200 mt-3"></div>
             </div>
 
-            <div className="bg-gradient-to-br from-green-50 to-indigo-50 rounded-xl p-6 shadow-md">
+            <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6 shadow-md">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {formCommendBody &&
                   [
@@ -386,9 +386,9 @@ export default function FormBody3(props) {
                     .map((text, index) => (
                       <div
                         key={`commend-${index}`}
-                        className="flex items-start p-4 bg-white rounded-lg shadow-sm border-l-4 border-green-500 hover:shadow-md transition-shadow"
+                        className="flex items-start p-4 bg-white rounded-lg shadow-sm border-l-4 border-blue-500 hover:shadow-md transition-shadow"
                       >
-                        <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0 mt-0.5 mr-3" />
+                        <CheckCircle className="w-6 h-6 text-blue-500 flex-shrink-0 mt-0.5 mr-3" />
                         <p className="text-gray-700">{text}</p>
                       </div>
                     ))}
@@ -422,7 +422,7 @@ export default function FormBody3(props) {
                         className={`mb-8 flex flex-col ${isEven ? "md:flex-row" : "md:flex-row-reverse"} bg-white rounded-xl overflow-hidden shadow-md`}
                       >
                         <div
-                          className={`md:w-1/3 bg-gradient-to-br ${isEven ? "from-blue-600 to-indigo-700" : "from-indigo-700 to-purple-800"} p-6 flex items-center justify-center`}
+                          className={`md:w-1/3 bg-gradient-to-br ${isEven ? "from-yellow-600 to-indigo-700" : "from-indigo-700 to-yellow-800"} p-6 flex items-center justify-center`}
                         >
                           <h3 className="text-2xl font-bold text-white text-center">
                             {section.titulo}

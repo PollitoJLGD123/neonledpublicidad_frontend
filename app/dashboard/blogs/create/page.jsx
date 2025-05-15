@@ -16,7 +16,7 @@ const templates = [
         name: "Plantilla Elegante",
     },
     {
-        src: "/dashboard/blogs/plantilla3.webp",
+        src: "/dashboard/blogs/plantilla3nuevo.jpg",
         viewLink: "/blog/look/gestion-redes/",
         editLink: "/edition/plantillas/plantilla3",
         name: "Plantilla Minimalista",
