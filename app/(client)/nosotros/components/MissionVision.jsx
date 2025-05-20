@@ -1,57 +1,40 @@
-import React from "react";
-
 export const MissionVision = () => {
   return (
-    <section className="py-8 md:py-16 px-4">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16">
-        {/* Mission */}
-        <div className="text-center p-4 md:p-6">
-          <div className="w-10 h-10 md:w-12 md:h-12 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6">
-            <svg
-              className="w-6 h-6 md:w-8 md:h-8 text-white"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-            >
+    <div className="space-y-8">
+      {/* Mission */}
+      <div className="bg-gray-900/80 rounded-lg p-5 backdrop-blur-sm">
+        <div className="flex items-center justify-center mb-4">
+          <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center mr-3">
+            <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor">
               <circle cx="12" cy="12" r="10" />
               <circle cx="12" cy="12" r="6" />
               <circle cx="12" cy="12" r="2" />
             </svg>
           </div>
-          <h2 className="text-xl md:text-2xl font-bold mb-3 md:mb-4 neon-text">
-            MISIÓN
-          </h2>
-          <p className="text-sm md:text-base text-gray-300">
-            Somos una empresa importadora, fabricante de productos
-            publicitarios, buscando hacer realidad las ideas de nuestros
-            clientes, satisfaciendo sus necesidades al menor tiempo y al menor
-            costo.
-          </p>
+          <h2 className="text-xl font-bold neon-text">MISIÓN</h2>
         </div>
+        <p className="text-xs md:text-sm text-gray-300 text-center">
+          Somos una empresa importadora, fabricante de productos publicitarios, buscando hacer realidad las ideas de
+          nuestros clientes, satisfaciendo sus necesidades al menor tiempo y al menor costo.
+        </p>
+      </div>
 
-        {/* Vision */}
-        <div className="text-center p-4 md:p-6">
-          <div className="w-10 h-10 md:w-12 md:h-12 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6">
-            <svg
-              className="w-6 h-6 md:w-8 md:h-8"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-            >
+      {/* Vision */}
+      <div className="bg-gray-900/80 rounded-lg p-5 backdrop-blur-sm">
+        <div className="flex items-center justify-center mb-4">
+          <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center mr-3">
+            <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor">
               <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" />
               <circle cx="12" cy="12" r="3" />
             </svg>
           </div>
-          <h2 className="text-xl md:text-2xl font-bold mb-3 md:mb-4 neon-text">
-            VISIÓN
-          </h2>
-          <p className="text-sm md:text-base text-gray-300">
-            Ser la empresa que exprese innovación y creatividad en el mundo de
-            la publicidad, buscando evolucionar en nuestros procesos,
-            implementando la tecnología más eficiente.
-          </p>
+          <h2 className="text-xl font-bold neon-text">VISIÓN</h2>
         </div>
+        <p className="text-xs md:text-sm text-gray-300 text-center">
+          Ser la empresa que exprese innovación y creatividad en el mundo de la publicidad, buscando evolucionar en
+          nuestros procesos, implementando la tecnología más eficiente.
+        </p>
       </div>
-    </section>
-  );
-};
+    </div>
+  )
+}
