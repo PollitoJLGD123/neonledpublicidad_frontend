@@ -82,8 +82,9 @@ export default function Header() {
                     className={`header-container h-[100px] bg-[--azul_oscuro] flex items-center justify-center gap-6 px-5 ${menuActive ? "menu-active" : ""}`}
                 >
                     <LinkNav text={"Inicio"} link={"/"} />
+                    <LinkNav text={"Nosotros"} link={"/nosotros"} />
                     <LinkNav text={"Productos"} link={"/productos"} />
-                    <LinkNav text={"Blog"} link={"/blog"} />
+                    
 
                     {currentMenu === "main" ? (
                         <div className=" w-[90px] text-white mx-7 text-center logo">
@@ -102,8 +103,8 @@ export default function Header() {
                             </a></div>
                     )}
 
-                    <LinkNav text={"Nosotros"} link={"/nosotros"} />
                     <LinkNav text={"Contacto"} link={"/contacto"} />
+                    <LinkNav text={"Blog"} link={"/blog"} />
                     <LinkNav text={"Login"} link={"/login"} />
 
                     {isSmallScreen && (
