@@ -140,35 +140,36 @@ export default function Header() {
                                 }}
                             />
                             <DropdownLink
+                                text={"Nosotros"}
+                                link={"/nosotros"}
+                                isInicio={false}
+                                final={false}
+                                 closeMenu={() => {
+                                    setMenuActive(false);
+                                    setContainerFullHeight(false);
+                                }}
+                            />
+                            <DropdownLink
                                 text={"Productos"}
                                 link={"/productos"}
                                 isInicio={false}
                                 final={false}
                                 onClick={() => goToSubMenu("productos")}
-                            />
-                            <DropdownLink
-                                text={"Blog"}
-                                link={"/blog"}
-                                isInicio={false}
-                                final={false}
-                                closeMenu={() => {
-                                    setMenuActive(false);
-                                    setContainerFullHeight(false);
-                                }}
-                            />
-                            <DropdownLink
-                                text={"Nosotros"}
-                                link={"/nosotros"}
-                                isInicio={false}
-                                final={false}
-                                closeMenu={() => {
-                                    setMenuActive(false);
-                                    setContainerFullHeight(false);
-                                }}
+
                             />
                             <DropdownLink
                                 text={"Contacto"}
                                 link={"/contacto"}
+                                isInicio={false}
+                                final={false}
+                                closeMenu={() => {
+                                    setMenuActive(false);
+                                    setContainerFullHeight(false);
+                                }}
+                            />
+                            <DropdownLink
+                                text={"Blog"}
+                                link={"/blog"}
                                 isInicio={false}
                                 final={true}
                                 closeMenu={() => {
